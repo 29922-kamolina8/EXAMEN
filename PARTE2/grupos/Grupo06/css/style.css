@@ -1,5 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
+    color: #000;
 }
 
 .rounded, .rounded-circle, .rounded-pill, .card, .dropdown-menu, .form-control, .btn, .sidebar, .bg-white, .sticky-footer {
@@ -21,7 +22,7 @@ h1, h2, h3, h4, h5, h6, pre {
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: #ccc; 
+    color: #ccc;  
 }
 .sidebar-dark .nav-item.active .nav-link {
     color: #fff;
@@ -134,37 +135,49 @@ h1, h2, h3, h4, h5, h6, pre {
     font-family: 'Roboto Mono', monospace !important;
 }
 
-/* ==== BARRA LATERAL FIJA ==== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 1030;
+.text-left {
+    text-align: left !important;
+}
+
+.content-card ol li {
+    position: relative;
+    padding-left: 30px; 
+    margin-bottom: 0.75rem; 
+    font-size: 1rem;
+    color: #000; 
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; 
+}
+
+ul#accordionSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    z-index: 1000; 
 }
 
 #content-wrapper {
-  margin-left: 225px; /* coincide con el ancho del sidebar */
+    margin-left: 224px;
 }
 
-/* ==== BARRA SUPERIOR FIJA ==== */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 225px; /* deja espacio al sidebar */
-  right: 0;
-  z-index: 1020;
+ul#accordionSidebar.toggled + #content-wrapper {
+    margin-left: 104px;
 }
 
-/* ==== CONTENIDO AJUSTADO ==== */
-#content {
-  padding-top: 70px; /* evita que el contenido quede oculto bajo el topbar */
+.tittle{
+    background-color: #858796;
 }
 
-/* Opcional: fondo para visualizar mejor la zona de contenido */
-.container-fluid {
-  background-color: #f8f9fc;
-  min-height: 100vh;
-  padding: 30px;
+.ejercicio-interactivo-ejecucion {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.iframe-ejercicio {
+  width: 80%;
+  height: 100vh;
+  border: none;
+  display: block;
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de Registro</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+
+  <!-- Contenedor principal de Bootstrap -->
+  <div class="container">
+    <div class="row">
+      <!-- Centrar el formulario horizontalmente -->
+      <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 col-centered">
+
+        <div class="formulario">
+          <a href="index.html"><h3>Formulario</h3></a>
+          <form class="form-horizontal" role="form">
+            
+            <!-- Campo Nombre -->
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Ingrese el nombre" required>
+              </div>
+            </div>
+
+            <!-- Campo Usuario -->
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Ingrese el usuario" required>
+              </div>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" class="form-control" placeholder="Ingrese la contraseña" required>
+              </div>
+            </div>
+
+            <!-- Campo Confirmar Contraseña -->
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-ok"></span>
+                </span>
+                <input type="password" class="form-control" placeholder="Confirme la contraseña" required>
+              </div>
+            </div>
+
+            <!-- Sección Género -->
+            <div class="form-group seccion-genero">
+              <h4 class="text-center"><strong>Género</strong></h4>
+              <div class="row" style="margin-top:10px;">
+                <!-- Columna del label -->
+                <div class="col-xs-6 text-right">
+                  <label for="genero" style="font-weight:bold;">Seleccione su género:</label>
+                </div>
+                <!-- Columna del select -->
+                <div class="col-xs-6 text-left">
+                  <select id="genero" class="form-control genero-select" required>
+                    <option value="">--Seleccione--</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>Lesbiana</option>
+                    <option>Gay</option>
+                    <option>Bisexual</option>
+                    <option>Transexual</option>
+                    <option>Intersexual</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recordarme -->
+            <div class="checkbox text-left">
+              <label><input type="checkbox"> Recuérdame</label>
+            </div>
+
+            <!-- Botón Guardar -->
+            <button type="submit" class="btn btn-guardar btn-block">
+              <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

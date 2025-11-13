@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EXAMEN PARCIAL 1 - Panel</title>
 
-    <title>EXAMEN PARCIAL 1 - Panel</title>
+  <!-- === Bootstrap 5 principal === -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
-
-    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="css/style.css" rel="stylesheet">
-
+  <!-- === Font Awesome + fuentes + estilos del tema === -->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
+  <div id="wrapper">
+ <!-- ===== Sidebar ===== -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
@@ -35,7 +30,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -85,9 +80,11 @@
                 </a>
             </li>
         </ul>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <!-- ===== End Sidebar ===== -->
+
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content"> 
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -96,26 +93,28 @@
                         EXAMEN PARCIAL 1
                     </div>
 
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="../../../index.html" title="Inicio">
                                 <i class="fas fa-home fa-fw"></i>
                             </a>
                         </li>
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item">
+                            <div class="topbar-divider d-none d-sm-block"></div>
+                        </li>
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="me-2 d-none d-lg-inline small">PARTES</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <div class="dropdown-menu dropdown-menu-end shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="../../../PARTE1/index.html">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>
                                     Parte I
                                 </a>
                                 <a class="dropdown-item" href="../../index.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
                                     Parte II
                                 </a>
                             </div>
@@ -123,23 +122,408 @@
                     </ul>
                 </nav>
 
-                <div class="container-fluid">
-                    <h1 class="h3 mb-4">Panel - Grupo 07</h1>
-                    
-                    </div>
-            </div>
+
+        <!-- ===== Contenido principal ===== -->
+        <div class="container-fluid">
+          <h1 class="h3 mb-4 text-center">PANEL - GRUPO 07</h1>
+
+        <!-- CARD TEÓRICA -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 bg-purple">
+            <h5 class="m-0 fw-bold">Paneles en Bootstrap</h5>
+          </div>
+          <div class="card-body">
+            <p>
+              Los <strong>paneles en Bootstrap</strong> fueron un componente introducido en las versiones 3.x del framework, diseñados para mostrar contenido dentro de recuadros con bordes, encabezados y pies de sección. 
+              Su estructura básica se componía de tres partes principales: <code>.panel-heading</code> para el título o encabezado, <code>.panel-body</code> para el contenido principal, y <code>.panel-footer</code> para la parte inferior opcional.
+            </p>
+
+            <p>
+              Bootstrap ofrecía distintos <strong>tipos de paneles</strong> mediante clases de contexto como <code>.panel-default</code>, <code>.panel-primary</code>, <code>.panel-success</code>, <code>.panel-info</code>, <code>.panel-warning</code> y <code>.panel-danger</code>, 
+              las cuales permitían identificar visualmente la importancia o el estado del contenido (por ejemplo, información, advertencia o error).
+            </p>
+
+            <p>
+              Estos paneles fueron muy utilizados hasta <strong>Bootstrap 3</strong>, pero a partir de <strong>Bootstrap 4</strong> fueron reemplazados por los <strong>componentes de tarjetas</strong> (<code>.card</code>). 
+              El cambio se debió a que las tarjetas ofrecen una estructura más flexible, moderna y adaptable a diferentes tamaños de pantalla, además de simplificar el código y unificar estilos para mostrar contenido con encabezado, cuerpo, pie, imágenes o listas dentro de un mismo componente.
+            </p>
+
+          </div>
         </div>
+
+          <!-- CARD CON VIDEO LOCAL -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3 bg-purple-light text-white">
+              <h5 class="m-0 fw-bold">Video de Paneles en Bootstrap</h5>
+            </div>
+            <div class="card-body text-center">
+              <div class="ratio ratio-16x9">
+                <video controls class="rounded shadow w-100">
+                  <source src="video/Paneles.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de videos HTML5.
+                </video>
+              </div>
+            </div>
+          </div>
+
+<!-- CONTENEDOR: EJEMPLO 1 DEL VIDEO -->
+<div class="card shadow mb-5">
+  <div class="card-header py-3 bg-purple-light text-white">
+    <h4 class="m-0 fw-bold">Ejemplos del video de Paneles en Bootstrap</h4>
+  </div>
+
+  <div class="card-body">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold">Ejemplo 1</h6>
+      
+      </div>
+
+      <div class="card-body text-center">
+        <h5 class="fw-bold">Panel básico</h5>
+        <p>Un panel básico <code>panel panel-default</code> es una estructura con bordes y relleno que encapsula contenido.</p>
+        <!-- Imagen de ejemplo -->
+        <img src="img/ejemplo1.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+        <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+        <ul class="text-start mt-3">
+          <li><code>.panel panel-default</code>: crea un panel básico con borde y fondo gris claro.</li>
+          <li><code>.panel-body</code>: contiene el contenido principal del panel, como texto o elementos visuales.</li>
+        </ul>
+
+
+        <!-- Botones -->
+            <button class="btn btn-dark" onclick="mostrarPanelEjemplo1()">Ejecutar</button>
+            <button class="btn btn-secondary" onclick="ocultarPanelEjemplo1()">RESETEAR</button>
+            <div id="panelEjemplo1" class="mt-4"></div>
+      </div>
     </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
-</body>
+<!-- =============================== -->
+<!-- EJEMPLO 2 DEL VIDEO -->
+<!-- =============================== -->
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <h6 class="m-0 fw-bold">Ejemplo 2</h6>
+  </div>
 
+  <div class="card-body text-center">
+    <h5 class="fw-bold">Panel con título</h5>
+    <p>
+      Este ejemplo muestra un panel con encabezado usando 
+      <code>.panel-heading</code> y <code>.panel-title</code> 
+      que permite mostrar un título o descripción corta.
+    </p>
+    <img src="img/ejemplo2.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo2.1.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+    <ul class="text-start">
+      <li><code>.panel panel-default</code>: crea un panel básico con borde y fondo gris claro.</li>
+      <li><code>.panel-heading</code>: agrega un encabezado superior al panel.</li>
+      <li><code>.panel-title</code>: define el texto del título dentro del encabezado.</li>
+      <li><code>.panel-body</code>: contiene el contenido principal del panel.</li>
+    </ul>
+
+    <button class="btn btn-dark" onclick="mostrarPanelEjemplo2()">EJECUTAR</button>
+    <button class="btn btn-secondary" onclick="ocultarPanelEjemplo2()">RESETEAR</button>
+    <div id="panelEjemplo2" class="mt-4"></div>
+  </div>
+</div>
+
+<!-- =============================== -->
+<!-- EJEMPLO 3: PANEL CON FOOTER -->
+<!-- =============================== -->
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <h6 class="m-0 fw-bold">Ejemplo 3</h6>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="fw-bold">Panel con Footer</h5>
+    <p>
+      Este ejemplo muestra cómo agregar un pie de página usando 
+      <code>.panel-footer</code>, ideal para colocar notas, botones o información adicional al final del panel.
+    </p>
+    <img src="img/ejemplo3.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+
+    <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+    <ul class="text-start">
+      <li><code>.panel panel-default</code>: crea un panel básico con borde y fondo gris claro.</li>
+      <li><code>.panel-body</code>: contiene el contenido central.</li>
+      <li><code>.panel-footer</code>: agrega una sección inferior de pie de página con tono más claro.</li>
+    </ul>
+
+    <button class="btn btn-dark" onclick="mostrarPanelEjemplo3()">EJECUTAR</button>
+    <button class="btn btn-secondary" onclick="ocultarPanelEjemplo3()">RESETEAR</button>
+    <div id="panelEjemplo3" class="mt-4"></div>
+  </div>
+</div>
+
+
+<!-- =============================== -->
+<!-- EJEMPLO 4: PANELES CONTEXTUALES -->
+<!-- =============================== -->
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <h6 class="m-0 fw-bold">Ejemplo 4</h6>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="fw-bold">Paneles contextuales</h5>
+    <p>
+      Los paneles contextuales permiten aplicar distintos colores de borde y encabezado 
+      para transmitir el estado del contenido (principal, éxito, información, advertencia, peligro).
+    </p>
+    <img src="img/ejemplo4.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo4.5.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo4.3.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo4.2.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo4.1.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+
+
+    <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+    <ul class="text-start">
+      <li><code>.panel-primary</code>: indica el panel principal o destacado.</li>
+      <li><code>.panel-success</code>: representa éxito o acción correcta.</li>
+      <li><code>.panel-info</code>: muestra información neutra o adicional.</li>
+      <li><code>.panel-warning</code>: advierte sobre precauciones.</li>
+      <li><code>.panel-danger</code>: señala errores o alertas.</li>
+    </ul>
+
+    <button class="btn btn-dark" onclick="mostrarPanelEjemplo4()">EJECUTAR</button>
+    <button class="btn btn-secondary" onclick="ocultarPanelEjemplo4()">RESETEAR</button>
+    <div id="panelEjemplo4" class="mt-4"></div>
+  </div>
+</div>
+
+<!-- =============================== -->
+<!-- EJEMPLO 5: PANELES CON TABLAS -->
+<!-- =============================== -->
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <h6 class="m-0 fw-bold">Ejemplo 5</h6>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="fw-bold">Panel con tablas</h5>
+    <p>
+      Este panel integra una <code>.table</code> dentro de su estructura, ideal para mostrar datos organizados.
+      Se combina con <code>.panel-heading</code> y <code>.panel-body</code> para mantener el formato clásico.
+    </p>
+    <img src="img/ejemplo5.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo5.1.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+
+    <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+    <ul class="text-start">
+      <li><code>.panel-primary</code>: indica el panel principal o destacado.</li>
+      <li><code>.panel-heading</code>: muestra el título o descripción del panel.</li>
+      <li><code>.panel-body</code>: contiene el texto o elementos principales.</li>
+      <li><code>.table</code>: estructura los datos en filas y columnas con bordes suaves.</li>
+    </ul>
+
+    <button class="btn btn-dark" onclick="mostrarPanelEjemplo5()">EJECUTAR</button>
+    <button class="btn btn-secondary" onclick="ocultarPanelEjemplo5()">RESETEAR</button>
+    <div id="panelEjemplo5" class="mt-4"></div>
+  </div>
+</div>
+
+<!-- =============================== -->
+<!-- EJEMPLO 6: PANEL CON LISTAS -->
+<!-- =============================== -->
+<div class="card shadow mb-4">
+  <div class="card-header">
+    <h6 class="m-0 fw-bold">Ejemplo 6</h6>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="fw-bold">Panel con listas de elementos</h5>
+    <p>
+      Este ejemplo muestra un panel con un grupo de listas usando 
+      <code>.list-group</code> y <code>.list-group-item</code> para representar 
+      elementos dentro del panel y un <code>badge</code> para indicar cantidades o notificaciones.
+    </p>
+    <img src="img/ejemplo5.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    <img src="img/ejemplo6.jpg" alt="Ejemplo visual de panel Bootstrap" class="ejemplo-img" style="max-width: 80%;"> <br>
+    
+
+    <h6 class="mt-3 fw-bold">Explicación del código:</h6>
+    <ul class="text-start">
+      <li><code>.panel-primary</code>: indica el panel principal o destacado.</li>
+      <li><code>.panel-heading</code>: muestra el encabezado superior del panel.</li>
+      <li><code>.panel-body</code>: contiene texto descriptivo o contenido adicional.</li>
+      <li><code>.list-group</code>: define una lista vertical de elementos estructurados.</li>
+      <li><code>.list-group-item</code>: representa cada elemento de la lista.</li>
+      <li><code>.badge</code>: muestra un contador o notificación asociada a cada elemento.</li>
+    </ul>
+
+    <button class="btn btn-dark" onclick="mostrarPanelEjemplo6()">EJECUTAR</button>
+    <button class="btn btn-secondary" onclick="ocultarPanelEjemplo6()">RESETEAR</button>
+    <div id="panelEjemplo6" class="mt-4"></div>
+  </div>
+</div>
+  </div>
+</div>
+<!-- =============================== -->
+<!-- CONTENEDOR: EJERCICIO ADICIONAL -->
+<!-- =============================== -->
+<div class="card shadow mb-5">
+  <div class="card-header py-3 bg-purple-light text-white">
+    <h4 class="m-0 fw-bold">Ejercicio Adicional</h4>
+  </div>
+
+  <div class="card-body">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold"> Paneles Aplicados en Bootstrap 3</h6>
+      </div>
+
+      <div class="card-body">
+        <p>
+          En este ejercicio se presentan distintos tipos de <strong>paneles de Bootstrap 3</strong>, 
+          utilizados para organizar y mostrar información dentro de contenedores con bordes, encabezados, cuerpos y pies de página.
+          Cada panel demuestra una de las variantes disponibles: básicos, con tabla, sin cuerpo, con listas, y contextuales (de colores).
+        </p>
+
+        <strong>Código aplicado dentro del iframe:</strong>
+<pre><code>&lt;!-- ===== Fila 4: Panel con tabla ===== --&gt;
+&lt;div class="panel panel-success"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h3 class="panel-title"&gt;Integrantes del Grupo 2&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="panel-body"&gt;
+    &lt;p&gt;Este panel combina un encabezado, un cuerpo descriptivo y una tabla integrada.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;table class="table table-bordered text-center"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Apellido&lt;/th&gt;&lt;th&gt;Correo&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Alisson&lt;/td&gt;&lt;td&gt;Cuenca&lt;/td&gt;&lt;td&gt;ancuenca@espe.edu.ec&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Stalin&lt;/td&gt;&lt;td&gt;Roche&lt;/td&gt;&lt;td&gt;sfroche@espe.edu.ec&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class="panel-footer"&gt;
+    Panel elaborado por Grupo 2 — NRC 29922
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<p><strong>Explicación:</strong> Este panel usa <code>.panel-success</code> para mostrar una tabla validada con encabezado, cuerpo descriptivo y pie de autoría.</p>
+
+<div class="text-center mt-3">
+  <img src="img/Fila4.png" alt="Panel con tabla" class="img-fluid shadow-sm rounded" style="max-width:80%; margin-top:8px;">
+</div>
+
+&lt;!-- ===== Fila 5: Paneles y body ===== --&gt;
+
+&lt;!-- Panel básico --&gt;
+&lt;div class="panel panel-default"&gt;
+  &lt;div class="panel-body"&gt;
+    Este panel básico usa solo <code>.panel-body</code> sin encabezado ni pie.
+    Es ideal para mostrar información breve o mensajes dentro de un contenedor simple.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Panel con tabla sin cuerpo --&gt;
+&lt;div class="panel panel-info"&gt;
+  &lt;div class="panel-heading"&gt;&lt;strong&gt;Listado de Proyectos Activos&lt;/strong&gt;&lt;/div&gt;
+  &lt;table class="table table-bordered text-center"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Proyecto&lt;/th&gt;&lt;th&gt;Responsable&lt;/th&gt;&lt;th&gt;Estado&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Sistema de Inventario&lt;/td&gt;&lt;td&gt;Carlos Jiménez&lt;/td&gt;&lt;td&gt;En desarrollo&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Plataforma de Aprendizaje&lt;/td&gt;&lt;td&gt;María Torres&lt;/td&gt;&lt;td&gt;En pruebas&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class="panel-footer"&gt;Panel sin cuerpo: la tabla se muestra directamente bajo el encabezado.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Panel con lista de grupo --&gt;
+&lt;div class="panel panel-warning"&gt;
+  &lt;div class="panel-heading"&gt;&lt;strong&gt;Actividad del Sistema&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class="panel-body"&gt;
+    Muestra la actividad reciente, procesos y conexiones del sistema.
+  &lt;/div&gt;
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;Conexiones activas &lt;span class="badge"&gt;32&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Procesos en ejecución &lt;span class="badge"&gt;45&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Consultas a la base de datos &lt;span class="badge"&gt;120&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="panel-footer"&gt;Panel con listas (.list-group) y contadores (.badge).&lt;/div&gt;
+&lt;/div&gt;
+
+<p><strong>Explicación:</strong> Esta fila incluye un panel básico, uno con tabla sin cuerpo y otro con listas, mostrando variaciones de estructura y propósito.</p>
+
+<div class="text-center mt-3">
+  <img src="img/fila5.1.png" alt="Panel con tabla" class="img-fluid shadow-sm rounded" style="max-width:80%; margin-top:8px;">
+</div>
+
+<div class="text-center mt-3">
+  <img src="img/fila5.2.png" alt="Panel con tabla" class="img-fluid shadow-sm rounded" style="max-width:80%; margin-top:8px;">
+</div>
+
+&lt;!-- ===== Fila 6: Paneles contextuales ===== --&gt;
+&lt;div class="panel panel-success"&gt;
+  &lt;div class="panel-heading"&gt;Estado del Proyecto&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Todos los módulos se encuentran operativos y verificados. Pruebas completadas exitosamente.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-warning"&gt;
+  &lt;div class="panel-heading"&gt;Advertencia del Sistema&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Algunos formularios presentan lentitud. Se recomienda optimizar consultas a la base de datos.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-info"&gt;
+  &lt;div class="panel-heading"&gt;Información del Equipo&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Grupo 2 — NRC 29922. Proyecto académico de Tecnologías Web desarrollado en la ESPE.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-danger"&gt;
+  &lt;div class="panel-heading"&gt;Alerta Crítica&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Falla al conectar con el servidor de respaldo FTP. Verificar credenciales y puerto 21.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Explicación:</strong> Los paneles contextuales aplican colores según su propósito: <code>success</code> para éxito, <code>warning</code> para advertencia, <code>info</code> para información general y <code>danger</code> para errores críticos.</p>
+
+<div class="text-center mt-3">
+  <img src="img/fila6.png" alt="Panel con tabla" class="img-fluid shadow-sm rounded" style="max-width:80%; margin-top:8px;">
+</div>
+
+
+        <strong>Explicación general:</strong>
+        <ul>
+          <li><code>.panel</code>: contenedor principal de Bootstrap 3 para agrupar contenido con bordes y fondos.</li>
+          <li><code>.panel-default / .panel-success / .panel-info / .panel-warning / .panel-danger</code>: 
+            determinan el color contextual del panel según el tipo de mensaje.</li>
+          <li><code>.panel-heading</code>: cabecera superior del panel, donde se ubican títulos o encabezados.</li>
+          <li><code>.panel-body</code>: cuerpo principal que contiene texto, tablas o componentes internos.</li>
+          <li><code>.panel-footer</code>: sección inferior, útil para notas o créditos.</li>
+          <li><code>.table</code>: permite mostrar información tabular integrada dentro del panel.</li>
+          <li><code>.list-group</code> y <code>.badge</code>: agregan listas y contadores de notificaciones dentro del panel.</li>
+        </ul>
+
+        <!-- Contenedor donde se mostrará el iframe -->
+        <div id="resultadoPanel" class="mt-4"></div>
+
+        <!-- Botones -->
+        <button class="btn btn-dark" onclick="mostrarEjercicioPanel()">Ejecutar</button>
+        <button class="btn btn-secondary" onclick="ocultarEjercicioPanel()">RESETEAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === JS Bootstrap 5 === -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

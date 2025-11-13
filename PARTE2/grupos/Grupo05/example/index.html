@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+  <title>Grupo3-Prueba01-Parte2</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="container-fluid mb-3">
+    <div class="row justify-content-center p-0">
+      <div id="header" class="col-12 col-lg-6 py-4 text-center">
+        <img id="Espe_img" src="./images/logo_ESPE.png" alt="Logo ESPE" class="img-fluid w-50">
+      </div>
+
+      <div class="p-0 bg-dark d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 col-12 col-lg-9">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Grupo 3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Docente</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="btnComandante">Comandante</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Grupos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item disabled" href="#">Grupo 1</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 2</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" id="btnGrupo3">Grupo 3</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 4</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 5</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 6</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 7</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item disabled" href="#">Grupo 8</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="container mb-3">
+    <div class="row justify-content-center px-4 gap-3">
+
+      <!-- Modal Formulario Login-->
+      <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="container">
+                <div class="p-4 rounded">
+                  <div class="text-center mb-4">
+                    <h1 class="fw-bold mb-3 fs-2">Login</h1>
+                  </div>
+
+                  <form>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">
+                        <i class="bi bi-person-circle fs-4"></i>
+                      </span>
+                      <input type="email" class="form-control fs-5" id="user" placeholder="Ingresa tu usuario" required>
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">
+                        <i class="bi bi-lock-fill fs-4"></i>
+                      </span>
+                      <input type="password" class="form-control fs-5" id="password" placeholder="Ingresa tu contraseña"
+                        required>
+                    </div>
+
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="remember">
+                      <label class="form-check-label" for="remember">Recordarme</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 fs-5">Iniciar Sesión</button>
+                  </form>
+
+                  <div class="text-center mt-4">
+                    <p class="text-muted fs-5 mb-2">Ingresa con</p>
+                    <a href="#" class="text-primary mx-3 fs-1"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-danger mx-3 fs-1"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark mx-3 fs-1"><i class="bi bi-twitter-x"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Formulario-->
+      <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLoginLabel">Registro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="container">
+                <div class="jumbotron">
+                  <div class="form-group text-center" ">
+                      <h1>Formulario</h1>
+                    </div>
+
+                    <hr>
+
+                    <form class=" form">
+                    <div class="form-group input-group mb-3">
+                      <span class="input-group-text"><i class="bi bi-person-fill fs-4"></i></span>
+                      <input type="text" class="form-control fs-5" id="nombre" placeholder="Ingrese el nombre..."
+                        required>
+                    </div>
+
+                    <div class="form-group input-group mb-3">
+                      <span class="input-group-text"><i class="bi bi-person-fill fs-4"></i></span>
+                      <input type="email" class="form-control fs-5" id="email" placeholder="Ingrese el usuario..."
+                        required>
+                    </div>
+
+                    <div class="form-group input-group mb-3">
+                      <span class="input-group-text"><i class="bi bi-lock-fill fs-4"></i></span>
+                      <input type="password" class="form-control fs-5" id="password"
+                        placeholder="Ingrese la contraseña..." required>
+                    </div>
+
+                    <div class="form-group input-group mb-3">
+                      <span class="input-group-text"><i class="bi bi-lock-fill fs-4"></i></span>
+                      <input type="password" class="form-control fs-5" id="password"
+                        placeholder="Confirme la contraseña..." required>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <label for="gender" class="me-3 mb-0">Seleccione su genero</label>
+                      <select id="gender" class="form-select w-50" aria-label="Select gender">
+                        <option selected disabled>Elegir...</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                        <option value="other">LGTB</option>
+                      </select>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                      <label>
+                        <input type="checkbox">
+                        Remenber me
+                      </label>
+                    </div>
+
+                    <a href="#" class="form-group btn btn-primary text-center gap-5 w-100 mb-3">
+                      <i class="bi bi-save"></i> Guardar
+                    </a>
+
+                    <div class="form-group text-end">
+                      <a href="#">Forget Password</a>
+                    </div>
+                    </form>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Tabla-->
+        <div class="modal fade" id="modalTabla" tabindex="-1" aria-labelledby="modalTablaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTablaLabel">Tabla de Integrantes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+
+              <div class="modal-body">
+                <table class="table text-center">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Correo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Jilmar</td>
+                      <td>Gonzalez</td>
+                      <td>jigonzalez3@espe.edu.ec</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Dereck</td>
+                      <td>Jimenez</td>
+                      <td>dijimenez3@espe.edu.ec</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Barra de Progreso Login-->
+        <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="loadingModalLabel">Cargando acceso...</h5>
+              </div>
+
+              <div class="modal-body text-center">
+
+                <!-- Barra de Prgreso con Animacion-->
+                <div class="progress" style="height: 25px;">
+                  <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                    role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    0%
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Barra de Progreso Formulario -->
+        <div class="modal fade" id="modalCargando" tabindex="-1" aria-labelledby="modalCargandoLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCargandoLabel">Cargando Formulario...</h5>
+              </div>
+
+              <div class="modal-body text-center">
+
+                <!-- Barra de Progreso Simple -->
+                <div class="progress" style="height: 30px;">
+                  <div id="progressBarCarga" class="progress-bar bg-success" role="progressbar" style="width: 0%;"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Barra de Progreso Tabla -->
+        <div class="modal fade" id="modalCargaTabla" tabindex="-1" aria-labelledby="modalCargaTablaLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCargaTablaLabel">Cargando tabla de integrantes...</h5>
+              </div>
+
+              <div class="modal-body text-center">
+
+                <!-- Barra de Progreso con Etiqueta-->
+                <div class="progress" style="height: 25px;">
+                  <div id="progressBarTabla" class="progress-bar progress-bar-animated bg-success" role="progressbar"
+                    style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    0%
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div
+          class="col-12 col-sm-8 col-md-8 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 rounded shadow p-3">
+
+          <a href="#" class="btn btn-success text-center gap-1 w-75">
+            <i class="bi bi-person"></i> Login
+          </a>
+
+          <a href="#" class="btn btn-success text-center gap-1 w-75">
+            <i class="bi bi-pencil-square"></i> Register
+          </a>
+
+          <a href="#" class="btn btn-success text-center gap-1 w-75">
+            <i class="bi bi-box-seam"></i> Producto
+          </a>
+
+          <a href="#" class="btn btn-success text-center gap-1 w-75" id="btnFormulario">
+            <i class="bi bi-person"></i> Formulario
+          </a>
+
+
+        </div>
+
+        <div class="col-12 col-sm-8 col-md-8 col-lg-4 text-center rounded shadow p-3">
+          <h2>Aplicaciones de tecnologias Web</h2>
+          <p>Grupo No: 3</p>
+          <p>Integrantes: Jilmar Gonzalez, Dereck Jimenez</p>
+          <p>NRC: 29922</p>
+          <p>Fecha: 30/10/2025</p>
+        </div>
+
+        <div class="col-12 col-sm-8 col-md-8 col-lg-4 d-flex justify-content-center rounded shadow p-3">
+          <video class="w-100 h-100 rounded" controls autoplay muted>
+            <source src="./video/Himno Universidad de las Fuerzas Armadas ESPE_ 2023(144P).mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid">
+      <div class="row">
+        <footer class="text-center bg-light p-3 bg-dark">
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-primary d-flex align-items-center gap-1" target="_blank">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="#" class="btn btn-info d-flex align-items-center gap-1" target="_blank">
+              <i class="bi bi-twitter"></i> Twitter
+            </a>
+            <a href="#" class="btn btn-danger d-flex align-items-center gap-1" target="_blank">
+              <i class="bi bi-youtube"></i> Youtube
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+      </script>
+
+    <!-- Script Barra de Progreso Login-->
+    <script>
+      document.getElementById('btnComandante').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Mostrar modal de carga
+        var loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
+        loadingModal.show();
+
+        var progress = 0;
+        var progressBar = document.getElementById('progressBar');
+
+        // Simular carga progresiva
+        var interval = setInterval(() => {
+          progress += 10;
+          progressBar.style.width = progress + '%';
+          progressBar.setAttribute('aria-valuenow', progress);
+          progressBar.textContent = progress + '%';
+
+          if (progress >= 100) {
+            clearInterval(interval);
+
+            // Esperar un momento y abrir modal de login
+            setTimeout(() => {
+              loadingModal.hide(); // Cierra el modal de carga
+
+              // Mostrar el modal de login
+              var loginModal = new bootstrap.Modal(document.getElementById('modalLogin'));
+              loginModal.show();
+            }, 500);
+          }
+        }, 200); // cada 200 ms
+      });
+    </script>
+
+    <!-- Script Barra de Progreso Formulario-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const btnFormulario = document.getElementById('btnFormulario');
+        const modalCargando = new bootstrap.Modal(document.getElementById('modalCargando'));
+        const modalFormulario = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        const progressBar = document.getElementById('progressBarCarga');
+
+        btnFormulario.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          let progreso = 0;
+          progressBar.style.width = '0%';
+          modalCargando.show();
+
+          const intervalo = setInterval(() => {
+            progreso += 10;
+            progressBar.style.width = progreso + '%';
+            progressBar.setAttribute('aria-valuenow', progreso);
+
+            if (progreso >= 100) {
+              clearInterval(intervalo);
+              setTimeout(() => {
+                modalCargando.hide();
+                modalFormulario.show();
+              }, 400);
+            }
+          }, 200);
+        });
+      });
+    </script>
+
+    <!-- Script Barra de Progreso Tabla-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const btnGrupo3 = document.getElementById('btnGrupo3');
+        const modalCargaTabla = new bootstrap.Modal(document.getElementById('modalCargaTabla'));
+        const modalTabla = new bootstrap.Modal(document.getElementById('modalTabla'));
+        const progressBar = document.getElementById('progressBarTabla');
+
+        btnGrupo3.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          let progreso = 0;
+          progressBar.style.width = '0%';
+          progressBar.textContent = '0%';
+          modalCargaTabla.show();
+
+          const intervalo = setInterval(() => {
+            progreso += 10;
+            progressBar.style.width = progreso + '%';
+            progressBar.setAttribute('aria-valuenow', progreso);
+            progressBar.textContent = progreso + '%';
+
+            if (progreso >= 100) {
+              clearInterval(intervalo);
+              setTimeout(() => {
+                modalCargaTabla.hide();
+                modalTabla.show();
+              }, 400);
+            }
+          }, 150); // velocidad de llenado
+        });
+      });
+    </script>
+
+</body>
+
+</html>

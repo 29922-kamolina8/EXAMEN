@@ -163,3 +163,35 @@ ul#accordionSidebar {
 ul#accordionSidebar.toggled + #content-wrapper {
     margin-left: 104px;
 }
+
+.topbar {
+    position: fixed; 
+    top: 0;         
+    right: 0;        
+    left: 224px;    
+    z-index: 1030;   
+    margin-bottom: 0 !important; 
+}
+
+#content {
+    padding-top: 67px; 
+}
+
+ul#accordionSidebar.toggled + #content-wrapper #content .topbar {
+    left: 104px; 
+    width: calc(100% - 104px); 
+}
+
+.topbar {
+    width: calc(100% - 224px); 
+}
+
+
+#content-wrapper {
+    overflow: visible; 
+}
+
+
+ul.sidebar {
+    z-index: 1040; 
+}

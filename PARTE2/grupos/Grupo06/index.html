@@ -11,20 +11,25 @@
     <title>EXAMEN PARCIAL 1 - List</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap 5.1.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="css/style.css" rel="stylesheet">
+
 
 </head>
 
 <body id="page-top">
     <div id="wrapper">
+        <!-- ... (Tu sidebar se mantiene igual) ... -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
@@ -35,7 +40,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -88,11 +93,12 @@
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
+                <!-- ... (Tu topbar se mantiene igual) ... -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <div class="navbar-center">
                         EXAMEN PARCIAL 1
                     </div>
@@ -126,21 +132,1271 @@
 
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">List - Grupo 06</h1>
-                    
+
+                    <!-- ... (El contenido teórico se mantiene igual) ... -->
+                    <h1 class="h5 mb-4 text-left">Teoría</h1>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-header py-3 tittle">
+                                    <h6 class="m-0 font-weight-bold">Listas</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        Una lista en HTML es una estructura utilizada para agrupar
+                                        ítems relacionados o no relacionados. Su propósito principal es organizar
+                                        la información de una manera clara y estructurada.
+                                    </p>
+                                    <ul>
+                                        <li class="fw-normal"><span class="fw-bold">Estructura: </span> Se define
+                                            mediante un contenedor principal (<code>ul</code> para desordenada,
+                                            <code>ol</code> para ordenada o <code>dl</code> para descripción)
+                                            que agrupa una serie de ítems secundarios (<code>li</code>).
+                                        </li>
+                                        <li class="fw-normal"><span class="fw-bold">Concepto: </span> Representa una
+                                            colección de elementos donde cada elemento (<code>li</code>) tiene una
+                                            relación o dependencia con el conjunto.
+                                            Es la base para crear menús, navegaciones y contenidos enumerados.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <h1 class="h5 mb-4 text-left">Tipos de Listas</h1>
+
+                        <!-- LISTA NO ORDENADA -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas No Ordenadas</h5>
+                                    <p class="card-text">
+                                        Son las más sencillas y las más utilizadas. Es un conjunto de
+                                        elementos relacionados entre sí, pero que no tienen un orden o secuencia
+                                        determinados.
+                                    </p>
+                                    <p>
+                                        <span class="fw-bold">ul: </span> encierra todos los elementos de la lista.
+                                        <br>
+                                        <span class="fw-bold">li: </span> encierra cada uno de los elementos.
+                                    </p>
+                                    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Té&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LISTA ORDENADA -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas Ordenadas</h5>
+                                    <p class="card-text">
+                                        Son similares a las listas no ordenadas, pero los elementos se muestran
+                                        siguiendo un orden determinado.
+                                    </p>
+                                    <p>
+                                        <span class="fw-bold">ol: </span> lista ordenada.
+                                        <br>
+                                        <span class="fw-bold">li: </span> encierra cada uno de los elementos.
+                                    </p>
+                                    <pre><code>&lt;ol&gt;
+  &lt;li&gt;Paso 1&lt;/li&gt;
+  &lt;li&gt;Paso 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LISTA DE ELEMENTOS COMPLEJOS -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas de Elementos Complejos</h5>
+                                    <p class="card-text">
+                                        Son componentes flexibles que permiten mostrar elementos
+                                        conformados por distintos tipos de contenido HTML.
+                                        Se puede incluir prácticamente cualquier tipo de elemento dentro de cada ítem.
+                                    </p>
+                                    <p>
+                                        <span class="fw-bold">Class: </span> list-group-item-heading
+                                        <br>
+                                        <span class="fw-bold">Class: </span> list-group-item-text
+                                    </p>
+                                    <pre><code>&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item active"&gt;
+        &lt;h4 class="list-group-item-heading"&gt;Mercedes-Benz A-Class&lt;/h4&gt;
+        &lt;p class="list-group-item-text"&gt;
+            La A-Class representa la entrada de gama de Mercedes-Benz.
+        &lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="list-group-item"&gt;
+        &lt;h4 class="list-group-item-heading"&gt;Mercedes-Benz C-Class&lt;/h4&gt;
+        &lt;p class="list-group-item-text"&gt;
+            La C-Class es un sedán compacto-mediano.
+        &lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- LISTA CON BADGE -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas de Elementos con Badge</h5>
+                                    <p class="card-text">
+                                        Muestran una cantidad o un estado asociado al ítem principal de la lista.
+                                    </p>
+                                    <p>
+                                        <span class="fw-bold">Class: </span> list-group
+                                        <br>
+                                        <span class="fw-bold">Class: </span> list-group-item
+                                    </p>
+                                    <pre><code>&lt;li class="list-group-item d-flex..."&gt;
+  Imágenes
+  &lt;span class="badge"&gt;10&lt;/span&gt;
+&lt;/li&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LISTA DE ENLACES -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listas de Elementos de Enlace</h5>
+                                    <p class="card-text">
+                                        Para crear una lista de elementos interactivos se reemplazan los
+                                        elementos <code>li</code> por elementos <code>a</code>.
+                                        Se encierran en un contenedor <code>div</code> (no en <code>ul</code>).
+                                        En este tipo de listas se visualiza un efecto <em>hover</em> en cada elemento.
+                                        Si se desea una lista activa, se utiliza la clase <code>active</code> en el
+                                        elemento correspondiente.
+                                    </p>
+                                    <p>
+                                        <span class="fw-bold">Class: </span> list-group
+                                        <br>
+                                        <span class="fw-bold">Class: </span> list-group-item
+                                    </p>
+                                    <pre><code>&lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item"&gt;
+    Inicio
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-header py-3 tittle">
+                                    <h6 class="m-0 font-weight-bold">Operaciones jQuery por Tipo de Lista</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-4">jQuery es una biblioteca de JavaScript que facilita la manipulación
+                                        de elementos HTML (el DOM).
+                                        Para las listas, nos permite agregar, eliminar y modificar ítems
+                                        (<code>&lt;li&gt;</code>) dentro de listas
+                                        ordenadas (<code>&lt;ol&gt;</code>) o desordenadas (<code>&lt;ul&gt;</code>) de
+                                        forma dinámica.
+                                    </p>
+                                    <h4 class="font-semibold">Selectores Clave</h4>
+                                    <p>
+                                        Los selectores son la base de jQuery, ya que le indican qué elementos del DOM
+                                        (Document Object Model) debe
+                                        manipular. jQuery utiliza la sintaxis de selectores CSS para encontrar
+                                        elementos.
+                                    </p>
+                                    <div class="container">
+                                        <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-sm text-dark">
+                                            <li><code>$("ul")</code>: Selecciona todas las listas desordenadas.</li>
+                                            <li><code>$("#mi-lista")</code>: Selecciona el elemento con el ID
+                                                "mi-lista".</li>
+                                            <li><code>$(".clase-item")</code>: Selecciona todos los elementos con la
+                                                clase "clase-item".</li>
+                                            <li><code>$("#mi-lista li")</code>: Selecciona todos los
+                                                <code>&lt;li&gt;</code> dentro de la lista
+                                                "#mi-lista".
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="font-semibold mt-4">Métodos Fundamentales</h4>
+                                    <p>
+                                        Los métodos fundamentales son el corazón de la interactividad en jQuery. Son los
+                                        que ejecutan las
+                                        acciones sobre los elementos que previamente seleccionaste.
+                                    </p>
+                                    <div class="container">
+                                        <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-sm text-dark">
+                                            <li><code>.append("...")</code>: Añade contenido (ej. un nuevo
+                                                <code>&lt;li&gt;</code>) al final del elemento
+                                                seleccionado.
+                                            </li>
+                                            <li><code>.prepend("...")</code>: Añade contenido al principio del elemento
+                                                seleccionado.</li>
+                                            <li><code>.remove()</code>: Elimina el elemento seleccionado (y todo su
+                                                contenido).</li>
+                                            <li><code>.on("click", function() { ... })</code>: Asigna un evento de clic.
+                                                Es fundamental para la
+                                                interactividad.</li>
+                                            <li><code>.toggleClass("clase")</code>: Añade una clase CSS si no la tiene,
+                                                o la quita si ya la tiene.
+                                                Perfecto
+                                                para "marcar" ítems.</li>
+                                            <li><code>.val()</code>: Obtiene o establece el valor de un campo de
+                                                formulario (como un
+                                                <code>&lt;input&gt;</code>).
+                                            </li>
+                                            <li><code>.parent()</code>: Selecciona el elemento "padre" directo del
+                                                elemento actual.</li>
+                                        </ul>
+                                    </div>
+                                    <h3>Evento Document Ready</h3>
+                                    <p>
+                                        En jQuery se utiliza para ejecutar código cuando el documento HTML ha sido
+                                        completamente cargado y parseado.
+                                        Este
+                                        evento se dispara cuando todos los elementos del DOM están disponibles para
+                                        manipular.
+                                    </p>
+                                    <div class="container evento">
+                                        <p>
+                                            $(document).ready(function() {<br>
+                                            // Funcionalidad
+                                            <br>
+                                            });
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h1 class="h5 mb-4 text-left">Video Demostrativo</h1>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 tittle">
+                            <h6 class="m-0 font-weight-bold">Video</h6>
+                        </div>
+                        <div class="card-body">
+                            <!-- Contenedor responsivo para el video -->
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="video/Capítulo 6 - Listas.mp4" type="video/mp4">
+                                    Tu navegador no soporta la etiqueta de video.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-header py-3 tittle">
+                                    <h6 class="m-0 font-weight-bold">Ejemplo: Listas con Contenido Complejo (del Video)
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <pre><code>&lt;!-- 
+  En Bootstrap 5, las clases .list-group-item-heading y 
+  .list-group-item-text han sido reemplazadas.
+  Ahora simplemente se usa formato estándar dentro del ítem.
+--&gt;
+&lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action active"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h5 class="mb-1"&gt;Título del Elemento 1&lt;/h5&gt;
+      &lt;small&gt;hace 3 días&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Este es el texto de descripción del elemento.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h5 class="mb-1"&gt;Título del Elemento 2&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Otra descripción para este elemento de la lista.&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+                                    <button class="btn btn-primary execute" data-code="video-demo">Ejecutar</button>
+
+                                    <div id="video-demo-output" class="mt-4 border p-3 rounded"></div>
+
+                                    <hr class="my-4">
+                                    <h1 class="h5 mb-4 text-left">Explicación Ejemplo 1: Código (Bootstrap 5)</h1>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="card content-card">
+                                                <div class="card-body">
+                                                    <h6 class="m-0 font-weight-bold">1. Contenedor: `.list-group`</h6>
+                                                    <p>Se usa un `&lt;div&gt;` con la clase `list-group` para envolver
+                                                        todos los elementos.</p>
+                                                    <pre><code>&lt;div class="list-group"&gt; ... &lt;/div&gt;</code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="card content-card">
+                                                <div class="card-body">
+                                                    <h6 class="m-0 font-weight-bold">2. Ítems: `.list-group-item-action`
+                                                    </h6>
+                                                    <p>Cada elemento es un enlace `&lt;a&gt;` con `list-group-item`. Se
+                                                        añade `list-group-item-action` para obtener el efecto *hover*
+                                                        (sombrear al pasar el mouse).</p>
+                                                    <pre><code>&lt;a href="#" class="list-group-item list-group-item-action"&gt; ... &lt;/a&gt;</code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="card content-card">
+                                                <div class="card-body">
+                                                    <h6 class="m-0 font-weight-bold">3. Contenido Personalizado (Títulos
+                                                        y Texto)</h6>
+                                                    <p>A diferencia de Bootstrap 3 (del video), en Bootstrap 5 se usan
+                                                        etiquetas HTML estándar (`&lt;h5&gt;`, `&lt;p&gt;`) y utilidades
+                                                        de `flexbox` y espaciado (`d-flex`, `mb-1`) para organizar el
+                                                        contenido.</p>
+                                                    <pre><code>&lt;div class="d-flex w-100 justify-content-between"&gt;
+  &lt;h5 class="mb-1"&gt;Título...&lt;/h5&gt;
+&lt;/div&gt;
+&lt;p class="mb-1"&gt;Texto...&lt;/p&gt;</code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h1 class="h5 mb-4 text-left">Demos</h1>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 tittle">
+                            <h6 class="m-0 font-weight-bold">Ejercicio 1 - Listas Ordenadas y No Ordenadas</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Demostrar las operaciones fundamentales de manipulación de listas desordenadas (ul)
+                                utilizando la librería jQuery
+                            </p>
+
+                            <pre><code>
+&lt;div class="row align-items-center mt-3"&gt;
+    &lt;div class="col-md-6 shadow lista"&gt;
+        &lt;h3&gt;Lista No Ordenada y Ordenadas&lt;/h3&gt;
+        &lt;h4&gt;Lenguajes de Programación&lt;/h4&gt;
+        &lt;ul class="list-group" id="NoOrdenada"&gt;
+            &lt;li&gt;C++&lt;/li&gt;
+            &lt;li&gt;Java&lt;/li&gt;
+            &lt;li&gt;Python&lt;/li&gt;
+            &lt;li&gt;PHP&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 shadow Operacion"&gt;
+        &lt;h3&gt;Operaciones&lt;/h3&gt;
+        &lt;div class="Container"&gt;
+            &lt;h4&gt;Elemento a Agregar&lt;/h4&gt;
+            &lt;input class="form-control" type="text" placeholder="Lenguaje de Programación..." id="itemInput"&gt;
+
+            &lt;div id="errorMsg" class_exists="text-danger small mt-1"&gt;&lt;/div&gt;
+
+            &lt;h4&gt;Mostrar&lt;/h4&gt;
+            &lt;div id="log" class="text-center"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;table class="table table-hover"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Operación&lt;/th&gt;
+                &lt;th&gt;Método jQuery&lt;/th&gt;
+                &lt;th&gt;Descripción&lt;/th&gt;
+                &lt;th&gt;Acción&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Añadir Ítem&lt;/td&gt;
+                &lt;td&gt;.append(), .prepend()&lt;/td&gt;
+                &lt;td&gt;Agrega nuevos &lt;span class="text-dark"&gt;li&lt;/span&gt; al final o al inicio del contenedor&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;button class="btn btn-primary btn-sm" id="addEnd"&gt;Añadir al Final (.append)&lt;/button&gt;
+                    &lt;button class="btn btn-primary btn-sm" id="addStart"&gt;Añadir al Inicio (.prepend)&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Eliminar Ítem&lt;/td&gt;
+                &lt;td&gt;.remove()&lt;/td&gt;
+                &lt;td&gt;Elimina un &lt;span class="text-dark"&gt;li&lt;/span&gt; específico.&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;button class="btn btn-danger btn-sm" id="removeLast"&gt;Eliminar Último (.remove)&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Recorrer&lt;/td&gt;
+                &lt;td&gt;.each()&lt;/td&gt;
+                &lt;td&gt;Itera sobre todos los &lt;span class="text-dark"&gt;li&lt;/span&gt; para leer o modificar su contenido.&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;button class="btn btn-primary btn-sm" id="iterate"&gt;Recorrer y Mostrar (.each)&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Manejar Evento&lt;/td&gt;
+                &lt;td&gt;.on("click")&lt;/td&gt;
+                &lt;td&gt;Asigna una acción al hacer clic en cualquier &lt;span class="text-dark"&gt;li&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;Seleccionar algún elemento de la Lista&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+
+                            <button class="btn btn-primary execute" data-code="jquery-demo">Ejecutar</button>
+                            <div id="jquery-demo-output" class="mt-4 border p-3 rounded"></div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h1 class="h5 mb-4 text-left">Explicación de Código</h1>
+                    <div class="row" id="ejer1">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod1.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Esta función tiene como propósito validar un campo de entrada de texto, manejar
+                                        mensajes de
+                                        error y resetear el texto ingresado para que pueda ser utilizado como un nuevo
+                                        elemento de lista (li) en el DOM.
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li class="fw-normal"><span class="fw-bold">Obtiene el valor: </span> Usa
+                                            $itemInput.val() para obtener el texto del campo de entrada.</li>
+                                        <li class="fw-normal"><span class="fw-bold">Limpia el texto: </span>Aplica
+                                            .trim() para eliminar cualquier espacio en blanco al inicio y al final del
+                                            texto.</li>
+                                        <li class="fw-normal"><span class="fw-bold">Si es válido: </span>Limpia
+                                            cualquier mensaje de error anterior de $errorMsg ($errorMsg.text("")) y
+                                            limpia el campo de entrada ($itemInput.val("")) para prepararlo para el
+                                            siguiente uso.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod2.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <img src="img/cod3.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Esta función tiene como propósito validar un campo de entrada de texto, manejar
+                                        mensajes de
+                                        error y resetear el texto ingresado para que pueda ser utilizado como un nuevo
+                                        elemento de lista (li) en el DOM.
+                                    </p>
+                                    <br>
+                                    <ol>
+                                        <li class="fw-normal"><span class="fw-bold">Añadir al Final: </span> Crea y
+                                            añade un nuevo elemento de lista (
+                                            li) con el texto validado del input al final del contenedor de la lista.
+                                            Método .append()
+                                        </li>
+                                        <li class="fw-normal"><span class="fw-bold">Añadir al Inicio: </span>Crea y
+                                            añade un
+                                            nuevo elemento de lista (
+                                            li) con el texto validado del input al principio del contenedor de la
+                                            lista. Método .prepend()</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod4.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Elimina el último elemento de la lista (li) si existe, usando un selector
+                                        avanzado para encontrarlo. Para realizar esta acción se usan métodos como:
+                                        .remove() y :last
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li class="fw-normal">Utiliza $noOrdenadaList.find("li:last") para seleccionar
+                                            específicamente el último elemento de la lista.</li>
+                                        <li class="fw-normal">Si encuentra un elemento (.length > 0), guarda su texto,
+                                            luego lo elimina permanentemente del DOM con el método .remove().</li>
+                                        <li class="fw-normal">Actualiza el $log con el nombre del ítem eliminado o
+                                            notifica si la lista está vacía.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod5.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Lee/procesa el contenido de toda la lista, iterando sobre cada elemento para
+                                        mostrar su contenido indexado en el área de log. Para esto se usan métodos:
+                                        .each() y .find()
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li class="fw-normal">Usa .each() para iterar sobre todos los li encontrados en
+                                            la lista.</li>
+                                        <li class="fw-normal">Dentro del bucle, construye una cadena HTML
+                                            que lista cada ítem con su índice y texto.</li>
+                                        <li class="fw-normal"><span class="fw-bold">Al finalizar, muestra esta lista
+                                                formateada en el área de $log.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod6.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Permite interactuar con cada uno de los ítems individuales de la lista,
+                                        alternando una clase
+                                        de estilo (resaltado) al hacer clic en ellos.
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li class="fw-normal">Al hacer clic en cualquier
+                                            li, utiliza .toggleClass("resaltado") para añadir o quitar una clase CSS,
+                                            permitiendo al usuario seleccionar o deseleccionar el ítem.</li>
+                                        <li class="fw-normal">Actualiza el $log para reflejar qué ítem fue clickeado.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 tittle">
+                            <h6 class="m-0 font-weight-bold">Ejercicio 2 - Listas de Elementos con Badge</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Demostración interactiva en jQuery para manipular y estilizar elementos de una lista con
+                                badges (contadores), específicamente enfocada en las películas.
+                            </p>
+                            <pre><code>
+&lt;div class="row align-items-center mt-3"&gt;
+    &lt;div class="col-md-6 shadow Operacion"&gt;
+        &lt;h3&gt;Operaciones&lt;/h3&gt;
+
+        &lt;table class="table table-hover"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Operador&lt;/th&gt;
+                &lt;th&gt;Método jQuery&lt;/th&gt;
+                &lt;th&gt;Descripción&lt;/th&gt;
+                &lt;th&gt;Acción&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Actualizar contador&lt;/td&gt;
+                &lt;td&gt;.text()&lt;/td&gt;
+                &lt;td&gt;Obtiene (.text()) el valor actual, lo calcula y lo establece (.text(nuevoValor)).&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;button class="btn btn-success btn-sm" id="incrementarContador"&gt;Incrementar contador&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Cambiar color&lt;/td&gt;
+                &lt;td&gt;.removeClass(), .addClass()&lt;/td&gt;
+                &lt;td&gt;Cambia el estado visual del badge.&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;button class="btn btn-warning btn-sm" id="cambiarAAlerta"&gt;Cambiar color a alerta&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Resaltar ítem&lt;/td&gt;
+                &lt;td&gt;.parent()&lt;/td&gt;
+                &lt;td&gt;Si haces clic en el badge, usas .parent() para manipular el li o el contenedor.&lt;/td&gt;
+                &lt;td&gt;Seleccionar un ítem&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 lista"&gt;
+        &lt;h3&gt;Lista de elementos con Badge&lt;/h3&gt;
+        &lt;h4&gt;Películas del 2025&lt;/h4&gt;
+        &lt;ul class="list-group" id="ListaBadge"&gt;
+            &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+                Acción
+                &lt;span class="badge bg-primary"&gt;5&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+                Comedia
+                &lt;span class="badge bg-success"&gt;1&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li class="list-group-item d-flex justify-content-between align-items-center" id="CienciaFiccion"&gt;
+                Ciencia ficción
+                &lt;span class="badge bg-warning text-dark" id="ContadorCiencia"&gt;10&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+                Suspenso
+                &lt;span class="badge bg-danger"&gt;2&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;a class="list-group-item d-flex justify-content-between align-items-center"&gt;
+                Terror
+                &lt;span class="badge bg-info text-dark"&gt;14&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                            <button class="btn btn-primary execute" data-code="exercise">Ejecutar</button>
+                            <div id="exercise" class="mt-4"></div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h1 class="h5 mb-4 text-left">Explicación del Código</h1>
+                    <div class="row" id="Ejer2">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod7.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Esta función se encarga de aumentar el valor numérico del badge asociado al
+                                        elemento seleccionado.
+                                    </p>
+                                    <br>
+                                    <table>
+                                        <tr>
+                                            <th>Código</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                        <tr>
+                                            <td>const $itemResaltado = $badgeList.find(".resaltado");</td>
+                                            <td>Busca el ítem seleccionado (el li o a con la clase .resaltado).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>const $badge = $itemResaltado.find(".badge");</td>
+                                            <td>Una vez encontrado el ítem resaltado, busca el badge (span con clase
+                                                .badge) dentro de él.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>let valorActual = $badge.text();</td>
+                                            <td>Contenido actual del badge.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>let nuevoValor = parseInt(valorActual, 10) + 1;</td>
+                                            <td>Convierte el texto a un número entero y le suma 1.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>$badge.text(nuevoValor);</td>
+                                            <td>Actualiza el texto del badge con el nuevo valor incrementado.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod8.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>Esta función se utiliza para alternar las clases de estilo de Bootstrap en el
+                                        badge del ítem seleccionado, cambiando su color.</p>
+                                    <br>
+                                    <table>
+                                        <tr>
+                                            <th>Código</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                        <tr>
+                                            <td>const $itemResaltado = $badgeList.find(".resaltado");</td>
+                                            <td>Busca el ítem seleccionado (el li o a con la clase .resaltado).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>const $badge = $itemResaltado.find(".badge");</td>
+                                            <td>Busca el badge dentro del ítem resaltado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>if ($badge.hasClass("bg-warning")) { ... } else { ... }</td>
+                                            <td>Verifica el estado actual del color.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>.removeClass("bg-warning text-dark").addClass("bg-danger");</td>
+                                            <td>Si el badge es amarillo (bg-warning), lo cambia a rojo (bg-danger).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>.removeClass("bg-primary...").addClass("bg-warning text-dark");</td>
+                                            <td>Si el badge es de otro color, lo cambia a amarillo (bg-warning) y le
+                                                añade
+                                                el texto oscuro (text-dark).</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card content-card">
+                                <div class="card-body">
+                                    <img src="img/cod9.png" class="img-fluid mb-3" alt="Bootstrap 5" width="400px"
+                                        height="auto">
+                                    <p>
+                                        Esta sección define cómo el usuario puede seleccionar un ítem de la lista, ya
+                                        sea haciendo clic en el texto principal o en el badge del contador.
+                                    </p>
+                                    <ol>
+                                        <li class="text-normal"><strong>Función:</strong> En lugar de asignar un
+                                            listener a cada elemento
+                                            individual (li o a), el listener se coloca en el elemento contenedor padre
+                                            ($badgeList).</li>
+                                        <li>
+                                            A todos esos hermanos les remueve la clase de estilo "resaltado",
+                                            asegurando que queden deseleccionados.
+                                        </li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 tittle">
+                            <h6 class="m-0 font-weight-bold">Ejercicio</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Demostrar la habilidad para manipular dinámicamente elementos, atributos y contenido
+                                dentro de listas no ordenadas (
+                                ul) utilizando las funciones de jQuery.
+                            </p>
+                            <button class="btn btn-primary execute" data-code="example"
+                                id="EjemploPractico">Ejecutar</button>
+                        </div>
+                    </div>
+                    <section id="Ejercicio" class="text-center py-5" style="display: none;">
+                        <div class="ejercicio-interactivo-ejecucion">
+                            <div class="container-fluid">
+                                <iframe src="Grupo04_Prueba01_Parte02/index.html" class="iframe-ejercicio"
+                                    title="Demostración Scrollspy" id="Ejercicio4" frameborder="0">
+                                </iframe>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="row mt-4 d-flex" style="display: none;" id="Desccripcion">
+
+                        <div class="col-md-6">
+                            <div class="card shadow-lg">
+                                <div class="card-header bg-dark text-white">
+                                    <h5 class="mb-0">Lista de Tareas del Comandante</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group mb-3" id="NoOrdenada">
+                                        <li class="list-group-item">Revisar reporte Grupo 2</li>
+                                        <li class="list-group-item">Aprobar permisos</li>
+                                    </ul>
+                                    <p class="text-secondary">
+                                        Esta lista permite <strong>agregar, eliminar o recorrer tareas</strong> mediante
+                                        botones controlados con
+                                        jQuery.
+                                        El usuario puede añadir nuevas actividades al inicio o al final,
+                                        eliminar la última tarea completada y ver todas las tareas actuales sin recargar
+                                        la página.
+                                        <br>
+                                        En la primera lista, el sistema toma la información ingresada en el input
+                                        identificado por su id con el
+                                        método <strong>$("#idDelInput").val()</strong>. Posteriormente, ese valor se
+                                        inserta dentro de una lista
+                                        <strong>ul</strong> mediante el método .append() o .prepend(), creando un nuevo
+                                        elemento
+                                        <strong>li</strong>
+                                        que se muestra en pantalla.
+                                        También permite eliminar elementos con .remove(), recorrer la lista completa
+                                        usando .each() y mostrar los
+                                        datos directamente en el navegador.
+                                    </p>
+                                    <br><br>
+                                    <button class="btn btn-dark">
+                                        <a class="text-light" href="#ejer1">Codigos Empleados</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card shadow-lg">
+                                <div class="card-header bg-dark text-white">
+                                    <h5 class="mb-0">Lista de Grupos con Badge</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group mb-3" id="ListaBadge">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Grupo 1 <span class="badge bg-primary rounded-pill">2</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Grupo 2 <span class="badge bg-secondary rounded-pill">4</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Grupo Actual <span class="badge bg-success rounded-pill">3</span>
+                                        </li>
+                                    </ul>
+                                    <p class="text-secondary">
+                                        Esta lista muestra los <strong>grupos activos y su número de
+                                            integrantes</strong>.
+                                        Con jQuery, se pueden <strong>incrementar los contadores</strong> o
+                                        <strong>cambiar el estado visual</strong> del grupo actual (por ejemplo,
+                                        resaltarlo como activo o en
+                                        alerta).
+                                        Esto sirve para practicar manipulación dinámica del DOM y control de clases con
+                                        jQuery.
+                                        <br>
+                                        En la segunda lista, el código trabaja de manera similar, pero enfocado en los
+                                        badges de Bootstrap para
+                                        mostrar números o estados junto a cada elemento de la lista.
+                                        Cada elemento <strong>li</strong> contiene un span con clase badge, y para
+                                        actualizar dinámicamente
+                                        mediante
+                                        .text() para
+                                        reflejar cambios, como el número de integrantes o tareas por grupo.
+                                        Además, se usan los métodos .addClass() y .toggleClass() para modificar el
+                                        estilo visual y resaltar, por
+                                        ejemplo, el grupo activo.
+                                    </p>
+                                    <br><br>
+                                    <button class="btn btn-dark">
+                                        <a class="text-light" href="#Ejer2">Codigos Empleados</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Este es Bootstrap 4 -->
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
+
+    <!-- Bootstrap 5.1.3 JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script src="js/Ejemplos.js"></script>
+    <script src="js/Funcionalidad_li.js"></script>
+    <script>
+        const boton = document.getElementById("EjemploPractico");
+        const Prueba = document.getElementById("Ejercicio");
+        const desc = document.getElementById("Desccripcion");
+
+        boton.addEventListener("click", () => {
+            // Si está oculto, lo muestra; si está visible, lo oculta
+            if (Prueba.style.display === "none" || Prueba.style.display === "") {
+                Prueba.style.display = "block";
+            } else {
+                Prueba.style.display = "none";
+            }
+            if (desc.style.display === "none" || desc.style.display === "") {
+                desc.style.display = "block";
+            } else {
+                desc.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Script para botones de TEORÍA
+            $(".execute-theory").click(function () {
+                const targetId = $(this).data("target");
+                const $targetDiv = $(targetId);
+                let htmlToInject = "";
+
+                $(".theory-demo-output").html("");
+
+                if (targetId === "#output-ul") {
+                    htmlToInject = `
+            <ul style="padding-left: 20px;">
+                <li>Café</li>
+                <li>Té</li>
+                <li>Agua</li>
+            </ul>`;
+                } else if (targetId === "#output-ol") {
+                    htmlToInject = `
+            <ol style="padding-left: 20px;">
+                <li>Paso 1: Inicializar</li>
+                <li>Paso 2: Procesar</li>
+            </ol>`;
+                } else if (targetId === "#output-complex") {
+                    htmlToInject = `
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">Mercedes-Benz A-Class</h4>
+                        <p class="list-group-item-heading">
+                            La A-Class representa la entrada de gama de Mercedes-Benz
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Mercedes-Benz C-Class</h4>
+                        <p class="list-group-item-heading">
+                            La C-Class es un sedán compacto-mediano
+                        </p>
+                    </a>
+                </div>`;
+                } else if (targetId === "#output-badge") {
+                    htmlToInject = `
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Imágenes
+                    <span class="badge bg-primary rounded-pill">10</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Archivos
+                    <span class="badge bg-primary rounded-pill">5</span>
+                </li>
+            </ul>`;
+                } else if (targetId === "#output-link") {
+                    htmlToInject = `
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">Inicio</a>
+                <a href="#" class="list-group-item list-group-item-action">Modelos</a>
+                <a href="#" class="list-group-item list-group-item-action">Tecnología</a>
+            </div>`;
+                }
+                $targetDiv.html(htmlToInject);
+            });
+
+
+            // Script para botones de EJEMPLO y EJERCICIO
+            $(".execute").click(function () {
+
+                var example = $(this).data("code");
+                var code = '';
+
+                // --- EJEMPLO 1 (VIDEO) ---
+                if (example === "video-demo") {
+                    code = `
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1 text-light">Título del elemento 1</h5>
+              <small>hace 3 días</small>
+            </div>
+            <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec
+convallis neque.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Título del elemento 2</h5>
+              <small class="text-muted">hace 1 semana</small>
+            </div>
+            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+risus.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Título del elemento 3</h5>
+              <small class="text-muted">hace 2 semanas</small>
+            </div>
+            <p class="mb-1">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          </a>
+        </div>
+        `;
+                    $("#video-demo-output").html(code);
+
+                    // --- EJEMPLO 2 (JQUERY) ---
+                } else if (example === "jquery-demo") {
+                    code = `
+        <div class="row">
+            <div class="col-lg-5">
+                <h5>Controles de lista simple</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Texto del ítem" id="itemInput">
+                    <button class="btn btn-outline-primary" type="button" id="addEnd" title="Añadir al final">.append()</button>
+                    <button class="btn btn-outline-secondary" type="button" id="addStart" title="Añadir al inicio">.prepend()</button>
+                </div>
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-danger" id="removeLast">Eliminar último (.remove)</button>
+                    <button class="btn btn-info" id="iterate">Recorrer lista (.each)</button>
+                </div>
+                <div id="errorMsg" class="text-danger mb-2" style="height: 1.5em;"></div>
+                <div id="log" class="alert alert-light" style="min-height: 100px;">El log de acciones aparecerá aquí.</div>
+                
+                <h5 class="mt-4">Controles de lista compleja</h5>
+                <p class="form-text">Selecciona una película de la lista de la derecha y luego usa estos botones.</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" id="incrementarContador">Incrementar vistas</button>
+                    <button class="btn btn-warning" id="cambiarAAlerta">Cambiar color del badge</button>
+                </div>
+            </div>
+            
+            <div class="col-lg-7">
+                <h5>Lista simple (haz clic en un ítem)</h5>
+                <ul class="list-group mb-4" id="NoOrdenada" style="min-height: 150px;">
+                    <li class="list-group-item">Manzana</li>
+                    <li class="list-group-item">Pera</li>
+                </ul>
+                
+                <h5>Lista compleja (películas)</h5>
+                <ul class="list-group" id="ListaBadge">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Oppenheimer
+                        <span class="badge bg-primary rounded-pill">10</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Dune: Parte dos
+                        <span class="badge bg-primary rounded-pill">5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Barbie
+                        <span class="badge bg-primary rounded-pill">20</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        `;
+
+                    $("#jquery-demo-output").html(code);
+
+                    // Handlers para Ejemplo 2 (jQuery)
+                    const $noOrdenadaList = $("#NoOrdenada");
+                    const $itemInput = $("#itemInput");
+                    const $log = $("#log");
+                    const $errorMsg = $("#errorMsg");
+
+                    function getItemData() {
+                        const text = $itemInput.val().trim();
+                        if (text === "") {
+                            $errorMsg.text("¡Debes ingresar texto primero!");
+                            return null;
+                        }
+                        $errorMsg.text("");
+                        $itemInput.val("");
+                        return {
+                            html: `<li class="list-group-item">${text}</li>`,
+                            text: text
+                        };
+                    }
+
+                    $("#addEnd").on("click", function () {
+                        const newItem = getItemData();
+                        if (newItem) {
+                            $noOrdenadaList.append(newItem.html);
+                            $log.html(`"${newItem.text}" añadido al final.`);
+                        }
+                    });
+                    $("#addStart").on("click", function () {
+                        const newItem = getItemData();
+                        if (newItem) {
+                            $noOrdenadaList.prepend(newItem.html);
+                            $log.html(`"${newItem.text}" añadido al inicio.`);
+                        }
+                    });
+                    $("#removeLast").on("click", function () {
+                        const $removedItem = $noOrdenadaList.find("li:last");
+                        if ($removedItem.length > 0) {
+                            const text = $removedItem.text();
+                            $removedItem.remove();
+                            $log.html(`"${text}" eliminado.`);
+                        } else {
+                            $log.html("La lista está vacía.");
+                        }
+                        $errorMsg.text("");
+                    });
+                    $("#iterate").on("click", function () {
+                        let logContent = "Contenido:<ul>";
+                        let count = 0;
+                        $noOrdenadaList.find("li").each(function (index) {
+                            logContent += `<li>${index + 1}: ${$(this).text()}</li>`;
+                            count++;
+                        });
+                        if (count === 0) {
+                            logContent = "La lista está vacía.";
+                        } else {
+                            logContent += "</ul>";
+                        }
+                        $log.html(logContent);
+                        $errorMsg.text("");
+                    });
+                    $noOrdenadaList.on("click", "li", function () {
+                        $(this).toggleClass("resaltado");
+                        $log.html(`Clic en: ${$(this).text()}`);
+                        $errorMsg.text("");
+                    });
+
+                    // Handlers para la lista compleja (películas)
+                    const $badgeList = $("#ListaBadge");
+                    $("#incrementarContador").on("click", function () {
+                        const $itemResaltado = $badgeList.find(".resaltado");
+                        if ($itemResaltado.length > 0) {
+                            const $badge = $itemResaltado.find(".badge");
+                            let nuevoValor = parseInt($badge.text(), 10) + 1;
+                            $badge.text(nuevoValor);
+                        } else {
+                            alert("Selecciona una película primero.");
+                        }
+                    });
+                    $("#cambiarAAlerta").on("click", function () {
+                        const $itemResaltado = $badgeList.find(".resaltado");
+                        if ($itemResaltado.length > 0) {
+                            const $badge = $itemResaltado.find(".badge");
+                            $badge.removeClass("bg-primary").addClass("bg-warning text-dark");
+                        } else {
+                            alert("Selecciona una película primero.");
+                        }
+                    });
+                    $badgeList.on("click", "li, a", function (e) {
+                        e.preventDefault();
+                        $(this).siblings().removeClass("resaltado");
+                        $(this).addClass("resaltado");
+                    });
+                    $badgeList.on("click", "span.badge", function (e) {
+                        e.stopPropagation();
+                        const $parentItem = $(this).closest("li");
+                        $parentItem.siblings().removeClass("resaltado");
+                        $parentItem.addClass("resaltado");
+                    });
+
+                    // --- EJERCICIO ---
+                } else if (example === "exercise") {
+                    code = `
+        <div class="row align-items-center mt-3">
+            <div class="col-md-6 shadow Operacion">
+                <h3>Operaciones</h3>
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>Operador</th>
+                        <th>Método jQuery</th>
+                        <th>Descripción</th>
+                        <th>Acción</th>
+                    </tr>
+                    <tr>
+                        <td>Actualizar contador</td>
+                        <td>.text()</td>
+                        <td>Obtiene (.text()) el valor actual, lo calcula y lo establece (.text(nuevoValor)).</td>
+                        <td>
+                            <button class="btn btn-success btn-sm" id="incrementarContador">Incrementar contador</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cambiar color</td>
+                        <td>.removeClass(), .addClass()</td>
+                        <td>Cambia el estado visual del badge.</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" id="cambiarAAlerta">Cambiar color a alerta</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resaltar ítem</td>
+                        <td>.parent()</td>
+                        <td>Si haces clic en el badge, usas .parent() para manipular el li o a contenedor.</td>
+                        <td>Seleccionar un ítem</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6 lista">
+                <h3>Lista de elementos con badge</h3>
+                <h4>Películas del 2025</h4>
+                <ul class="list-group" id="ListaBadge">
+                    <a class="list-group-item d-flex justify-content-between align-items-center">
+                        Acción
+                        <span class="badge bg-primary">5</span>
+                    </a>
+                    <a class="list-group-item d-flex justify-content-between align-items-center">
+                        Comedia
+                        <span class="badge bg-success">1</span>
+                    </a>
+                    <a class="list-group-item d-flex justify-content-between align-items-center" id="CienciaFiccion">
+                        Ciencia ficción
+                        <span class="badge bg-warning text-dark" id="ContadorCiencia">10</span>
+                    </a>
+                    <a class="list-group-item d-flex justify-content-between align-items-center">
+                        Suspenso
+                        <span class="badge bg-danger">2</span>
+                    </a>
+                    <a class="list-group-item d-flex justify-content-between align-items-center">
+                        Terror
+                        <span class="badge bg-info text-dark">14</span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        `;
+
+                    $("#exercise").html(code);
+
+                    const $badgeList = $("#ListaBadge");
+
+                    // Incrementar el contador
+                    $("#incrementarContador").on("click", function () {
+                        const $itemResaltado = $badgeList.find(".resaltado");
+                        if ($itemResaltado.length > 0) {
+                            const $badge = $itemResaltado.find(".badge");
+                            let valorActual = $badge.text();
+                            let nuevoValor = parseInt(valorActual, 10) + 1;
+                            $badge.text(nuevoValor);
+                        } else {
+                            alert("Por favor, selecciona una película de la lista principal primero.");
+                        }
+                    });
+
+                    // Cambiar color del badge de un ítem
+                    $("#cambiarAAlerta").on("click", function () {
+                        const $itemResaltado = $badgeList.find(".resaltado");
+                        if ($itemResaltado.length > 0) {
+                            const $badge = $itemResaltado.find(".badge");
+                            if ($badge.hasClass("bg-warning")) {
+                                $badge.removeClass("bg-warning text-dark").addClass("bg-danger");
+                            } else {
+                                $badge.removeClass("bg-primary bg-success bg-danger bg-info")
+                                    .addClass("bg-warning text-dark");
+                            }
+                        } else {
+                            alert("Por favor, selecciona una película de la lista principal primero.");
+                        }
+                    });
+
+                    // Resaltado
+                    $badgeList.on("click", "li, a", function (e) {
+                        e.preventDefault();
+                        $(this).siblings().removeClass("resaltado");
+                        $(this).addClass("resaltado");
+                    });
+
+                    $badgeList.on("click", "span.badge", function (e) {
+                        e.stopPropagation();
+                        const $parentItem = $(this).parent();
+                        $parentItem.siblings().removeClass("resaltado");
+                        $parentItem.addClass("resaltado");
+                    });
+                } // Fin del else-if
+            }); // Fin del .execute click
+        }); // Fin del document.ready
+    </script>
 </body>
 
 </html>

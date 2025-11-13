@@ -1,0 +1,78 @@
+/* --- Estilos Generales --- */
+body {
+    background-color: #f4f4f4; /* Un fondo gris claro */
+}
+
+/* --- Encabezado --- */
+#header {
+    background-color: rgba(0, 255, 255);
+    border: 5px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- Menú Izquierdo --- */
+#leftMenu {
+    background-color: rgba(255, 255, 255);
+    border: 5px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* --- Contenido Central --- */
+#contentWrapper {
+    background-color: rgba(51, 153, 51);
+    border: 5px solid rgba(121, 121, 121, 1);
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white; /* Texto blanco para el fondo verde */
+    padding: 15px;
+}
+#contentWrapper p { 
+    color: white; 
+}
+#contentWrapper h2, #contentWrapper h3 {
+    color: white;
+}
+
+/* --- Contenedores Internos (Fondo blanco) --- */
+#groupTableContainer, #listDemoContainer {
+    background-color: white;
+    color: #333; /* Texto oscuro para fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+}
+#groupTableContainer h3 {
+    color: #333;
+}
+
+/* --- Menú Derecho --- */
+#rightMenu {
+    background-color: rgba(0, 0, 0);
+    border: 5px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+}
+#rightMenu h4 {
+    color: white;
+}
+
+/* --- Footer --- */
+#footer {
+    background-color: rgba(255, 255, 0);
+    border: 5px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* --- Clase de Resaltado (para Demo jQuery) --- */
+.resaltado {
+  border: 2px solid #0d6efd !important; /* Azul de BS5 */
+  background-color: #e0f0ff !important;
+}

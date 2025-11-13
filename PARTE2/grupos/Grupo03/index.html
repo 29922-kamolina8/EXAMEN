@@ -15,11 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap 5.1.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/megamenu.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +37,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -92,7 +94,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <div class="navbar-center">
                         EXAMEN PARCIAL 1
                     </div>
@@ -126,21 +128,612 @@
 
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Scrollspy - Grupo 03</h1>
-                    
+
+                    <div class="row" id="parte1">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Teoría</h2>
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h4 class="text-secondary fw-bold"> Descripción general</h4>
+                                    <p>
+                                        El componente <strong>Scrollspy</strong> de Bootstrap es una herramienta
+                                        dinámica que
+                                        <strong>sincroniza el desplazamiento del contenido</strong> (<em>scroll</em>)
+                                        con los <strong>elementos de navegación</strong> de una página web.
+                                        Su función principal es <strong>resaltar automáticamente el enlace
+                                            activo</strong>
+                                        en el menú según la sección visible del contenido,
+                                        brindando al usuario una referencia clara sobre
+                                        <strong>en qué parte del sitio se encuentra</strong>.
+                                    </p>
+
+                                    <hr>
+
+                                    <h4 class="text-secondary fw-bold"> Funcionamiento general</h4>
+                                    <p>
+                                        Cuando el usuario se desplaza por una página extensa,
+                                        Scrollspy "espía" el movimiento del desplazamiento y
+                                        detecta qué sección está visible en ese momento.
+                                        Bootstrap utiliza JavaScript interno para aplicar
+                                        automáticamente la clase <code>.active</code> al enlace del menú
+                                        correspondiente y eliminarla de los demás,
+                                        generando una experiencia de navegación fluida y visualmente atractiva.
+                                    </p>
+
+                                    <p>
+                                        Este proceso ocurre en tiempo real mientras el usuario navega hacia arriba o
+                                        hacia abajo,
+                                        comparando la posición del <em>scroll</em> con las etiquetas <code>id</code>
+                                        que definen cada sección.
+                                        De esta forma, el sistema identifica la parte visible del documento y
+                                        actualiza el estado del menú de navegación en consecuencia.
+                                    </p>
+
+                                    <hr>
+
+                                    <h4 class="text-secondary fw-bold">Estructura básica y atributos principales</h4>
+                                    <p>
+                                        Para implementar Scrollspy correctamente se deben configurar ciertos
+                                        <strong>atributos HTML</strong> que permiten vincular el área con desplazamiento
+                                        y el menú correspondiente:
+                                    </p>
+                                    <ul>
+                                        <li><code>data-bs-spy="scroll"</code>: activa el comportamiento Scrollspy.</li>
+                                        <li><code>data-bs-target="#id-del-menu"</code>: indica el menú que se
+                                            actualizará automáticamente.</li>
+                                        <li><code>data-bs-offset="valor"</code>: establece el margen superior (en
+                                            píxeles) para activar un enlace.</li>
+                                        <li><code>tabindex="0"</code>: permite que el contenedor reciba eventos de
+                                            desplazamiento.</li>
+                                    </ul>
+
+                                    <hr class="my-4">
+
+                                    <h4 class="text-secondary fw-bold">Aplicado al NAVBAR</h4>
+
+                                    <p class="text-muted" style="font-size: 1.05rem;">
+                                        Cuando Scrollspy se utiliza en conjunto con una barra de navegación
+                                        (<code>&lt;nav&gt;</code>), su función principal es
+                                        <strong>resaltar automáticamente</strong> cuál enlace del menú corresponde a la
+                                        sección del documento que está visible en ese instante.
+                                        Esto mejora la <strong>orientación del usuario</strong> dentro de páginas con
+                                        varias secciones extensas.
+                                    </p>
+
+                                    <hr class="my-4">
+
+                                    <h4 class="text-secondary fw-bold">Aplicado al componente LIST-GROUP</h4>
+
+                                    <p class="text-muted" style="font-size: 1.05rem;">
+                                        Cuando Scrollspy se utiliza con el componente
+                                        (<code>.list-group</code>), u función principal sigue siendo la misma:
+                                        resaltar automáticamente el elemento activo conforme el usuario se desplaza por
+                                        diferentes secciones del contenido.
+                                        Sin embargo, en este caso, en lugar de una barra de navegación, se emplea una
+                                        lista de <strong>elementos agrupados</strong>, ofreciendo una apariencia más
+                                        limpia y segmentada,
+                                        ideal para menús laterales o paneles informativos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <!-- PARTE 2 - EJEMPLO DEL VIDEO + EXPLICACIÓN -->
+
+                    <div>
+                        <!-- Sección 2 -->
+                        <div class="card shadow mb-4" id="parte2">
+                            <div class="card-header py-3">
+                                <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Video Demostrativo y Explicación</h2>
+                            </div>
+
+                            <div class="card-body">
+                                
+                                <h4 class="fw-bold mb-3">Video Demostrativo</h4>
+
+                                <!-- VIDEO CENTRADO -->
+                                <div class="video-container">
+                                    <video controls>
+                                        <source src="img/video_scrollspy.mp4" type="video/mp4">
+                                        Tu navegador no soporta la reproducción de video.
+                                    </video>
+                                </div>
+
+                                <hr>
+
+                                <h4 class="fw-bold mb-3">Explicación del código principal (capturas del video)</h4>
+
+                                <!-- 1 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-body.png" alt="Activación Scrollspy">
+                                    <p><strong>1) Activación del Scrollspy:</strong> En la etiqueta
+                                        <code>&lt;body&gt;</code> se utilizan los atributos
+                                        <code>data-spy="scroll"</code>,
+                                        <code>data-target="#scrollspy"</code> y <code>data-offset="1"</code> para
+                                        vincular el desplazamiento
+                                        de la página con la barra de navegación.
+                                    </p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-navbar.png" alt="Navbar Scrollspy">
+                                    <p><strong>2) Barra de navegación:</strong> Se crea una barra fija con
+                                        <code>&lt;nav id="scrollspy"&gt;</code>. El <code>id</code> es importante porque
+                                        será el objetivo
+                                        que Scrollspy actualizará para resaltar el enlace activo.
+                                    </p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-items.png" alt="Enlaces del menú">
+                                    <p><strong>3) Enlaces del menú:</strong> Los enlaces de navegación usan
+                                        <code>&lt;a href="#seccion"&gt;</code>. Scrollspy se encarga de agregar la clase
+                                        <code>.active</code> automáticamente al enlace que coincide con la sección
+                                        visible.
+                                    </p>
+                                </div>
+
+                                <!-- 4 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-secciones.png" alt="Secciones con ID">
+                                    <p><strong>4) Secciones del contenido:</strong> Cada sección debe tener un
+                                        <code>id</code> correspondiente a los enlaces del menú. Al desplazarse la
+                                        página,
+                                        Scrollspy detecta qué sección está en pantalla y resalta el enlace asociado.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- PARTE 3 - EJEMPLOS PRÁCTICOS -->
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;"> Ejecución del Código Navbar</h2>
+                        </div>
+
+                        <div class="card-body">
+
+
+
+                        <!-- Código del Scrollspy -->
+                        <pre id="codeBoxNavbar"
+                            style="background-color:#212529;color:#f8f9fa;border-radius:8px;padding:15px;
+                                    font-family:monospace;overflow-x:auto;user-select:none;margin-top:20px;">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                        &lt;title&gt;Scrollspy con Bootstrap 5&lt;/title&gt;
+                        &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+                        &lt;/head&gt;
+                        &lt;body data-bs-spy="scroll" data-bs-target="#navbarExample" data-bs-offset="70" tabindex="0"&gt;
+
+                        &lt;nav id="navbarExample" class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top"&gt;
+                            &lt;div class="container-fluid"&gt;
+                            &lt;a class="navbar-brand" href="#"&gt;Devcode.la&lt;/a&gt;
+                            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                            &lt;/button&gt;
+                            &lt;div class="collapse navbar-collapse justify-content-end" id="navbarNav"&gt;
+                                &lt;ul class="navbar-nav"&gt;
+                                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#django"&gt;Django&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#bootstrap"&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#python"&gt;Python&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#rwd"&gt;RWD&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#nodejs"&gt;NodeJS&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/nav&gt;
+
+                        &lt;div class="container-fluid pt-5 mt-5"&gt;
+                            &lt;section id="django" class="min-vh-100 d-flex align-items-center justify-content-center bg-light"&gt;
+                                &lt;img src="img/django.jpg" alt="Django" class="img-fluid rounded shadow-sm"&gt;
+                            &lt;/section&gt;
+
+                            &lt;section id="bootstrap" class="min-vh-100 d-flex align-items-center justify-content-center"&gt;
+                                &lt;img src="img/bootstrap.jpg" alt="Bootstrap" class="img-fluid rounded shadow-sm"&gt;
+                            &lt;/section&gt;
+
+                            &lt;section id="python" class="min-vh-100 d-flex align-items-center justify-content-center bg-light"&gt;
+                                &lt;img src="img/python.jpg" alt="Python" class="img-fluid rounded shadow-sm"&gt;
+                            &lt;/section&gt;
+
+                            &lt;section id="rwd" class="min-vh-100 d-flex align-items-center justify-content-center"&gt;
+                                &lt;img src="img/rwd.jpg" alt="RWD" class="img-fluid rounded shadow-sm"&gt;
+                            &lt;/section&gt;
+
+                            &lt;section id="nodejs" class="min-vh-100 d-flex align-items-center justify-content-center bg-light"&gt;
+                                &lt;img src="img/node.jpg" alt="NodeJS" class="img-fluid rounded shadow-sm"&gt;
+                            &lt;/section&gt;
+                        &lt;/div&gt;
+
+                        &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </pre>
+
+                        <!-- Botones -->
+                        <div class="mt-3 d-flex gap-2">
+                            <button id="runCodeNavbar" class="btn btn-success">
+                            <i class="bi bi-play-fill"></i> Ejecutar
+                            </button>
+                            <button id="resetCodeNavbar" class="btn btn-outline-danger">
+                            <i class="bi bi-x-circle"></i> Resetear
+                            </button>
+                        </div>
+
+                        <!-- Recuadro oculto inicialmente -->
+                        <div id="resultBoxNavbar"
+                            class="mt-3"
+                            style="display:none; background-color:#fff; border:1px solid #dee2e6; border-radius:8px; padding:20px;">
+                            <iframe id="resultFrameNavbar"
+                                    style="width:100%; height:600px; border:none; border-radius:8px;"></iframe>
+                        </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SECCIÓN 3 ejercicio 2 -->
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;"> Ejecución del Código list-group</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <p>Pulsa <strong>Ejecutar</strong> para ver el Scrollspy con grupos de listas y
+                                desplazamiento dinámico.</p>
+
+                            <pre id="codeBox2"
+                                style="background-color:#212529;color:#f8f9fa;border-radius:8px;padding:15px;font-family:monospace;overflow-x:auto;user-select:none;">
+&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;div id="list-example-demo" class="list-group shadow-sm"
+         style="background-color:#e9f0f8;border:1px solid #cdd8e4;border-radius:10px;"&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-intro"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Introducción&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-func"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Funcionamiento&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-vent"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Ventajas&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-conc"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Conclusión&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-md-8"&gt;
+    &lt;div id="scrollspy-demo" data-bs-spy="scroll" data-bs-target="#list-example-demo" data-bs-offset="0" tabindex="0"
+         style="position:relative;height:400px;overflow-y:scroll;scroll-behavior:smooth;
+                border:1px solid #dee2e6;border-radius:10px;background-color:#ffffff;padding:20px;"&gt;
+
+      &lt;h4 id="item-intro"&gt;Introducción&lt;/h4&gt;
+      &lt;p&gt;Scrollspy puede vincularse a listas para lograr una navegación clara y moderna. Es una forma elegante de mantener al usuario orientado sobre en qué sección se encuentra.&lt;/p&gt;
+      &lt;p&gt;Es perfecto para dashboards, reportes técnicos o páginas informativas extensas donde necesitas indicar la posición del usuario.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+
+      &lt;h4 id="item-func"&gt;Funcionamiento&lt;/h4&gt;
+      &lt;p&gt;Cada enlace apunta a una sección del contenido. Bootstrap detecta cuál está visible en la ventana de desplazamiento y aplica la clase .active automáticamente.&lt;/p&gt;
+      &lt;p&gt;Así el usuario siempre sabe en qué parte del contenido se encuentra sin perder la orientación.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+      &lt;h4 id="item-vent"&gt;Ventajas&lt;/h4&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Diseño limpio y segmentado para mejor visualización.&lt;/li&gt;
+        &lt;li&gt;No requiere código adicional complejo, solo atributos HTML.&lt;/li&gt;
+        &lt;li&gt;Se integra fácilmente en plantillas modernas de Bootstrap.&lt;/li&gt;
+        &lt;li&gt;Mejora la experiencia del usuario en páginas largas.&lt;/li&gt;
+        &lt;li&gt;Compatible con navegadores modernos.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Además, mejora la comprensión visual del contenido y la orientación del lector en documentos extensos.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+
+      &lt;h4 id="item-conc"&gt;Conclusión&lt;/h4&gt;
+      &lt;p&gt;Scrollspy con grupos de listas es una alternativa moderna y elegante, ideal para sitios interactivos o educativos.&lt;/p&gt;
+      &lt;p&gt;Su diseño adaptable y su simplicidad lo convierten en una herramienta excelente para mejorar la navegación en una sola página.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                            </pre>
+
+                            <div class="mt-3 d-flex gap-2">
+                                <button id="runCode2" class="btn btn-success"><i class="bi bi-play-fill"></i>
+                                    Ejecutar</button>
+                                <button id="resetCode2" class="btn btn-outline-danger"><i class="bi bi-x-circle"></i>
+                                    Resetear</button>
+                            </div>
+
+                            <div id="resultBox2"
+                                style="background-color:#fff;border:1px solid #dee2e6;border-radius:8px;padding:20px;margin-top:20px;">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                   <!-- SECCIÓN 4 -->
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Ejercicio de la Prueba - Navbar</h2>
+                        </div>
+                        <br>
+                        <div class="card-body">
+                        <h4 class="fw-bold mb-3">Explicación</h4>
+                        </div>
+
+                        <div class="card-body" style="max-width:900px;margin:auto">
+
+                            <!-- 1) ACTIVACIÓN -->
+                            <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                                <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">1) Activación del
+                                    ScrollSpy</h5>
+                                <p style="text-align:justify;margin-bottom:10px;">
+                                    En este ejemplo el <b>espía</b> se activa sobre el <code>&lt;body&gt;</code> porque
+                                    usamos Bootstrap 3:
+                                    <code>data-spy="scroll"</code>, <code>data-target="#MenuBar"</code> y
+                                    <code>data-offset="80..100"</code>.
+                                    Así, el <b>menú superior</b> se actualiza según la sección visible.
+                                </p>
+                                <!-- Sustituye la imagen por tu captura -->
+                                <img src="img/NAV_activacion.png"
+                                    alt="Activación en el body con data-spy, data-target y data-offset"
+                                    style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                            </div>
+
+                            <!-- 2) NAVBAR FIJO -->
+                            <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                                <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">2) Barra de navegación
+                                    fija</h5>
+                                <p style="text-align:justify;margin-bottom:10px;">
+                                    El menú es un <code>&lt;nav id="MenuBar" class="navbar navbar-inverse"&gt;</code>
+                                    con
+                                    <code>position:fixed; top:0; width:100%</code> para mantenerlo visible. El <b>id</b>
+                                    <code>#MenuBar</code> es
+                                    el mismo que se usa en <code>data-target</code>.
+                                </p>
+                                <img src="img/NAV_navbar.png" alt="Navbar fijo con id MenuBar"
+                                    style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                            </div>
+
+                            <!-- 3) ENLACES -->
+                            <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                                <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">3) Enlaces del menú</h5>
+                                <p style="text-align:justify;margin-bottom:10px;">
+                                    Cada <code>&lt;a&gt;</code> apunta con <code>href="#id"</code> a su sección
+                                    (<code>#inicio</code>,
+                                    <code>#docente</code>, <code>#comandante</code>, <code>#grupos</code>). Scrollspy
+                                    aplica
+                                    <code>.active</code> al <code>&lt;li&gt;</code> correspondiente.
+                                </p>
+                                <img src="img/NAV_enlaces.png" alt="Enlaces del menú con anchor a cada sección"
+                                    style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                            </div>
+
+                            <!-- 4) SECCIONES -->
+                            <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                                <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">4) Secciones observadas
+                                </h5>
+                                <p style="text-align:justify;margin-bottom:10px;">
+                                    Las secciones del contenido usan <code>id</code> que coincide con los enlaces. Se
+                                    agrega
+                                    <code>margin-top</code> o <code>padding-top</code> (y un <b>offset</b> de ~100 px)
+                                    para que el título no quede
+                                    oculto bajo el navbar fijo.
+                                </p>
+                                <img src="img/NAV_secciones.png"
+                                    alt="Secciones con id: inicio, docente, comandante, grupos"
+                                    style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                            </div>
+
+                            <!-- 5) INICIALIZACIÓN -->
+                            <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                                <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">5) Inicialización con
+                                    jQuery (Bootstrap 3)</h5>
+                                <p style="text-align:justify;margin-bottom:10px;">
+                                    Se refuerza la activación con jQuery:
+                                    <code>$('body').scrollspy({ target: '#MenuBar', offset: 100 });</code>
+                                    El <b>offset</b> debe aproximar la altura de tu navbar + espacio superior.
+                                </p>
+                                <img src="img/NAV_init.png" alt="Inicialización jQuery scrollspy con offset"
+                                    style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                                <p style="font-size:.95rem;color:#6c757d;margin:10px 0 0 0;">
+                                    • Código real en <code>parte4.html</code> (navbar + secciones + scrollspy).
+                                    :contentReference[oaicite:4]{index=4} <br>
+                                    • Estilos de los codebox y la UI vienen de tu hoja de estilos.
+                                    :contentReference[oaicite:5]{index=5}
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- === CÓDIGO REAL DE parte4.html + BOTONES + IFRAME === -->
+                        <hr class="my-4">
+                        <div class="card-body">
+                        <h6 class="fw-bold">Código del Exámen</h6>
+                        <p class="text-muted">Se muestra el archivo real. Puedes ejecutarlo en un iframe aquí mismo.</p>
+                        </div>
+
+                        <pre id="codeParte4" class="code-dark"></pre>
+
+                        <div class="mt-3 d-flex gap-2">
+                            <button id="btnRunParte4" class="btn btn-success">Ejecutar</button>
+                            <button id="btnDiscardParte4" class="btn btn-outline-danger">Descartar</button>
+                        </div>
+
+                        <!-- IFRAME: oculto hasta que presionen "Ejecutar" -->
+                        <div class="mt-3">
+                            <iframe id="iframeParte4" src=""
+                                style="display:none; width:100%; height:600px; border:2px solid #ccc; border-radius:6px;"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow mb-4" id="parte4">
+                        <div class="card shadow mb-4" id="parte4">
+                            <div class="card-header py-3">
+                                <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Ejercicio de la Prueba - list-group</h2>
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="fw-bold mb-3">Explicación</h4>
+                            </div>
+
+                            <div class="container" style="max-width:900px; margin:auto;">
+                                <!-- 1️⃣ ACTIVACIÓN -->
+                                <div style="background:#fff; border-left:4px solid #28a745; border-radius:10px; 
+         box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:18px 22px; margin-bottom:18px;">
+
+                                    <h5 style="color:#198754; font-weight:bold; margin-bottom:8px;">
+                                        1️) Activación del ScrollSpy
+                                    </h5>
+
+                                    <p style="font-size:15px; text-align:justify; margin-bottom:10px;">
+                                        En la etiqueta <span style="color:#d63384;">&lt;body&gt;</span> se utilizan los
+                                        atributos <span style="color:#d63384;">data-bs-spy="scroll"</span>,
+                                        <span style="color:#d63384;">data-bs-target="#navbar"</span> y
+                                        <span style="color:#d63384;">data-bs-offset="80"</span> para vincular el
+                                        desplazamiento
+                                        del contenido con la barra de navegación. Bootstrap detecta automáticamente las
+                                        secciones y activa el enlace correspondiente.
+                                    </p>
+
+                                    <img src="img/Activacion_List.png" alt="Navbar Scrollspy"
+                                        style="max-width:100%; height:auto; display:block; margin:auto; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                </div>
+
+
+                                <!-- 2️⃣ BARRA DE NAVEGACIÓN -->
+                                <div
+                                    style="background:#fff; border-left:4px solid #28a745; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:18px 22px; margin-bottom:18px;">
+                                    <h5 style="color:#198754; font-weight:bold; margin-bottom:8px;">2️) Barra de
+                                        navegación</h5>
+                                    <p style="font-size:15px; text-align:justify; margin-bottom:10px;">
+                                        Se crea una menu fijo con <span style="color:#d63384;">&lt;nav
+                                            id="MenuLista"&gt;</span>.
+                                        El atributo <b>id</b> es esencial porque ScrollSpy lo usa como objetivo
+                                        para actualizar los enlaces activos. Además, se utiliza la clase
+                                        <span style="color:#d63384;">fixed-top</span> para mantener el menú visible al
+                                        desplazarse.
+                                    </p>
+                                    <img src="img/Barra_lista.png" alt="Navbar Scrollspy"
+                                        style="max-width:100%; height:auto; display:block; margin:auto; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                </div>
+
+                                <!-- 3️⃣ ENLACES DEL MENÚ -->
+                                <div
+                                    style="background:#fff; border-left:4px solid #28a745; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:18px 22px; margin-bottom:18px;">
+                                    <h5 style="color:#198754; font-weight:bold; margin-bottom:8px;">3️) Enlaces del menú
+                                    </h5>
+                                    <p style="font-size:15px; text-align:justify; margin-bottom:10px;">
+                                        Los enlaces del menú usan <span style="color:#d63384;">&lt;a
+                                            href="#seccion"&gt;</span>
+                                        para apuntar a las diferentes partes del documento.
+                                        ScrollSpy se encarga de agregar la clase <span
+                                            style="color:#d63384;">.active</span>
+                                        automáticamente al enlace que coincide con la sección visible.
+                                    </p>
+                                    <img src="img/Enlaces_lista.png" alt="Navbar Scrollspy"
+                                        style="max-width:100%; height:auto; display:block; margin:auto; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                </div>
+
+                                <!-- 4️⃣ SECCIONES -->
+                                <div
+                                    style="background:#fff; border-left:4px solid #28a745; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:18px 22px; margin-bottom:18px;">
+                                    <h5 style="color:#198754; font-weight:bold; margin-bottom:8px;">4️) Secciones
+                                        observadas por ScrollSpy</h5>
+                                    <p style="font-size:15px; text-align:justify; margin-bottom:10px;">
+                                        Cada sección debe tener un identificador
+                                        (<span style="color:#d63384;">id</span>) que coincida con los enlaces del menú.
+                                        Cuando el usuario se desplaza, ScrollSpy detecta qué sección está visible
+                                        y resalta el enlace correspondiente en la barra de navegación.
+                                    </p>
+                                    <img src="img/NAV_secciones.png" alt="Navbar Scrollspy"
+                                        style="max-width:100%; height:auto; display:block; margin:auto; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                </div>
+
+                                <!-- 5️⃣ FUNCIONAMIENTO -->
+                                <div
+                                    style="background:#fff; border-left:4px solid #28a745; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); padding:18px 22px; margin-bottom:18px;">
+                                    <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">5) Inicialización con
+                                        jQuery (Bootstrap 3)</h5>
+                                    <p style="text-align:justify;margin-bottom:10px;">
+                                        Se refuerza la activación con jQuery:
+                                        <code>$('body').scrollspy({ target: '#MenuLista', offset: 140 });</code>
+                                        donde el parámetro target identifica el contenedor del menú que será actualizado
+                                        dinámicamente, y offset compensa la altura del navbar fijo más el espaciado
+                                        superior, evitando que los títulos de sección queden ocultos al hacer scroll.
+                                        Esta configuración es especialmente útil cuando el atributo data-spy="scroll" no
+                                        se activa correctamente al cargar el DOM, y debe ajustarse según el diseño real
+                                        del sistema para garantizar una navegación fluida, trazable y funcionalmente
+                                        auditable.
+                                    </p>
+                                    <img src="img/Script_lista.png" alt="Navbar Scrollspy"
+                                        style="max-width:100%; height:auto; display:block; margin:auto; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                                </div>
+                            </div>
+                            <hr>
+                            <hr class="my-4.2">
+
+                            <div class="card-body">
+                                <h6 class="fw-bold">Código del exámen</h6>
+                                <p class="text-muted">Se muestra el archivo real. Puedes ejecutarlo en un iframe aquí mismo.</p>
+                            </div>
+
+                            <pre id="codeParte4.2" class="code-dark"></pre>
+
+                            <div class="mt-3 d-flex gap-2">
+                                <button id="btnRunParte4.2" class="btn btn-success">Ejecutar</button>
+                                <button id="btnDiscardParte4.2" class="btn btn-outline-danger">Descartar</button>
+                            </div>
+
+                            <!-- IFRAME: oculto hasta que presionen "Ejecutar" -->
+                            <div class="mt-3">
+                                <iframe id="iframeParte4.2" src=""
+                                    style="display:none; width:100%; height:600px; border:2px solid #ccc; border-radius:6px;"></iframe>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
+        <!-- Scripts -->
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../../js/sb-admin-2.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+
 </body>
 
 </html>

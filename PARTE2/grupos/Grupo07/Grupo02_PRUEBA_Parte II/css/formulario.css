@@ -1,0 +1,88 @@
+/* ======== Estilos generales ======== */
+body {
+  background: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ======== Contenedor del formulario ======== */
+.formulario {
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px 30px;
+  width: 360px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ======== Título principal ======== */
+.formulario h3 {
+  text-align: center;
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ======== Campos de entrada ======== */
+.input-group-addon {
+  background-color: #f9f9f9;
+}
+
+/* ======== Botón Guardar ======== */
+.btn-guardar {
+  background: linear-gradient(to bottom, #0b04da, #143de0);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-guardar:hover {
+  background: linear-gradient(to bottom, #ffe082, #ffca28);
+}
+
+/* ======== Sección de Género ======== */
+.seccion-genero {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 20px 0;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Título “Género” */
+.seccion-genero h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Distribución horizontal */
+.seccion-genero .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Etiqueta “Seleccione su género” */
+.seccion-genero label {
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Menú desplegable */
+.genero-select {
+  width: 100%;
+  max-width: 180px;
+  display: inline-block;
+}
+
+
+/* Centrar la columna principal del formulario */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}

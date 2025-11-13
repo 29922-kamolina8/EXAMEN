@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo06 Ejercicio (Bootstrap 5)</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="Recursos/MisEstilos.css">
+    
+    <style>
+        /* Estilos MÍNIMOS para ocultar/mostrar secciones */
+        #loginFormContainer,
+        #groupTableContainer,
+        #comandanteLoginContainer,
+        #listDemoContainer { /* Añadida la demo de listas */
+            display: none;
+        }
+
+        body {
+            padding-top: 56px; /* Ajuste para la navbar fija */
+            padding-bottom: 80px;
+        }
+
+        #rightMenu h4 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img id="Espe_img" src="Recursos/img/logo_ESPE.png" alt="Logo ESPE"
+                    class="img-fluid" style="max-height: 89px; width:auto; max-width: 500px;">
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Grupo 6</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+                aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Docente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" target="_blank" onclick="showComandanteLogin()">Comandante</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Grupos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item disabled" href="#">Grupo 1</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 3</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 4</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 5</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="showGroupTable()">Grupo 6</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 7</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">Grupo 8</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="leftMenu" class="col-12 col-md-2">
+                <h4>Menú</h4>
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showDefaultContent()">
+                        <i class="bi bi-house-fill"></i> Inicio
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <i class="bi bi-person-fill"></i> LOGIN
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <i class="bi bi-hdd-fill"></i> REGISTRO
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <i class="bi bi-book-fill"></i> PRODUCTO
+                    </button>
+                    <button class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#miModal">
+                        <i class="bi bi-card-list"></i> FORMULARIO
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showListDemo()">
+                        <i class="bi bi-check-circle-fill"></i> Demo Listas jQuery
+                    </button>
+                </div>
+            </aside>
+
+            <section id="contentWrapper" class="col-12 col-md-7">
+                <div id="defaultContent">
+                    <h2>Aplicaciones de Tecnologías Web</h2>
+                    <p>Integrantes</p>
+                    <p>Christian Javier Gordon</p>
+                    <p>Nicolas Fernando Zanafria Solorzano</p>
+                    <p>NRC: 29922</p>
+                    <p>Grupo: 6</p>
+                </div>
+
+                <div id="groupTableContainer">
+                    <h3 class="text-center">Integrantes Grupo 6</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Christian</td>
+                                <td>Gordon</td>
+                                <td>cjgordon@espe.edu.ec</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nicolas</td>
+                                <td>Zanafria</td>
+                                <td>nfzanafria@espe.edu.ec</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="listDemoContainer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="lista shadow-sm p-3 mb-3 bg-light rounded">
+                                <h3>Lista de Tareas (Comandante)</h3>
+                                <h4>Pendientes</h4>
+                                <ul class="list-group" id="NoOrdenada">
+                                    <li class="list-group-item">Revisar reporte Grupo 2</li>
+                                    <li class="list-group-item">Aprobar permisos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="Operacion shadow-sm p-3 mb-3 bg-light rounded">
+                                <h3>Operaciones</h3>
+                                <h4>Nueva Tarea</h4>
+                                <input class="form-control" type="text" placeholder="Nueva tarea pendiente..." id="itemInput">
+                                <div id="errorMsg" class="text-danger small mt-1"></div>
+                                <h4 class="mt-3">Resultado</h4>
+                                <div id="log" class="text-center card card-body bg-white"></div>
+                                <table class="table table-hover mt-3">
+                                    <tr>
+                                        <td>Añadir Tarea</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" id="addEnd">Final</button>
+                                            <button class="btn btn-primary btn-sm" id="addStart">Inicio</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Completar Tarea</td>
+                                        <td><button class="btn btn-danger btn-sm" id="removeLast">Completar Última</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ver Tareas</td>
+                                        <td><button class="btn btn-info btn-sm" id="iterate">Ver Lista</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="Operacion shadow-sm p-3 mb-3 bg-light rounded">
+                                <h3>Operaciones de Grupos</h3>
+                                <table class="table table-hover mt-3">
+                                    <tr>
+                                        <td>Añadir Integrante</td>
+                                        <td><button class="btn btn-success btn-sm" id="incrementarContador">Incrementar</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marcar Grupo</td>
+                                        <td><button class="btn btn-warning btn-sm" id="cambiarAAlerta">Alternar Alerta</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seleccionar Grupo</td>
+                                        <td>(Haz clic en un grupo)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lista shadow-sm p-3 mb-3 bg-light rounded">
+                                <h3>Estado de Grupos</h3>
+                                <h4>Integrantes por Grupo</h4>
+                                <ul class="list-group" id="ListaBadge">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Grupo 1 <span class="badge bg-primary rounded-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Grupo 2 <span class="badge bg-primary rounded-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Grupo 3 <span class="badge bg-primary rounded-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Grupo 4 (Actual) <span class="badge bg-success rounded-pill">2</span>
+                                    </li>
+                                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                        Grupo 5 <span class="badge bg-primary rounded-pill">2</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section> <aside id="rightMenu" class="col-12 col-md-3">
+                <h4>Video Institucional</h4>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/_mLQ4BaMPoY"
+                        title="Video Institucional" allowfullscreen></iframe>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Formulario Login</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-section">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="bi bi-pencil-fill"></i></span>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <label for="usuario" class="form-label">Usuario:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <label for="contrasena" class="form-label">Contraseña:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <label for="genero" class="form-label">Género:</label>
+                            <select class="form-select" id="genero">
+                                <option value="">Seleccione...</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="lgtb">LGTB</option>
+                            </select>
+                        </div>
+                        <div class="form-check my-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Recuérdame
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="#" class="btn btn-primary"><i class="bi bi-hand-thumbs-up-fill"></i> Facebook</a>
+                <a href="#" class="btn btn-info"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="#" class="btn btn-danger"><i class="bi bi-youtube"></i> YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/Funcionalidad_li.js"></script>
+    
+    <script>
+        function hideAllContent() {
+            $('#defaultContent').hide();
+            $('#loginFormContainer').hide();
+            $('#groupTableContainer').hide();
+            $('#comandanteLoginContainer').hide();
+            $('#listDemoContainer').hide(); // Oculta la demo de listas
+        }
+        function showDefaultContent() {
+            hideAllContent();
+            $('#defaultContent').show();
+        }
+        function showLoginForm() {
+            hideAllContent();
+            $('#loginFormContainer').show();
+        }
+        function showGroupTable() {
+            hideAllContent();
+            $('#groupTableContainer').show();
+        }
+        function showComandanteLogin() {
+            hideAllContent();
+            $('#comandanteLoginContainer').show();
+        }
+        // Nueva función para mostrar la demo
+        function showListDemo() {
+            hideAllContent();
+            $('#listDemoContainer').show();
+        }
+
+        // Iniciar en la página de inicio
+        $(document).ready(function () {
+            showDefaultContent();
+        });
+    </script>
+</body>
+
+</html>

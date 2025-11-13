@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Inicio</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/estios.css">
+    <link rel="stylesheet" href="./css/iconbar.css">
+    <link rel="stylesheet" href="./icomoon/style.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <style>
+        .expand-row { display: flex; gap: 18px; align-items: stretch; margin-top: 18px; }
+        .expand-row .expand-col { flex: 1; transition: flex .2s ease, box-shadow .2s ease; background: #fafafa; padding: 18px; border: 1px solid #e6e6e6; border-radius: 4px; min-width: 180px; }
+        .expand-row .expand-col:hover { flex: 1.12; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+        @media (max-width: 767px) { .expand-row { flex-direction: column; } .expand-row .expand-col { flex: none; } }
+        .expand-col h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    
+    <div class="container logo"> 
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <img src="./img/logo_ESPE.png" alt="Logo" class="img-responsive center-block" style="width:50%;">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#despliegar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Grupo 1</a>
+				</div>
+				<div class="collapse navbar-collapse" id="despliegar">
+					<ul class="nav navbar-nav">
+                        <li><a href="#">Docente</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#comandanteModal" role="button">Comandante</a></li>
+
+						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Grupos<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+                                <li><a href="#" data-toggle="modal" data-target="#grupoModal">Grupo 1</a></li>
+                                <li><a href="#">Grupo 2</a></li>
+								<li><a href="#">Grupo 3</a></li>
+                                <li><a href="#">Grupo 4</a></li>
+                                <li><a href="#">Grupo 5</a></li>
+                                <li><a href="#">Grupo 6</a></li>
+                                <li><a href="#">Grupo 7</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="buscar">
+						</div>
+						<boton class="btn btn-primary">Buscar</boton>
+					</form>
+				</div>
+			</div>
+		</nav>
+    </div>
+    <div class="container cuerpo">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center menu_left border">
+                    <div class="btn-group-vertical btn-block">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#comandanteModal" data-placement="top" title="Inicia sesión para acceder a tu cuenta."><span class="glyphicon glyphicon-user"></span> Login</button>
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="left" data-content="" title="Crea una cuenta nueva para comenzar."><span class="glyphicon glyphicon-hdd"></span> Registro</button>
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="right" data-content="" title="Consulta los productos o servicios disponibles."><span class="glyphicon glyphicon-book"></span> Producto</button>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#formularioModal" data-placement="bottom" title="Completa el formulario con tus datos."><span class="glyphicon glyphicon-user"></span> Formulario</a>
+                        <button class="btn btn-default" aria-hidden="true" tabindex="-1" data-container="" data-toggle="tooltip" data-placement="bottom" data-content="" title="Mensaje 4..." style="background-color:transparent; color:transparent; border-color:transparent; box-shadow:none; outline:none; opacity:0; pointer-events:none;">
+                            <span class="glyphicon glyphicon-book"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 text-center content border">
+                    <h3>Aplicacion de tecnologías web</h3>
+                    <br>
+                    <h4>Integrantes:</h4>
+                    <h4>Carlos Andres Carrasco Novoa</h4>
+                    <h4>Christian David Ramos Alava</h4>
+                    <h4>NRC: 29922</h4>
+                    <h4>Grupo 1</h4>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-5 video border" style="display:flex; align-items:stretch; height:100%;">
+                    <div class="embed-responsive embed-responsive-16by9" style="width:100%; height:100%; position:relative;">
+                        <video class="embed-responsive-item" controls preload="metadata" playsinline
+                               style="width:100%; height:100%; object-fit:cover; display:block;">
+                            <source src="./Grupo7_LABORATORIO_Parte_II/Capítulo 7 -Tooltip y Popover.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer">
+        <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                	<button class="btn btn-primary" data-toggle="popover" data-placement="top" title="Facebook" data-content="¡Comparte esta publicación con tus amigos en Facebook y ayúdanos a llegar a más personas!" data-trigger="focus"><span class="icon-Facebook"></span> Facebook</button>
+                	<button class="btn btn-info" data-toggle="popover" data-placement="bottom" title="Twitter" data-content="Comparte esta publicación en Twitter" data-trigger="focus"><span class="icon-twitter"></span> Twitter</button>
+                	<button class="btn btn-danger" data-toggle="popover" data-placement="right" title="YouTube" data-content="Suscríbete a nuestro canal en YouTube" data-trigger="focus"><span class="icon-youtube"></span> YouTube</button>
+                </div>
+        </div>
+    </div>
+
+            <div class="container" id="tooltip-popover-explain" style="margin-top:18px; margin-bottom:30px;">
+                    <div class="expand-row">
+                            <div class="expand-col">
+                                    <h4>Tooltips</h4>
+                                    <p>Los <strong>tooltips</strong> ofrecen ayuda breve, normalmente un único renglón de texto, destinada a aclarar el propósito de un control o mostrar información contextual muy corta. Son ideales para iconos, botones o campos con espacio limitado.</p>
+
+                                    <h5>Inicialización y selectores</h5>
+                                    <p>En este proyecto se inicializan automáticamente con jQuery. La lógica principal es:</p>
+                                    <pre><code>// inicializa tooltips, excluyendo elementos que son popovers
+    $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').each(function () {
+        var $el = $(this);
+        var $modal = $el.closest('.modal');
+        var container = $modal.length ? $modal : 'body';
+        $el.tooltip({ container: container });
+    });
+                                    </code></pre>
+
+                                    <h5>Por qué excluir popovers</h5>
+                                    <p>Si un elemento tiene tanto tooltip como popover (o comparte <code>title</code> con un popover), el usuario vería dos capas de UI. Para evitar confusión, los elementos marcados como popover se excluyen del init de tooltips.</p>
+
+                                    <h5>Container y z-index</h5>
+                                    <p>Problema: cuando un control está dentro de un modal, el tooltip añadido al <code>body</code> puede quedar detrás del backdrop debido al stacking context y z-index. Solución: inicializar el tooltip con <code>container</code> apuntando al propio <code>.modal</code> si el elemento está dentro de uno. Esto lo posiciona dentro del mismo contexto de apilamiento que el modal y evita que quede oculto.</p>
+
+                                    <h5>Accesibilidad y keyboard</h5>
+                                    <p>Los tooltips deben activarse con <code>hover</code> y <code>focus</code>. Asegúrate de que los elementos sean accesibles por teclado (tabindex cuando corresponda) y contiene texto alternativo claro en <code>title</code>. Para ARIA, Bootstrap gestiona <code>role="tooltip"</code> y <code>aria-describedby</code> automáticamente al inicializar.</p>
+
+                                    <h5>Opciones y personalización</h5>
+                                    <p>Puedes pasar opciones: <code>delay</code> (ms), <code>placement</code>, <code>template</code>, <code>html</code>. Evita usar <code>html: true</code> sin sanitizar contenido.</p>
+
+                                    <h5>Casos dinámicos y rendimiento</h5>
+                                    <p>Si la página crea muchos elementos con tooltips dinámicamente, inicialízalos al crearlos o usa delegación. Evita inicializar cientos de tooltips simultáneamente: considera una estrategia que inicialice solo cuando el elemento entra en vista (intersection observer) o cuando el usuario interactúa.</p>
+                            </div>
+
+                            <div class="expand-col">
+                                    <h4>Popovers</h4>
+                                    <p>Los <strong>popovers</strong> muestran contenido más rico: título y cuerpo, y pueden contener enlaces, botones o incluso pequeñas formas. Son más intrusivos que los tooltips y se usan cuando hace falta más contexto o acciones.</p>
+
+                                    <h5>Inicialización y fragmento de código</h5>
+                                    <p>Se inicializan con un patrón similar al de los tooltips, y el container dinámico evita problemas dentro de modales:</p>
+                                    <pre><code>$('[data-toggle="popover"]').each(function () {
+        var $el = $(this);
+        var $modal = $el.closest('.modal');
+        var container = $modal.length ? $modal : 'body';
+        $el.popover({ container: container, trigger: 'focus' });
+    });
+                                    </code></pre>
+
+                                    <h5>Triggers: focus vs click</h5>
+                                    <p>En el proyecto usamos <code>trigger: 'focus'</code> para que el popover se cierre automáticamente al perder foco. <code>'click'</code> es otra opción (toggle), pero puede dejar el popover abierto hasta que el usuario haga otra acción explícita; evalúa qué experiencia quieres ofrecer.</p>
+
+                                    <h5>Contenido HTML y seguridad</h5>
+                                    <p>Si necesitas HTML dentro del popover, activa <code>data-html="true"</code> y valida/sanitiza el contenido si proviene de usuarios. Bootstrap provee sanitización por defecto, pero conviene definir las etiquetas/atributos permitidos si se inserta HTML dinámico.</p>
+
+                                    <h5>Comportamiento con múltiples popovers</h5>
+                                    <p>Para evitar que múltiples popovers se queden abiertos, puedes cerrar otros popovers cuando se abre uno nuevo. Un patrón común:</p>
+                                    <pre><code>$(document).on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+            // si el click no es dentro del popover ni en el disparador, ciérralo
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+                                    </code></pre>
+
+                                    <h5>Accesibilidad</h5>
+                                    <p>Asegúrate de que los disparadores sean focusables y que el popover tenga atributos ARIA adecuados (<code>aria-describedby</code>, manejo de escape key para cerrarlo). Prueba con lector de pantalla y navegación por teclado.</p>
+
+                                    <h5>Uso con datos dinámicos</h5>
+                                    <p>Para contenido cargado mediante AJAX, actualiza el contenido del popover y re-posiciónalo (llamando a <code>popover('show')</code> después de insertar el contenido). Ten en cuenta latencias y estados de carga.</p>
+                            </div>
+                    </div>
+            </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').each(function () {
+                var $el = $(this);
+                var $modal = $el.closest('.modal');
+                var container = $modal.length ? $modal : 'body';
+                $el.tooltip({ container: container });
+            });
+
+            $('[data-toggle="popover"]').each(function () {
+                var $el = $(this);
+                var $modal = $el.closest('.modal');
+                var container = $modal.length ? $modal : 'body';
+                $el.popover({ container: container, trigger: 'focus' });
+            });
+        });
+    </script>
+    
+        <div class="modal fade" id="formularioModal" tabindex="-1" role="dialog" aria-labelledby="formularioLabel" >
+            <div class="modal-dialog" role="document" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="formularioLabel">Formulario</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form" action="#" method="post">
+                            <div class="form-group" >
+                                <label class="sr-only" for="nombre_modal">Nombre</label>
+                                <div class="input-group" >
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input id="nombre_modal" type="text" class="form-control" placeholder="Ingrese su nombre..." name="nombre" required data-toggle="tooltip" data-placement="right" title="Ejemplo. Carlos András Carrasco Novoa" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control" placeholder="Ingrese el usuario..." name="usuario" required data-toggle="tooltip" data-placement="right" title="Ejemplo. cacarrasco3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" placeholder="Ingrese la contraseña..." name="contrasena" required data-toggle="tooltip" data-placement="right" title="Debe contener una mayúscula, una minúscula, un número y un carácter especial.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" placeholder="Confirme la contraseña..." name="confirmar_contrasena" required data-toggle="tooltip" data-placement="right" title="Debe coincidir con la contraseña ingresada anteriormente.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="genero_modal">Género</label>
+                                <div class="input-group">
+                                    <select id="genero_modal" name="genero" class="form-control" data-toggle="popover" data-placement="left" title="Género" data-content="Elija el género con el que se sienta identificado. Esto nos ayuda a personalizar mejor su experiencia." data-trigger="focus">
+                                        <option value="">-- Seleccione --</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                        <option value="lgtb">LGTB</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div> 
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="comandanteModal" tabindex="-1" role="dialog" aria-labelledby="comandanteLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="comandanteLabel">Login - Comandante</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="./img/logo_ESPE.png" alt="Emblem" style="width:80px; margin-bottom:12px;" />
+                        <form>
+                            <div class="form-group" data-toggle="popover" data-placement="left" title="Ingrese su usuario" data-content="Escriba su nombre de usuario. Puede usar letras y números, sin espacios." data-trigger="focus">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control" placeholder="Usuario Comandante" />
+                                </div>
+                            </div>
+                            <div class="form-group" data-toggle="popover" data-placement="left" title="Ingrese su contraseña" data-content="Ingrese la contraseña asociada a su cuenta para acceder al sistema." data-trigger="focus">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" placeholder="Contraseña Comandante" />
+                                </div>
+                            </div>
+                            <div class="checkbox text-left">
+                                <label><input type="checkbox" /> Recuérdame</label>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="grupoModal" tabindex="-1" role="dialog" aria-labelledby="grupoLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="grupoLabel">Integrantes - Grupo 1</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width:40px">#</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="success">
+                                        <td>1</td>
+                                        <td>Christian David</td>
+                                        <td>Ramos Alava</td>
+                                        <td>cdramos4@espe.edu.com</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>2</td>
+                                        <td>Carlos Andres</td>
+                                        <td>Carrasco Novoa</td>
+                                        <td>cacarrasco3@espe.edu.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

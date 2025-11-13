@@ -1,0 +1,116 @@
+/* estilos.css (Modificado para Bootstrap) */
+body{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+} 
+
+/* Estilos de texto y encabezados se pueden mantener */
+h2{
+  text-align: center;
+  margin-bottom: 10px;
+  color:#FFF;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size: 30px;
+}
+
+.Texto{
+  text-align: center;
+  color:#000;
+  font-family:Arial;
+  font-size: 25px;
+}
+/* Estilos visuales para el nav bar (sin posicionamiento) */
+nav{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Estilos visuales de los contenedores (sin posicionamiento) */
+#header {
+  background-color: rgba(0, 255, 255);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 10px;
+  margin-bottom: 15px; /* Espacio antes de la navbar */
+}
+
+/* leftMenu, content y rightMenu ahora usan clases de Bootstrap para el layout,
+   pero podemos mantener sus estilos de fondo, borde, etc. */
+
+#leftMenu {
+  text-align: center;
+  background-color: rgba(255, 255, 255);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 15px;
+  margin-top: 15px;
+  min-height: 320px;
+}
+#leftMenu a{
+  margin-bottom: 10px;
+  background-color: lightgray;
+  color: #000;
+}
+
+#content {
+  text-align: center;
+  background-color: rgba(51, 153, 51);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  margin-top: 15px;
+  min-height: 320px;
+  color: white; /* Para que el texto sea visible */
+}
+#content p { color: white; } /* Especificidad */
+
+
+#rightMenu {
+  background-color: rgba(0, 0, 0);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 10px;
+  margin-top: 15px;
+  min-height: 320px;
+  color: white;
+}
+
+#footer {
+  background-color: rgba(255,255,0);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding-top: 10px;
+  height: auto; /* Altura automática */
+  margin-top: 20px; /* Espacio antes del footer */
+  padding-bottom: 10px;
+}
+
+#footer #Facebook{
+    background-color: #3b5998;
+    color: white;
+}
+
+#footer #Twitter{
+    background-color: #00acee;
+    color: white;
+}
+
+#footer #Youtube{
+    background-color: #c4302b;
+    color: white;
+}

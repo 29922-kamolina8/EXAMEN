@@ -1,0 +1,14 @@
+body {
+    background: linear-gradient(to bottom, rgb(70, 223, 70), #ffffff);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* Define el ancho de la tarjeta de login */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+}

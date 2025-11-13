@@ -2,143 +2,771 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>EXAMEN PARCIAL 1 - Badge</title>
+  <title>EXAMEN PARCIAL 1 - Badge</title>
 
-    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
+  <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* ===== Estilos pedidos: explicación en negro y letras blancas ===== */
+    .code-explain{
+      border-left: 4px solid #ffc107;          /* amarillo para contraste */
+      background: #000000;                     /* fondo negro */
+      color: #ffffff;                          /* texto blanco */
+      padding: .9rem 1.1rem;
+      border-radius: .4rem;
+      margin: .6rem 0 .9rem 0;
+      line-height: 1.55;
+    }
+    .code-explain a{
+      color:#9adcff;                           /* enlaces legibles en fondo negro */
+      text-decoration: underline;
+    }
+    .code-explain code{
+      color:#ffe082;                           /* resalta fragmentos cortos */
+      background: rgba(255,255,255,.08);
+      padding: .05rem .35rem;
+      border-radius: .25rem;
+    }
+    .code-explain .bullet{
+      display:block;
+      margin-left: .9rem;
+      text-indent: - .9rem;
+    }
+    .code-caption{font-size:.85rem;color:#6c757d;margin-top:.5rem}
+    pre code{font-family:"Roboto Mono",monospace}
+  </style>
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  <div id="wrapper">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
-                <div class="sidebar-brand-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">PARTE II</div>
-            </a>
-
-            <hr class="sidebar-divider my-0">
-            
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo01/index.html">
-                    <i class="fas fa-fw fa-comment-alt"></i>
-                    <span>Tooltip and Popover</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo02/index.html">
-                    <i class="fas fa-fw fa-sliders-h"></i>
-                    <span>Slider</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo03/index.html">
-                    <i class="fas fa-fw fa-crosshairs"></i>
-                    <span>Scrollspy</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo04/index.html">
-                    <i class="fas fa-fw fa-stream"></i>
-                    <span>Megamenu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo05/index.html">
-                    <i class="fas fa-fw fa-tasks"></i>
-                    <span>Progress Bar</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo06/index.html">
-                    <i class="fas fa-fw fa-list-ul"></i>
-                    <span>List</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo07/index.html">
-                    <i class="fas fa-fw fa-columns"></i>
-                    <span>Panel</span>
-                </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-certificate"></i>
-                    <span>Badge</span>
-                </a>
-            </li>
-        </ul>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    
-                    <div class="navbar-center">
-                        EXAMEN PARCIAL 1
-                    </div>
-
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../../index.html" title="Inicio">
-                                <i class="fas fa-home fa-fw"></i>
-                            </a>
-                        </li>
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../../../PARTE1/index.html">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte I
-                                </a>
-                                <a class="dropdown-item" href="../../index.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte II
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="container-fluid">
-                    <h1 class="h3 mb-4">Badge - Grupo 08</h1>
-                </div>
-            </div>
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
+        <div class="sidebar-brand-icon">
+          <i class="fas fa-users"></i>
         </div>
+        <div class="sidebar-brand-text mx-3">PARTE II</div>
+      </a>
+
+      <hr class="sidebar-divider my-0">
+
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo01/index.html">
+          <i class="fas fa-fw fa-comment-alt"></i>
+          <span>Tooltip and Popover</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo02/index.html">
+          <i class="fas fa-fw fa-sliders-h"></i>
+          <span>Slider</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo03/index.html">
+          <i class="fas fa-fw fa-crosshairs"></i>
+          <span>Scrollspy</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo04/index.html">
+          <i class="fas fa-fw fa-stream"></i>
+          <span>Megamenu</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo05/index.html">
+          <i class="fas fa-fw fa-tasks"></i>
+          <span>Progress Bar</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo06/index.html">
+          <i class="fas fa-fw fa-list-ul"></i>
+          <span>List</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Grupo07/index.html">
+          <i class="fas fa-fw fa-columns"></i>
+          <span>Panel</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-certificate"></i>
+          <span>Badge</span>
+        </a>
+      </li>
+    </ul>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="navbar-center">
+            EXAMEN PARCIAL 1
+          </div>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../index.html" title="Inicio">
+                <i class="fas fa-home fa-fw"></i>
+              </a>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                   aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="../../../PARTE1/index.html">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Parte I
+                </a>
+                <a class="dropdown-item" href="../../index.html">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Parte II
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container-fluid">
+          <h1 class="h3 mb-4">Badge - Grupo 08</h1>
+        </div>
+        <div class="container-fluid">
+          <h1 class="h3 mb-4">Grupo 08 — Pagination, Label y Badges</h1>
+
+          <!-- Teoría -->
+          <h1 class="h5 mb-3 text-left">Teoría</h1>
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <div class="card content-card">
+                <div class="card-header py-3">
+                  <h6 class="m-0">¿Qué son y para qué sirven?</h6>
+                </div>
+              </div>
+              <div class="card content-card">
+                <div class="card-body">
+                  <p><strong>Badges:</strong> son pequeños elementos visuales con forma de píldora o etiqueta, utilizados para mostrar información breve y destacada como cantidades, estados, notificaciones o categorías.
+                    Pueden ubicarse junto a botones, títulos, íconos, listas o dentro de tablas para indicar, por ejemplo, el número de mensajes no leídos o el estado de un pedido.
+                    En <strong>Bootstrap 5</strong> se definen mediante la clase <code>.badge</code>, y se combinan con clases de color como <code>.bg-primary</code>, <code>.bg-success</code> o <code>.bg-danger</code>.
+                    Además, pueden incorporar íconos o texto oculto con <code>.visually-hidden</code> para mejorar la accesibilidad.</p>
+                </div>
+              </div>
+              <div class="card content-card">
+                <div class="card-body">
+                  <p><strong>Labels:</strong> en versiones anteriores de Bootstrap existía el componente <em>label</em>, pero en Bootstrap 5 este concepto se unificó dentro de <code>.badge</code>.
+                    Los "labels" son útiles para identificar categorías, estados de procesos o resultados de validaciones.
+                    Por ejemplo, un "label" con <code>.bg-success</code> puede representar un estado "Aprobado", mientras que uno con <code>.bg-warning</code> indica "Pendiente".
+                    Su objetivo principal es comunicar visualmente información contextual de forma rápida y estandarizada, reforzando la legibilidad en tablas, listas o encabezados.</p>
+                </div>
+              </div>
+              <div class="card content-card">
+                <div class="card-body">
+                  <p><strong>Pagination:</strong> es un componente de navegación que divide grandes volúmenes de contenido en páginas numeradas, mejorando la organización y la experiencia del usuario.
+                    En Bootstrap, se construye con listas no ordenadas y clases como <code>.pagination</code> y <code>.page-item</code>.
+                    Es importante incluir atributos de accesibilidad como <code>aria-label</code> y <code>aria-current="page"</code> para que los lectores de pantalla identifiquen la página activa.
+                    También pueden incorporarse íconos o símbolos («, ») para representar acciones de "Anterior" y "Siguiente", o incluso truncamientos (…) cuando existen muchas páginas.
+                    Una paginación bien diseñada guía al usuario, reduce la carga cognitiva y mantiene el diseño consistente con las pautas de usabilidad.</p>
+                </div>
+              </div>
+              <div class="card content-card">
+                <div class="card-body">
+                  <p>Estos tres componentes —<strong>Badges, Labels y Pagination</strong>— comparten un mismo principio: aportar claridad visual, orden y accesibilidad en la interfaz.
+                    Son elementos básicos en cualquier sistema web moderno, permitiendo crear interfaces interactivas, limpias y adaptadas a múltiples dispositivos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video -->
+          <hr class="my-4">
+          <h1 class="h5 mb-3 text-left"> Video Demostrativo</h1>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0">Video</h6>
+            </div>
+            <div class="card-body">
+              <div class="ratio ratio-16x9">
+                <video id="video-explicativo" autoplay muted playsinline loop controls>
+                  <source src="./img/Cap8.mp4" type="video/mp4">
+                  Tu navegador no soporta la etiqueta de video.
+                </video>
+              </div>
+              <div class="code-caption">Autoplay</div>
+            </div>
+          </div>
+
+          <!-- Ejemplos con ejecución -->
+          <hr class="my-4">
+          <h1 class="h5 mb-3 text-left">Ejemplos</h1>
+
+          <!-- BADGES -->
+          <div class="card mb-4 shadow-sm border-primary">
+            <div class="card-header">Badges</div>
+            <div class="card-body">
+              <p>
+                Los badges se utilizan para mostrar cantidades o notificaciones. Pueden aplicarse en listas de navegación, botones o cualquier otro elemento.
+                Recuerda usar <code>.visually-hidden</code> para accesibilidad.
+              </p>
+
+              <h6 class="mt-2">Código — En lista de navegación</h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> construye una lista vertical (sidebar) con <code>.nav .nav-pills</code> y agrega un contador a la derecha mediante <code>&lt;span class="badge"&gt;</code>.<br>
+                <span class="bullet">• <strong>Layout:</strong> <code>.d-flex</code> + <code>.justify-content-between</code> separan el texto del contador a extremos opuestos del enlace.</span>
+                <span class="bullet">• <strong>Accesibilidad:</strong> el badge debe representar información redundante con el texto (p. ej., “Mensajes (3)”) para usuarios con lectores de pantalla.</span>
+                <span class="bullet">• <strong>Buenas prácticas:</strong> evita poner badges en enlaces deshabilitados y actualiza el número vía JS cuando cambie el estado (notificaciones en tiempo real).</span>
+                <span class="bullet">• <strong>BS5:</strong> usa <code>.badge</code> + variaciones de color como <code>.bg-secondary</code>. En listas, la variante “pill” es opcional (<code>.rounded-pill</code>).</span>
+              </div>
+              <pre><code>&lt;ul class="nav nav-pills nav-stacked" style="max-width:260px;"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;
+      &lt;span class="badge pull-right"&gt;28&lt;/span&gt;
+      Inicio
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Perfil&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;
+      &lt;span class="badge pull-right"&gt;3&lt;/span&gt;
+      Mensajes
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+              <h6 class="mt-3">Código — En botón </h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> muestra 2 patrones comunes: (1) contador “pill” sobre el borde del botón y (2) punto de notificación silencioso.<br>
+                <span class="bullet">• <strong>Posicionamiento:</strong> el contenedor necesita <code>.position-relative</code>; el badge usa <code>.position-absolute</code> con utilidades <code>.top-0 .start-100 .translate-middle</code>.</span>
+                <span class="bullet">• <strong>Accesibilidad:</strong> añade <code>.visually-hidden</code> con texto como “unread messages” para describir el significado del número o del punto.</span>
+                <span class="bullet">• <strong>Rendimiento:</strong> evita reflujo continuo: actualiza el contenido del badge (innerText) o alterna clases en lotes, no en cada frame.</span>
+                <span class="bullet">• <strong>Estados:</strong> usa colores semánticos: <code>.bg-danger</code> para alertas, <code>.bg-warning</code> para atención, <code>.bg-success</code> para confirmaciones.</span>
+              </div>
+              <pre><code>&lt;button type="button" class="btn btn-primary position-relative"&gt;
+  Inbox
+  &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;
+    99+&lt;span class="visually-hidden"&gt;unread messages&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-primary position-relative ms-2"&gt;
+  Profile
+  &lt;span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"&gt;
+    &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <button type="button" class="btn btn-sm btn-primary ejecutar"
+                        data-target="#out-badge" data-example="badge-list">
+                  EJECUTAR LISTA
+                </button>
+                <button type="button" class="btn btn-sm btn-success ejecutar"
+                        data-target="#out-badge" data-example="badge-button">
+                  EJECUTAR BOTONES
+                </button>
+                <button type="button" class="btn btn-sm btn-danger btn-reset"
+                        data-target="#out-badge">
+                  RESTABLECER
+                </button>
+              </div>
+
+              <div id="out-badge" class="demo-output mt-3">
+                <p class="text-muted small mb-0">Ejemplo no ejecutado.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LABELS -->
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">Labels</div>
+            <div class="card-body">
+              <p>
+                En versiones anteriores de Bootstrap se usaba <code>.label</code> para mostrar estados o categorías.
+                En Bootstrap 5, se reemplazan por <code>.badge</code>. A continuación se muestran ambos tipos de ejemplos.
+              </p>
+
+              <h6 class="mt-2">Código — Etiquetas Clásicas</h6>
+              <div class="code-explain">
+                <strong>Contexto histórico:</strong> las clases <code>.label</code> pertenecen a Bootstrap 3/4 y ya no existen en BS5.<br>
+                <span class="bullet">• <strong>Uso actual:</strong> solo como referencia/legado. En proyectos nuevos, migra a <code>.badge</code> + <code>.bg-*</code>.</span>
+                <span class="bullet">• <strong>Migración rápida:</strong> <em>label-default →</em> <code>.badge.bg-secondary</code>, <em>label-success →</em> <code>.badge.bg-success</code>, etc.</span>
+                <span class="bullet">• <strong>Accesibilidad:</strong> si el texto del label comunica estado, acompáñalo con iconos o <code>aria-live</code> si cambia dinámicamente.</span>
+              </div>
+              <pre><code>&lt;h3&gt;Ejemplos de Etiquetas &lt;span class="label label-default"&gt;Nuevo&lt;/span&gt;&lt;/h3&gt;
+
+&lt;span class="label label-default"&gt;Por Defecto&lt;/span&gt;
+&lt;span class="label label-primary"&gt;Principal&lt;/span&gt;
+&lt;span class="label label-success"&gt;Éxito&lt;/span&gt;
+&lt;span class="label label-info"&gt;Información&lt;/span&gt;
+&lt;span class="label label-warning"&gt;Aviso&lt;/span&gt;
+&lt;span class="label label-danger"&gt;Peligro&lt;/span&gt;</code></pre>
+
+              <h6 class="mt-3">Código — Badges como Labels en Títulos</h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> reemplaza labels por badges modernas dentro de encabezados.<br>
+                <span class="bullet">• <strong>Contraste:</strong> sobre fondos claros, agrega <code>.text-dark</code> en <code>.bg-warning</code> para AA/AAA.</span>
+                <span class="bullet">• <strong>Semántica:</strong> evita usar <code>&lt;h1..h6&gt;</code> solo por tamaño; respeta jerarquía y usa utilidades de display si necesitas variar el tamaño.</span>
+                <span class="bullet">• <strong>Internacionalización:</strong> si el estado (“Aprobado/Pendiente”) puede cambiar de idioma, prepara llaves/strings en tu capa de i18n.</span>
+              </div>
+              <pre><code>&lt;h5&gt;Título &lt;span class="badge bg-primary"&gt;Nuevo&lt;/span&gt;&lt;/h5&gt;
+&lt;h4&gt;Título &lt;span class="badge bg-success"&gt;Aprobado&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;Título &lt;span class="badge bg-warning text-dark"&gt;Pendiente&lt;/span&gt;&lt;/h3&gt;</code></pre>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <button type="button" class="btn btn-sm btn-primary ejecutar"
+                        data-target="#out-labels" data-example="label-classic">
+                  EJECUTAR 1
+                </button>
+
+                <button type="button" class="btn btn-sm btn-dark ejecutar"
+                        data-target="#out-labels" data-example="label-headers">
+                  EJECUTAR 2
+                </button>
+
+                <button type="button" class="btn btn-sm btn-danger btn-reset"
+                        data-target="#out-labels">
+                  RESTABLECER
+                </button>
+              </div>
+
+              <div id="out-labels" class="demo-output mt-3">
+                <p class="text-muted small mb-0">Ejemplo no ejecutado.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">Pagination (simple, con estado y pager)</div>
+            <div class="card-body">
+              <p>Usa <code>aria-label</code> para describir la navegación y <code>aria-current="page"</code> en el elemento activo.</p>
+
+              <h6 class="mt-2">Código — Simple</h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> barra de paginación mínima con números y flechas « ».<br>
+                <span class="bullet">• <strong>Estructura BS5:</strong> cada item lleva <code>.page-item</code> y el enlace <code>.page-link</code>.</span>
+                <span class="bullet">• <strong>Responsive:</strong> la paginación colapsa bien; puedes centrar con utilidades <code>.justify-content-center</code> en el <code>ul</code>.</span>
+                <span class="bullet">• <strong>Rastreo:</strong> recuerda actualizar el querystring (?page=2) o el estado del router SPA al hacer click.</span>
+              </div>
+              <pre><code>&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+              <h6 class="mt-3">Código — Con estados </h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> muestra primer botón inactivo y la página actual marcada.<br>
+                <span class="bullet">• <strong>Accesibilidad:</strong> usa <code>.disabled</code> + <code>aria-disabled="true"</code> y <code>tabindex="-1"</code> para evitar foco en deshabilitados.</span>
+                <span class="bullet">• <strong>Truncamiento:</strong> elipsis «…» reduce ruido cuando hay muchas páginas; genera dinámicamente según total/actual.</span>
+                <span class="bullet">• <strong>SEO:</strong> en SSR, añade <code>rel="prev"</code>/<code>rel="next"</code> en enlaces correspondientes.</span>
+              </div>
+              <pre><code>&lt;ul class="pagination"&gt;
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;1 &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+              <h6 class="mt-3">Código — Pager simple (Anterior / Siguiente)</h6>
+              <div class="code-explain">
+                <strong>Qué hace:</strong> navegación lineal con solo “Anterior/Siguiente”.<br>
+                <span class="bullet">• <strong>Cuándo usar:</strong> lectura de artículos, pasos de wizard o galerías cuando no necesitas saltar a páginas específicas.</span>
+                <span class="bullet">• <strong>Atajos teclado:</strong> añade listeners para <code>ArrowLeft</code>/<code>ArrowRight</code> y mejora UX.</span>
+                <span class="bullet">• <strong>Deshabilitado:</strong> oculta o desactiva “Anterior” cuando estás en el inicio y “Siguiente” al final.</span>
+              </div>
+              <pre><code>&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;&lt;a href="#"&gt;&larr; Anterior&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="next"&gt;&lt;a href="#"&gt;Siguiente &rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <button type="button" class="btn btn-sm btn-dark ejecutar" data-target="#out-pag" data-example="paginacion-simple">EJECUTAR SIMPLE</button>
+                <button type="button" class="btn btn-sm btn-success ejecutar" data-target="#out-pag" data-example="paginacion-estado">EJECUTAR ESTADOS</button>
+                <button type="button" class="btn btn-sm btn-outline-success ejecutar" data-target="#out-pag" data-example="pager-simple">EJECUTAR PAGER</button>
+                <button type="button" class="btn btn-sm btn-danger btn-reset" data-target="#out-pag">RESTABLECER</button>
+              </div>
+
+              <div id="out-pag" class="demo-output mt-3">
+                <p class="text-muted small mb-0">Ejemplo no ejecutado.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Código Template -->
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <span>Corrección de la prueba —  (login/registro)</span>
+              <button type="button" class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="#code-tmplLogin">
+                Copiar
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="code-explain">
+                <strong>Qué hace:</strong> define un <code>&lt;template&gt;</code> con dos formularios (login/registro) alternables por pestañas sin duplicar HTML.<br>
+                <span class="bullet">• <strong>Validación nativa:</strong> usa <code>required</code>, <code>minlength</code>, <code>pattern</code>, rangos numéricos y tipos HTML5 (<code>email</code>, <code>date</code>).</span>
+                <span class="bullet">• <strong>Interacción:</strong> puedes clonar el contenido con <code>document.getElementById('tmplLogin').content.cloneNode(true)</code> e insertarlo en un modal o contenedor dinámico.</span>
+                <span class="bullet">• <strong>UX:</strong> marca campos obligatorios con <code>.req</code>, muestra mensajes de error personalizados con <code>setCustomValidity</code> y <code>reportValidity()</code>.</span>
+                <span class="bullet">• <strong>Seguridad:</strong> nunca valides solo en frontend; revalida en servidor. Usa <em>autocomplete</em> apropiado y política de contraseñas.</span>
+              </div>
+              <pre><code id="code-tmplLogin">
+                &lt;template id="tmplLogin"&gt;
+  &lt;div class="contenedor-formularios"&gt;
+    &lt;ul class="contenedor-tabs nav nav-tabs mb-3"&gt;
+      &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="#" id="btnIniciar"&gt;Iniciar Sesión&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" id="btnRegistrar"&gt;Registrarse&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="contenido-tab"&gt;
+      &lt;div id="loginPanel"&gt;
+        &lt;form id="FormLoginAvanzado" novalidate&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="loginUsuario" class="form-label"&gt;Correo o Usuario &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="loginUsuario" required placeholder="usuario@correo.com"&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="loginPassword" class="form-label"&gt;Contraseña &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="loginPassword" required minlength="6" placeholder="••••••"&gt;
+          &lt;/div&gt;
+          &lt;button type="submit" class="btn btn-primary w-100"&gt;Iniciar Sesión&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div id="registerPanel" style="display:none"&gt;
+        &lt;form id="FormRegistroAvanzado" novalidate&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="nombre" class="form-label"&gt;Nombre completo &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="nombre" required minlength="2" maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="correo" class="form-label"&gt;Correo electrónico &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="email" class="form-control" id="correo" required&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="edad" class="form-label"&gt;Edad &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="number" class="form-control" id="edad" required min="18" max="99"&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="fecha" class="form-label"&gt;Fecha de nacimiento &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="date" class="form-control" id="fecha" required&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="password" class="form-label"&gt;Contraseña &lt;span class="req text-danger"&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="password" required minlength="6" maxlength="20" placeholder="••••••"&gt;
+          &lt;/div&gt;
+          &lt;button type="submit" class="btn btn-success w-100"&gt;Registrarse&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    <span>Corrección de la Prueba</span>
+    <button type="button" class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="#code-layout3">
+      Copiar
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="code-explain">
+      <h4 style="margin-top:0;color:#fff">Código explicado de la Corrección de la Prueba</h4>
+      <p style="margin:.2rem 0 .6rem 0">Este bloque define un header con logo, una barra de atajos y un grid 3/6/3 que contiene: acciones (izq), contenido dinámico (centro) y un video (der.). A continuación se describen detalles prácticos y recomendaciones.</p>
+
+      <strong>Acciones rápidas (izquierda)</strong>
+      <span class="bullet">• <strong>data-func</strong>: cada enlace usa <code>data-func="xxx"</code> — el script clona la plantilla correspondiente <code>#tmpl-func-xxx</code> y la inserta en <code>#contenido-dinamico</code>. Esto permite una SPA ligera sin frameworks.</span>
+      <span class="bullet">• <strong>Buenas prácticas:</strong> usa <code>role="button"</code> o <code>tabindex="0"</code> si el elemento no es un botón real; maneja el foco al abrir contenido dinámico para accesibilidad.</span>
+
+      <strong>Grid responsivo (3 / 6 / 3)</strong>
+      <span class="bullet">• <code>.col-12 .col-md-3 / .col-md-6</code>: en pantallas pequeñas las columnas se apilan (col-12). En desktop se distribuye 3/6/3. Mantén el contenido centrado y evita anchos fijos dentro de las columnas.</span>
+      <span class="bullet">• <strong>Altura y alineación:</strong> usa utilidades como <code>.h-100</code> y <code>.align-items-stretch</code> para que tarjetas compartan altura y evitar saltos visuales.</span>
+
+      <strong>Contenido dinámico (centro)</strong>
+      <span class="bullet">• <strong>#contenido-dinamico</strong>: contenedor donde se renderizan templates. Para transiciones suaves se usa <code>hide().html(content).fadeIn(400)</code>.</span>
+      <span class="bullet">• <strong>Seguridad:</strong> el HTML inyectado proviene de <code>&lt;template&gt;</code> local; evita insertar contenido externo sin sanitizar para prevenir XSS.</span>
+
+      <strong>Video (derecha)</strong>
+      <span class="bullet">• <code>&lt;video&gt;</code>: usar <code>muted playsinline</code> si quieres autoplay en móviles; agrega <code>controls</code> si deseas que el usuario controle reproducción.</span>
+      <span class="bullet">• <strong>Performance:</strong> añade <code>poster="./img/Cap8-poster.jpg" preload="metadata"</code> para mostrar una imagen y evitar descargar el video completo al cargar la página.</span>
+      <span class="bullet">• <strong>Estética:</strong> envuelve en <code>.ratio.ratio-16x9</code> y usa <code>object-fit:cover</code> o <code>contain</code> según prefieras recorte o totalidad de la imagen.</span>
+
+      <strong>Footer y enlaces</strong>
+      <span class="bullet">• Abrir en nueva pestaña: siempre usar <code>target="_blank" rel="noopener"</code> para enlaces externos para seguridad y rendimiento.</span>
+      <span class="bullet">• Iconos y accesibilidad: añade <code>aria-label</code> a iconos cuando el texto no sea suficiente (p. ej. solo el icono social).</span>
+
+      <strong>Extras y recomendaciones</strong>
+      <span class="bullet">• <strong>Keyboard UX:</strong> añade atajos de teclado (ArrowLeft/Right) para navegar pagers y mejorar usabilidad.</span>
+      <span class="bullet">• <strong>Internacionalización:</strong> evita texto plano en templates; usa variables de i18n si el proyecto crecerá en idiomas.</span>
+      <span class="bullet">• <strong>Migración:</strong> si deseas modernizar, reemplaza las clases legacy (<code>.label</code>) por <code>.badge.bg-*</code> y elimina hojas de estilo de compatibilidad.</span>
     </div>
+    <pre><code id="code-layout3">
+  &lt;div class="card mb-4 shadow-sm" style="background:#e9f7ef;"&gt;
+  &lt;div class="text-center mb-3"&gt;
+    &lt;img src="./img/logo.png" class="img-fluid" alt="ESPE" style="max-height:80px;"&gt;
+  &lt;/div&gt;
+  &lt;div class="d-flex justify-content-center align-items-center flex-wrap py-3 mb-4 bg-light border rounded"&gt;
+    &lt;a href="#" class="mx-3 text-success fw-bold text-decoration-none enlace-func" data-func="registro"&gt;
+      &lt;i class="fas fa-user-plus me-1"&gt;&lt;/i&gt; Formulario Registro
+    &lt;/a&gt;
+    &lt;a href="#" class="mx-3 text-success fw-bold text-decoration-none enlace-func" data-func="producto"&gt;
+      &lt;i class="fas fa-box me-1"&gt;&lt;/i&gt; Formulario Producto
+    &lt;/a&gt;
+    &lt;a href="#" class="mx-3 text-success fw-bold text-decoration-none enlace-func" data-func="contacto"&gt;
+      &lt;i class="fas fa-envelope me-1"&gt;&lt;/i&gt; Contacto
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="row g-4 align-items-stretch"&gt;
+    &lt;div class="col-12 col-md-3"&gt;
+      &lt;div class="card shadow-sm border-success p-3 h-100"&gt;
+        &lt;div class="d-flex flex-column gap-3"&gt;
+          &lt;button type="button" class="btn btn-success w-100 py-2" data-func="badges"&gt;&lt;i class="fas fa-sign-in-alt me-2"&gt;&lt;/i&gt;Badge&lt;/button&gt;
+          &lt;button type="button" class="btn btn-success w-100 py-2" data-func="labels"&gt;&lt;i class="fas fa-user-graduate me-2"&gt;&lt;/i&gt;Labels&lt;/button&gt;
+          &lt;button type="button" class="btn btn-success w-100 py-2" data-func="pagination"&gt;&lt;i class="fas fa-box me-2"&gt;&lt;/i&gt;Pagination&lt;/button&gt;
+          &lt;button type="button" class="btn btn-success w-100 py-2" data-func="all"&gt;&lt;i class="fas fa-user-plus me-2"&gt;&lt;/i&gt;Resumen&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-6"&gt;
+      &lt;div id="contenido-dinamico" class="card border-success shadow-sm p-4 h-100" style="background-color:#f5fff5;"&gt;
+        &lt;h2 class="text-success text-center mb-4"&gt;Aplicación de Tecnologías WEB&lt;/h2&gt;
+        &lt;p&gt;&lt;strong&gt;Estudiantes:&lt;/strong&gt; Dario Constante, Franco Pillajo&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;NRC:&lt;/strong&gt; 29922&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Grupo:&lt;/strong&gt; 08&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Fecha:&lt;/strong&gt; 8 de noviembre del 2025&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;h4 class="text-success text-center mt-3"&gt;Tema: Pagination, Label y Badges&lt;/h4&gt;
+        &lt;p class="text-muted text-center"&gt;Haz clic en los botones de la izquierda para ver los ejemplos interactivos.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12 col-md-3"&gt;
+      &lt;div class="card shadow-sm border-success p-2 h-100"&gt;
+        &lt;div class="ratio ratio-16x9"&gt;
+          &lt;div class="text-center"&gt;
+            &lt;video autoplay loop muted playsinline class="rounded w-100 object-fit-cover" style="height:100%"&gt;
+              &lt;source src="./img/video_espe.mp4" type="video/mp4"&gt;
+              Tu navegador no soporta la reproducción de video.
+            &lt;/video&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;footer class="text-center mt-4 py-3 bg-success text-white rounded shadow-sm"&gt;
+    &lt;div class="footer-social"&gt;
+      &lt;h5 class="text-white mb-3"&gt;&lt;i class="fas fa-share-alt"&gt;&lt;/i&gt; Síguenos en nuestras redes sociales&lt;/h5&gt;
+      &lt;div class="social-links"&gt;
+        &lt;a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook"&gt;&lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter"&gt;&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"&gt;&lt;i class="fab fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
+          <!-- Sección EXTRA -->
+          <hr class="my-4">
+          <div class="d-flex gap-2 flex-wrap mt-3 mb-3">
+            <button type="button" class="btn btn-warning ejecutar" data-target="#seccionExtra" data-example="mostrar-extra">
+              <i class="fas fa-eye"></i> EJECUTAR - Corrección Prueba
+            </button>
+            <button type="button" class="btn btn-danger btn-reset" data-target="#seccionExtra">
+              <i class="fas fa-eye-slash"></i> RESTABLECER - Ocultar
+            </button>
+          </div>
+
+          <div id="seccionExtra" style="display:none;">
+            <!-- Modal genérico (no utilizado en el HTML actual, pero mantenido por si se necesita) -->
+            <div class="modal fade" id="globalModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Formulario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.container-fluid -->
+      </div><!-- End of Main Content -->
+    </div><!-- End of Content Wrapper -->
+  </div><!-- /#wrapper -->
+
+  <!-- =================================================================
+  == PLANTILLAS PARA EJEMPLOS DINÁMICOS (REFACTORIZACIÓN)
+  ================================================================== -->
+
+  <!-- Plantillas para la sección de "Ejemplos" -->
+  <template id="tmpl-badge-list">
+    <ul class="nav nav-pills flex-column" style="max-width:260px;">
+      <li class="nav-item">
+        <a class="nav-link active d-flex justify-content-between align-items-center" href="#">
+          Inicio <span class="badge bg-secondary">28</span>
+        </a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+          Mensajes <span class="badge bg-secondary">3</span>
+        </a>
+      </li>
+    </ul>
+  </template>
+
+  <template id="tmpl-badge-button">
+    <button type="button" class="btn btn-primary position-relative">
+      Inbox
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        99+ <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary position-relative ms-2">
+      Profile
+      <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+        <span class="visually-hidden">New alerts</span>
+      </span>
+    </button>
+  </template>
+
+  <template id="tmpl-label-classic">
+    <div>
+      <h3>Ejemplos de Etiquetas <span class="label label-default">Nuevo</span></h3>
+      <div class="mt-2">
+        <span class="label label-default">Por Defecto</span>
+        <span class="label label-primary">Principal</span>
+        <span class="label label-success">Éxito</span>
+        <span class="label label-info">Información</span>
+        <span class="label label-warning">Aviso</span>
+        <span class="label label-danger">Peligro</span>
+      </div>
+    </div>
+  </template>
+
+  <template id="tmpl-label-headers">
+    <h5>Título <span class="badge bg-primary">Nuevo</span></h5>
+    <h4>Título <span class="badge bg-success">Aprobado</span></h4>
+    <h3>Título <span class="badge bg-warning text-dark">Pendiente</span></h3>
+  </template>
+
+  <template id="tmpl-paginacion-simple">
+    <nav aria-label="Paginación simple">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&laquo;</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente">&raquo;</a></li>
+      </ul>
+    </nav>
+  </template>
+
+  <template id="tmpl-paginacion-estado">
+    <nav aria-label="Paginación con estados">
+      <ul class="pagination">
+        <li class="page-item disabled" aria-disabled="true"><a class="page-link" href="#" tabindex="-1">&laquo;</a></li>
+        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item disabled" aria-disabled="true"><span class="page-link">…</span></li>
+        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+      </ul>
+    </nav>
+  </template>
+
+  <template id="tmpl-pager-simple">
+    <ul class="pager list-unstyled d-flex justify-content-between">
+      <li class="previous"><a href="#">&larr; Anterior</a></li>
+      <li class="next"><a href="#">Siguiente &rarr;</a></li>
+    </ul>
+  </template>
+
+  <!-- Plantillas para el panel central dinámico -->
+  <template id="tmpl-func-badges">
+    <h3 class="text-success text-center mb-3">🔹 Ejemplo de Badges</h3>
+    <div class="text-center my-4">
+      <button class="btn btn-primary position-relative me-3">
+        Mensajes
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+      </button>
+      <button class="btn btn-success position-relative">
+        Alertas
+        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-warning border border-light rounded-circle"></span>
+      </button>
+    </div>
+    <p class="text-muted text-center">Los badges se usan para notificaciones o cantidades.</p>
+  </template>
+
+  <template id="tmpl-func-labels">
+    <h3 class="text-success text-center mb-3">🔹 Ejemplo de Labels</h3>
+    <ul class="list-unstyled text-center fs-5">
+      <li>Pago: <span class="badge bg-info text-dark">Pendiente</span></li>
+      <li>Estado: <span class="badge bg-success">Completado</span></li>
+      <li>Prioridad: <span class="badge bg-danger">Urgente</span></li>
+    </ul>
+  </template>
+
+  <template id="tmpl-func-pagination">
+    <h3 class="text-success text-center mb-3">🔹 Ejemplo de Paginación</h3>
+    <nav aria-label="Ejemplo de paginación" class="d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item disabled"><a class="page-link">Anterior</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+      </ul>
+    </nav>
+  </template>
+
+  <template id="tmpl-func-all">
+    <h3 class="text-success text-center mb-4">📘 Resumen de Temas</h3>
+    <p><strong>Badges</strong> – Muestran notificaciones o contadores.</p>
+    <p><strong>Labels</strong> – Indican estados o categorías.</p>
+    <p><strong>Pagination</strong> – Divide contenido en varias páginas.</p>
+  </template>
+
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../../js/sb-admin-2.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
+
 </body>
-
 </html>

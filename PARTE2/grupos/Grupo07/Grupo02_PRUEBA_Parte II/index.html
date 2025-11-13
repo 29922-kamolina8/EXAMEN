@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prueba Laboratorio - Grupo 2</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== Fila 1: Logo ===== -->
+  <div class="row seccion" id="fila-logo">
+    <div class="col-xs-12 text-center">
+      <img src="img/logo_ESPE.png" alt="Logo" class="img-responsive center-block" id="logo">
+    </div>
+  </div>
+
+  <!-- ===== Fila 2: Navbar ===== -->
+  <div class="row seccion">
+    <nav class="navbar navbar-inverse" role="navigation" style="margin-bottom: 0;">
+      <div class="container-fluid">
+
+        <!-- Botón hamburguesa -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+            <span class="sr-only">Mostrar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Grupo 2</a>
+        </div>
+
+        <!-- Opciones del menú -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Docente</a></li>
+            <li><a href="Login_glaphynicon/index.html">Comandante</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Grupos <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="disabled"><a href="#">Grupo 1</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="active"><a href="#" id="grupo2">Grupo 2</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 3</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 4</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 5</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 6</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 7</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Grupo 8</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+          <!-- Buscador alineado a la derecha -->
+          <form class="navbar-form navbar-right" role="search" onsubmit="return false;">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+             <div class="form-group form-group-center">
+            <button type="submit" class="btn btn-primary center-block">Buscar</button>
+          </div>
+          </form>
+
+
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== Fila 3: Tres columnas ===== -->
+  <div class="row seccion text-center" id="contenido">
+
+    <!-- Columna 1 -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="bloque">
+        <button class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-user"></span> Login
+        </button>
+        <button class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-hdd"></span> Registro
+        </button>
+        <button class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-book"></span> Producto
+        </button>
+        <a href="formulario.html" class="btn btn-default btn-block">
+          <span class="glyphicon glyphicon-user"></span> Formulario
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="bloque verde">
+        <h3>Aplicaciones de Tecnologías Web</h3>
+        <p><strong>Integrantes:</strong></p>
+        <p>Alisson Nicole Cuenca Morales</p>
+        <p>Stalin Fabián Roche Córdova</p>
+        <p><strong>NRC:</strong> 29922</p>
+        <p><strong>Grupo:</strong> 02</p>
+      </div>
+    </div>
+
+    <div class="bloque negro text-center">
+      <p><strong>Video de presentación</strong></p>
+      <a href="https://www.youtube.com/watch?v=WrjjDqAsVQI" target="_blank" class="btn btn-danger">
+        ▶ Ver en YouTube
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== Fila 4: Tabla ===== -->
+  <div class="row seccion" id="fila-tabla">
+    <div class="col-lg-12">
+
+      <!-- 🟩 Panel con tabla (Ejercicio de paneles) -->
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Integrantes del Grupo 2</h3>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            Este panel combina una estructura de encabezado (<code>.panel-heading</code>) con una tabla 
+            dentro de su cuerpo (<code>.panel-body</code>). Se usa <code>.panel-success</code> 
+            para indicar que el contenido representa información validada.
+          </p>
+        </div>
+
+        <table class="table table-bordered text-center">
+          <thead style="background-color:#d9edf7;">
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Alisson Nicole</td>
+              <td>Cuenca Morales</td>
+              <td>ancuenca@espe.edu.ec</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Stalin Fabián</td>
+              <td>Roche Córdova</td>
+              <td>sfroche@espe.edu.ec</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="panel-footer">
+          Panel elaborado por <strong>Grupo 2</strong> — NRC 29922.
+        </div>
+      </div>
+      <!-- 🟩 Fin del panel -->
+    </div>
+  </div>
+
+    <!-- ===== Fila 5: Paneles complementarios ===== -->
+  <div class="row seccion" id="fila-paneles-complementarios">
+    <div class="col-lg-12">
+
+      <!-- 🟨 PANEL BÁSICO -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Este panel básico utiliza solo <code>.panel</code> y <code>.panel-body</code>, sin encabezado ni pie.
+          Es ideal para mostrar información breve o mensajes dentro de un contenedor simple.
+          <br><br>
+          Aquí puedes ver los últimos mensajes recibidos en tu bandeja de entrada.
+          Revisa las notificaciones marcadas y responde a los usuarios pendientes.
+        </div>
+      </div>
+      <!-- 🟨 Fin del panel básico -->
+
+
+      <!-- 🟧 PANEL CON TABLA SIN CUERPO -->
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <strong>Listado de Proyectos Activos</strong>
+        </div>
+
+        <table class="table table-bordered text-center">
+          <thead style="background-color:#d9edf7;">
+            <tr>
+              <th>#</th>
+              <th>Proyecto</th>
+              <th>Responsable</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Sistema de Inventario</td>
+              <td>Carlos Jiménez</td>
+              <td>En desarrollo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Plataforma de Aprendizaje Online</td>
+              <td>María Torres</td>
+              <td>En pruebas</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Aplicación Móvil de Ventas</td>
+              <td>Jorge Ramírez</td>
+              <td>En producción</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="panel-footer">
+          Panel sin cuerpo. Se muestra directamente la tabla bajo el encabezado.
+        </div>
+      </div>
+      <!-- 🟧 Fin del panel con tabla sin cuerpo -->
+
+
+      <!-- 🟦 PANEL CON LISTA DE GRUPO -->
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <strong>Actividad del Sistema</strong>
+        </div>
+        <div class="panel-body">
+          El sistema ha registrado las últimas acciones ejecutadas por los usuarios.
+          Este resumen muestra la actividad reciente, incluyendo procesos, conexiones
+          y notificaciones del rendimiento general del servidor.
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            Conexiones activas <span class="badge">32</span>
+          </li>
+          <li class="list-group-item">
+            Procesos en ejecución <span class="badge">45</span>
+          </li>
+          <li class="list-group-item">
+            Consultas a la base de datos <span class="badge">120</span>
+          </li>
+          <li class="list-group-item">
+            Notificaciones enviadas <span class="badge">27</span>
+          </li>
+          <li class="list-group-item">
+            Tareas completadas <span class="badge">18</span>
+          </li>
+        </ul>
+
+        <div class="panel-footer">
+          Panel con listas (<code>.list-group</code>) y contadores (<code>.badge</code>).
+        </div>
+      </div>
+      <!-- 🟦 Fin del panel con lista -->
+
+    </div>
+  </div>
+
+  <!-- ===== Fila 6: Paneles contextuales ===== -->
+  <div class="row seccion" id="fila-paneles-contextuales">
+    <div class="col-lg-12">
+
+      <!-- 🟩 Panel SUCCESS: Datos verificados -->
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <strong>Estado del Proyecto</strong>
+        </div>
+        <div class="panel-body">
+          Todos los módulos del proyecto se encuentran <strong>operativos y verificados</strong>.
+          Las pruebas funcionales y de integración han sido completadas exitosamente.
+        </div>
+        <div class="panel-footer">
+          Última validación realizada el <em>09/11/2025</em> por el Grupo 2.
+        </div>
+      </div>
+
+      <!-- 🟨 Panel WARNING: Advertencia general -->
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <strong>Advertencia del Sistema</strong>
+        </div>
+        <div class="panel-body">
+          Algunos formularios presentan tiempos de respuesta superiores a lo esperado.
+          Se recomienda revisar la conexión con la base de datos y optimizar las consultas SQL.
+        </div>
+        <div class="panel-footer">
+          Nivel de prioridad: <strong>Media</strong> — seguimiento en curso.
+        </div>
+      </div>
+
+      <!-- 🟦 Panel INFO: Información del equipo -->
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <strong>Información del Equipo</strong>
+        </div>
+        <div class="panel-body">
+          El Grupo 2 está conformado por estudiantes del NRC 29922 del programa de Ingeniería en 
+          Tecnologías de la Información.  
+          Este proyecto forma parte del laboratorio de <em>Tecnologías Web</em>.
+        </div>
+        <div class="panel-footer">
+          Coordinador del grupo: <strong>Stalin Fabián Roche Córdova</strong>.
+        </div>
+      </div>
+
+      <!-- 🟥 Panel DANGER: Error o alerta crítica -->
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <strong>Alerta Crítica</strong>
+        </div>
+        <div class="panel-body">
+          No se ha podido establecer conexión con el servidor de respaldo FTP.  
+          Verifique las credenciales de acceso y la disponibilidad del puerto 21.
+        </div>
+        <div class="panel-footer">
+          Estado actual: <strong>En revisión</strong>.
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ===== Fin de Fila 6 ===== -->
+
+
+
+
+
+
+
+  <!-- ===== Footer ===== -->
+  <footer id="footer" class="text-center">
+    <div class="social-icons">
+      <a href="#" class="btn-social fb">
+        <img src="fonts/251.svg" alt="Facebook" class="icon-social"> Facebook
+      </a>
+      <a href="#" class="btn-social tw">
+        <img src="fonts/twitter.png" alt="Twitter" class="icon-social"> Twitter
+      </a>
+      <a href="#" class="btn-social yt">
+        <img src="fonts/youtube.png" alt="YouTube" class="icon-social"> Youtube
+      </a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!--
+    Script para mostrar/ocultar la tabla
+    <script>
+      $(document).ready(function(){
+        $("#grupo2").click(function(e){
+          e.preventDefault();
+          $("#fila-tabla").slideToggle("slow");
+        });
+      });
+    </script>
+  -->
+</body>
+</html>

@@ -11,15 +11,19 @@
     <title>EXAMEN PARCIAL 1 - Progress Bar</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +39,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -92,7 +96,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <div class="navbar-center">
                         EXAMEN PARCIAL 1
                     </div>
@@ -124,23 +128,1151 @@
                     </ul>
                 </nav>
 
+
+                <!-- Examen -->
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Progress Bar - Grupo 05</h1>
-                    
-                    </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <p class="m-0 text-dark prf">
+                                Las <strong>barras de progreso</strong> son elementos visuales diseñados para mostrar el
+                                <strong>avance de una tarea</strong> de manera clara y dinámica.
+                                Su objetivo es ofrecer al usuario una <strong>sensación de control y fluidez</strong>
+                                mientras espera la carga, descarga o ejecución de un proceso.
+                                Más allá de su función técnica, también aportan <strong>estética y coherencia
+                                    visual</strong> al diseño del sitio web.
+                                Gracias a tecnologías como <strong>HTML, CSS y JavaScript</strong> o frameworks como
+                                <strong>Bootstrap</strong>, es posible crear barras lineales, circulares o animadas que
+                                no solo informan,
+                                sino que también <strong>mejoran la experiencia del usuario</strong> al transformar el
+                                tiempo de espera en una interacción más agradable.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Video Tutorial</strong>
+                                        </div>
+                                        <div class="card-body">
+                                            <video autoplay loop controls muted width="100%" height="auto">
+                                                <source src="./video/Capítulo 5 - Barras de progreso.mp4"
+                                                    type="video/mp4">
+                                                Tu navegador no soporta el elemento de video.
+                                            </video>
+
+                                            <p class="mt-3 text-dark">
+                                                Las <strong>barras de progreso</strong> se crean con elementos
+                                                <strong>HTML</strong> y <strong>CSS</strong>,
+                                                utilizando contenedores personalizados que permiten <strong>apilar,
+                                                    animar</strong> y <strong>añadir texto</strong>.
+                                                El elemento <code>.progress</code> actúa como contenedor general,
+                                                mientras que <code>.progress-bar</code> muestra
+                                                el avance mediante su <strong>ancho ajustable</strong>.
+                                                <br>
+                                                <br>
+                                                En esta pagina hay <strong>varios ejemplos</strong> con codigo y
+                                                ejecucion que ilustran los distintos estilos de las barras de progreso.
+                                            </p>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Ejemplo 1: Código del Video - Múltiples Barras</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="text-dark">
+                                                Este ejemplo muestra una <strong>barra de progreso compuesta</strong>,
+                                                donde se utilizan
+                                                <strong>varias sub-barras</strong> con diferentes colores para
+                                                representar distintos
+                                                estados o etapas de un proceso. Cada una usa una clase de color de
+                                                Bootstrap
+                                                (<code>bg-success</code>, <code>bg-warning</code>,
+                                                <code>bg-danger</code>)
+                                                para indicar niveles de éxito, advertencia o error dentro del mismo
+                                                progreso.
+                                            </p>
+
+                                            <pre class="bg-light p-3 rounded"><code>&lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-success" style="width:35%"&gt;
+        &lt;span class="sr-only"&gt;35% completado (éxito)&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="progress-bar bg-warning" style="width:20%"&gt;
+        &lt;span class="sr-only"&gt;20% completado (aviso)&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="progress-bar bg-danger" style="width:10%"&gt;
+        &lt;span class="sr-only"&gt;10% completado (peligro)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                            <button class="btn btn-primary execute mt-3" data-code="example1">
+                                                Ejecutar Código
+                                            </button>
+
+                                            <div id="example1" class="mt-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Ejemplo 2: Barra de Progreso con Etiqueta</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="text-dark">
+                                                Esta barra de progreso incluye un <strong>porcentaje visible dentro de
+                                                    la barra</strong>.
+                                                Muestra el valor actual de progreso directamente en el elemento, útil
+                                                para indicar
+                                                visualmente el avance de una tarea específica.
+                                            </p>
+
+                                            <pre class="bg-light p-3 rounded"><code>&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" 
+        aria-valuemin="0" aria-valuemax="100"&gt;30%
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                            <button class="btn btn-primary execute mt-3" data-code="example2">Ejecutar
+                                                Código</button>
+                                            <div id="example2" class="mt-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Ejemplo 3: Barra de Progreso Animada</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="text-dark">
+                                                Este ejemplo utiliza una <strong>barra animada con franjas
+                                                    diagonales</strong>,
+                                                lograda mediante las clases <code>progress-bar-striped</code> y
+                                                <code>progress-bar-animated</code>. Simula movimiento continuo,
+                                                ideal para indicar procesos en ejecución.
+                                            </p>
+
+                                            <pre class="bg-light p-3 rounded"><code>&lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                            <button class="btn btn-primary execute mt-3" data-code="example3">Ejecutar
+                                                Código</button>
+                                            <div id="example3" class="mt-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Ejemplo 4: Barras de Progreso con Diferente Altura</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="text-dark">
+                                                En este caso se modifican las <strong>alturas de las barras</strong> con
+                                                el atributo
+                                                <code>style="height:"</code>. Esto permite crear barras más delgadas o
+                                                más gruesas
+                                                dependiendo del contexto visual deseado.
+                                            </p>
+
+                                            <pre class="bg-light p-3 rounded"><code>&lt;div class="progress mb-2" style="height: 1px;"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%;" 
+         aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress" style="height: 20px;"&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 50%;" 
+         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                            <button class="btn btn-primary execute mt-3" data-code="example4">Ejecutar
+                                                Código</button>
+                                            <div id="example4" class="mt-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Ejemplo 5: Barras de Progreso con Colores (Antecedentes)</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <p class="text-dark">
+                                                Este ejemplo muestra cómo usar las clases de color de Bootstrap como
+                                                <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code> y
+                                                <code>bg-danger</code> para representar <strong>diferentes estados o
+                                                    niveles
+                                                    de avance</strong>. Cada barra está separada con la clase
+                                                <code>mb-2</code>.
+                                            </p>
+
+                                            <pre class="bg-light p-3 rounded"><code>&lt;div class="progress mb-2"&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 25%" 
+         aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress mb-2"&gt;
+    &lt;div class="progress-bar bg-info" role="progressbar" style="width: 50%" 
+         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress mb-2"&gt;
+    &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 75%" 
+         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 100%" 
+         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                            <button class="btn btn-primary execute mt-3" data-code="example5">Ejecutar
+                                                Código</button>
+                                            <div id="example5" class="mt-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Mi Pagina Web-->
+                    <h1 class="h3 mb-4">Barras de Progreso Ejemplo en Pagina Web</h1>
+
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header bg-gradient-primary text-white">
+                            <strong>Página Web</strong>
+                        </div>
+
+                        <div class="card-body">
+
+                            <details>
+                                <summary>Ver Código Fuente</summary>
+                                <pre class="bg-light p-3 mt-2 rounded">
+<code>&lt;!-- Header --&gt;
+&lt;div class="container-fluid mb-3"&gt;
+  &lt;div class="row justify-content-center p-0"&gt;
+    &lt;div id="header" class="col-12 col-lg-6 py-4 text-center"&gt;
+      &lt;img id="Espe_img" src="./img/logo_ESPE.png" alt="Logo ESPE" class="img-fluid w-50"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="p-0 bg-dark d-flex justify-content-center"&gt;
+      &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 col-12 col-lg-9"&gt;
+        &lt;div class="container-fluid"&gt;
+          &lt;a class="navbar-brand" href="#"&gt;Grupo 3&lt;/a&gt;
+          &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+
+          &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+            &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+              &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Docente&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#" id="btnComandante"&gt;Comandante&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class="nav-item dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                  Grupos
+                &lt;/a&gt;
+                &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item" href="#" id="btnGrupo3"&gt;Grupo 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 4&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 5&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 6&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 7&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Grupo 8&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;form class="d-flex"&gt;
+              &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+              &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Main --&gt;
+&lt;div class="container mb-3"&gt;
+  &lt;div class="row justify-content-center px-4 gap-3"&gt;
+
+    &lt;!-- Modal Formulario Login--&gt;
+    &lt;div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="modalLoginLabel"&gt;Iniciar Sesión&lt;/h5&gt;
+            &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+          &lt;/div&gt;
+
+          &lt;div class="modal-body"&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="p-4 rounded"&gt;
+                &lt;div class="text-center mb-4"&gt;
+                  &lt;h1 class="fw-bold mb-3 fs-2"&gt;Login&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;form&gt;
+                  &lt;div class="input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-person-circle fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="email" class="form-control fs-5" id="user" placeholder="Ingresa tu usuario" required&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-lock-fill fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="password" class="form-control fs-5" id="password" placeholder="Ingresa tu contraseña" required&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="form-check mb-3"&gt;
+                    &lt;input class="form-check-input" type="checkbox" id="remember"&gt;
+                    &lt;label class="form-check-label" for="remember"&gt;Recordarme&lt;/label&gt;
+                  &lt;/div&gt;
+
+                  &lt;button type="submit" class="btn btn-primary w-100 fs-5"&gt;Iniciar Sesión&lt;/button&gt;
+                &lt;/form&gt;
+
+                &lt;div class="text-center mt-4"&gt;
+                  &lt;p class="text-muted fs-5 mb-2"&gt;Ingresa con&lt;/p&gt;
+                  &lt;a href="#" class="text-primary mx-3 fs-1"&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href="#" class="text-danger mx-3 fs-1"&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;a href="#" class="text-dark mx-3 fs-1"&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Formulario Registro --&gt;
+    &lt;div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="modalLoginLabel"&gt;Registro&lt;/h5&gt;
+            &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+          &lt;/div&gt;
+
+          &lt;div class="modal-body"&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="jumbotron"&gt;
+                &lt;div class="form-group text-center"&gt;
+                  &lt;h1&gt;Formulario&lt;/h1&gt;
+                &lt;/div&gt;
+
+                &lt;hr&gt;
+
+                &lt;form class="form"&gt;
+                  &lt;div class="form-group input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-person-fill fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="text" class="form-control fs-5" id="nombre" placeholder="Ingrese el nombre..." required&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="form-group input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-person-fill fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="email" class="form-control fs-5" id="email" placeholder="Ingrese el usuario..." required&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="form-group input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-lock-fill fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="password" class="form-control fs-5" id="password" placeholder="Ingrese la contraseña..." required&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="form-group input-group mb-3"&gt;
+                    &lt;span class="input-group-text"&gt;&lt;i class="bi bi-lock-fill fs-4"&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;input type="password" class="form-control fs-5" id="passwordConfirm" placeholder="Confirme la contraseña..." required&gt;
+                  &lt;/div&gt;
+
+                  &lt;hr&gt;
+
+                  &lt;div class="d-flex justify-content-between align-items-center mb-3"&gt;
+                    &lt;label for="gender" class="me-3 mb-0"&gt;Seleccione su género&lt;/label&gt;
+                    &lt;select id="gender" class="form-select w-50" aria-label="Select gender"&gt;
+                      &lt;option selected disabled&gt;Elegir...&lt;/option&gt;
+                      &lt;option value="male"&gt;Masculino&lt;/option&gt;
+                      &lt;option value="female"&gt;Femenino&lt;/option&gt;
+                      &lt;option value="other"&gt;LGTB&lt;/option&gt;
+                    &lt;/select&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="form-group mb-3"&gt;
+                    &lt;label&gt;
+                      &lt;input type="checkbox"&gt; Recordarme
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+
+                  &lt;a href="#" class="form-group btn btn-primary text-center gap-5 w-100 mb-3"&gt;
+                    &lt;i class="bi bi-save"&gt;&lt;/i&gt; Guardar
+                  &lt;/a&gt;
+
+                  &lt;div class="form-group text-end"&gt;
+                    &lt;a href="#"&gt;Olvidé mi contraseña&lt;/a&gt;
+                  &lt;/div&gt;
+
+                &lt;/form&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Tabla --&gt;
+    &lt;div class="modal fade" id="modalTabla" tabindex="-1" aria-labelledby="modalTablaLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="modalTablaLabel"&gt;Tabla de Integrantes&lt;/h5&gt;
+            &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+          &lt;/div&gt;
+
+          &lt;div class="modal-body"&gt;
+            &lt;table class="table text-center"&gt;
+              &lt;thead&gt;
+                &lt;tr&gt;
+                  &lt;th scope="col"&gt;#&lt;/th&gt;
+                  &lt;th scope="col"&gt;Nombre&lt;/th&gt;
+                  &lt;th scope="col"&gt;Apellido&lt;/th&gt;
+                  &lt;th scope="col"&gt;Correo&lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;th scope="row"&gt;1&lt;/th&gt;
+                  &lt;td&gt;Jilmar&lt;/td&gt;
+                  &lt;td&gt;Gonzalez&lt;/td&gt;
+                  &lt;td&gt;jigonzalez3@espe.edu.ec&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;th scope="row"&gt;2&lt;/th&gt;
+                  &lt;td&gt;Dereck&lt;/td&gt;
+                  &lt;td&gt;Jimenez&lt;/td&gt;
+                  &lt;td&gt;dijimenez3@espe.edu.ec&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Barra de Progreso Login --&gt;
+    &lt;div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="loadingModalLabel"&gt;Cargando acceso...&lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body text-center"&gt;
+            &lt;div class="progress" style="height: 25px;"&gt;
+              &lt;div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;
+                0%
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Barra de Progreso Formulario --&gt;
+    &lt;div class="modal fade" id="modalCargando" tabindex="-1" aria-labelledby="modalCargandoLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="modalCargandoLabel"&gt;Cargando Formulario...&lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body text-center"&gt;
+            &lt;div class="progress" style="height: 30px;"&gt;
+              &lt;div id="progressBarCarga" class="progress-bar bg-success" role="progressbar" style="width: 0%;"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Barra de Progreso Tabla --&gt;
+    &lt;div class="modal fade" id="modalCargaTabla" tabindex="-1" aria-labelledby="modalCargaTablaLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="modalCargaTablaLabel"&gt;Cargando tabla de integrantes...&lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body text-center"&gt;
+            &lt;div class="progress" style="height: 25px;"&gt;
+              &lt;div id="progressBarTabla" class="progress-bar progress-bar-animated bg-success"
+                role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;
+                0%
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Sección principal --&gt;
+    &lt;div class="col-12 col-sm-8 col-md-8 col-lg-3 d-flex flex-column align-items-center justify-content-center gap-3 rounded shadow p-3"&gt;
+      &lt;a href="#" class="btn btn-success text-center gap-1 w-75"&gt;
+        &lt;i class="bi bi-person"&gt;&lt;/i&gt; Login
+      &lt;/a&gt;
+      &lt;a href="#" class="btn btn-success text-center gap-1 w-75"&gt;
+        &lt;i class="bi bi-pencil-square"&gt;&lt;/i&gt; Register
+      &lt;/a&gt;
+      &lt;a href="#" class="btn btn-success text-center gap-1 w-75"&gt;
+        &lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; Producto
+      &lt;/a&gt;
+      &lt;a href="#" class="btn btn-success text-center gap-1 w-75" id="btnFormulario"&gt;
+        &lt;i class="bi bi-person"&gt;&lt;/i&gt; Formulario
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-12 col-sm-8 col-md-8 col-lg-4 text-center rounded shadow p-3"&gt;
+      &lt;h2&gt;Aplicaciones de Tecnologías Web&lt;/h2&gt;
+      &lt;p&gt;Grupo No: 3&lt;/p&gt;
+      &lt;p&gt;Integrantes: Jilmar Gonzalez, Dereck Jimenez&lt;/p&gt;
+      &lt;p&gt;NRC: 29922&lt;/p&gt;
+      &lt;p&gt;Fecha: 30/10/2025&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-12 col-sm-8 col-md-8 col-lg-4 d-flex justify-content-center rounded shadow p-3"&gt;
+      &lt;video class="w-100 h-100 rounded" controls autoplay muted&gt;
+        &lt;source src="./video/Himno Universidad de las Fuerzas Armadas ESPE_ 2023(144P).mp4" type="video/mp4"&gt;
+        Tu navegador no soporta la etiqueta de video.
+      &lt;/video&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Footer --&gt;
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row"&gt;
+    &lt;footer class="text-center bg-dark text-light p-3"&gt;
+      &lt;div class="d-flex justify-content-center gap-3"&gt;
+        &lt;a href="#" class="btn btn-primary d-flex align-items-center gap-1" target="_blank"&gt;
+          &lt;i class="bi bi-facebook"&gt;&lt;/i&gt; Facebook
+        &lt;/a&gt;
+        &lt;a href="#" class="btn btn-info d-flex align-items-center gap-1" target="_blank"&gt;
+          &lt;i class="bi bi-twitter"&gt;&lt;/i&gt; Twitter
+        &lt;/a&gt;
+        &lt;a href="#" class="btn btn-danger d-flex align-items-center gap-1" target="_blank"&gt;
+          &lt;i class="bi bi-youtube"&gt;&lt;/i&gt; Youtube
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                                </code>
+                                </pre>
+                            </details>
+
+                            <button class="btn btn-primary execute mt-3" data-target="#example6"
+                                data-url="./example/index.html">
+                                Ejecutar Código
+                            </button>
+
+                            <div id="example6" class="mt-4 border rounded bg-light">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <div class="card-body">
+
+                            <div class="row">
+
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card h-100 shadow border">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Barra de Progreso Simple (Formulario)</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/barra-simple.png" alt="Barra de Progreso Simple"
+                                                        class="img-fluid rounded shadow-sm border w-100">
+                                                    <small class="text-muted d-block mt-2">Barra de progreso durante la
+                                                        carga</small>
+                                                </div>
+
+                                                <div class="col-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/modal-formulario.png" alt="Modal de Formulario"
+                                                        class="img-fluid rounded shadow-sm border w-100">
+                                                    <small class="text-muted d-block mt-2">Formulario mostrado tras
+                                                        completar la carga</small>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <details>
+                                                        <summary>Ver código
+                                                        </summary>
+                                                        <pre class="bg-light p-3 mt-2 rounded">
+<code>&lt;!-- Botón para abrir la el formulario&gt;
+&lt;a href="#" class="btn btn-success text-center gap-1 w-75" id="btnFormulario">Formulario&lt;/a&gt;
+
+&lt;!-- Modal de Carga --&gt;
+&lt;div class="modal fade" id="modalCargando" tabindex="-1" aria-labelledby="modalCargandoLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="modalCargandoLabel"&gt;Cargando Formulario...&lt;/h5&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body text-center"&gt;
+
+      &lt;!-- Barra de Progreso Simple --&gt;
+        &lt;div class="progress" style="height: 30px;"&gt;
+          &lt;div id="progressBarCarga" class="progress-bar bg-success" role="progressbar"
+               style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal del Formulario --&gt;
+&lt;div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="modalFormularioLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="modalFormularioLabel"&gt;Formulario Cargado&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;p&gt;¡El formulario se ha cargado correctamente!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script Barra de Progreso Formulario--&gt;
+&lt;script&gt;
+      document.addEventListener('DOMContentLoaded', function () {
+        const btnFormulario = document.getElementById('btnFormulario');
+        const modalCargando = new bootstrap.Modal(document.getElementById('modalCargando'));
+        const modalFormulario = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        const progressBar = document.getElementById('progressBarCarga');
+
+        btnFormulario.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          let progreso = 0;
+          progressBar.style.width = '0%';
+          modalCargando.show();
+
+          const intervalo = setInterval(() => {
+            progreso += 10;
+            progressBar.style.width = progreso + '%';
+            progressBar.setAttribute('aria-valuenow', progreso);
+
+            if (progreso >= 100) {
+              clearInterval(intervalo);
+              setTimeout(() => {
+                modalCargando.hide();
+                modalFormulario.show();
+              }, 400);
+            }
+          }, 200);
+        });
+      });
+    &lt;/script&gt;
+</code>
+                                                        </pre>
+                                                    </details>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+
+                                                    <p class="text-dark">
+                                                        Al realizar clic en el botón
+                                                        <strong>Formulario</strong>, se ejecuta un
+                                                        proceso visual que despliega un <strong>modal de carga.</strong>
+                                                        En donde se encuentra una <strong>barra de progreso</strong>
+                                                        definida mediante la clase <code>.progress-bar</code> y
+                                                        estilizada con el color verde (<code>.bg-success</code>). A
+                                                        través de un bloque de <strong>JavaScript</strong>, se controla
+                                                        la animación de llenado de la barra mediante un incremento
+                                                        progresivo del atributo <code>width</code>, simulando el proceso
+                                                        de carga de un formulario. Una vez que la barra alcanza el
+                                                        <strong>100%</strong>, el script detiene el intervalo de
+                                                        actualización, oculta el modal de carga y muestra un segundo
+                                                        <strong>modal</strong> que confirma que el <strong>formulario de
+                                                            registro</strong> ha sido cargado correctamente.
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card h-100 shadow mb-4 border">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Barra de Progreso con Etiquetas (Tabla de Integrantes)</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/barra-etiqueta.png"
+                                                        alt="Barra de Progreso con Etiquetas"
+                                                        class="img-fluid rounded shadow-sm border w-100">
+                                                    <small class="text-muted d-block mt-2">Barra de progreso con
+                                                        etiquetas de porcentaje</small>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/modal-tabla.png" alt="Modal Tabla de Integrantes"
+                                                        class="img-fluid rounded shadow-sm border w-100">
+                                                    <small class="text-muted d-block mt-2">Modal con tabla de
+                                                        integrantes</small>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <details>
+                                                        <summary>Ver código</summary>
+                                                        <pre class="bg-light p-3 mt-2 rounded">
+<code>&lt;!-- En el menú de navegación --&gt;
+&lt;li&gt;
+  &lt;a class="dropdown-item" href="#" id="btnGrupo3"&gt;Grupo 3&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;!-- Modal Barra de Progreso Tabla --&gt;
+&lt;div class="modal fade" id="modalCargaTabla" tabindex="-1" aria-labelledby="modalCargaTablaLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="modalCargaTablaLabel"&gt;Cargando tabla de integrantes...&lt;/h5&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body text-center"&gt;
+
+        &lt;!-- Barra de Progreso con Etiqueta--&gt;      
+        &lt;div class="progress" style="height: 25px;"&gt;
+          &lt;div id="progressBarTabla" class="progress-bar progress-bar-animated bg-success"
+               role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;
+            0%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal Tabla de Integrantes --&gt;
+&lt;div class="modal fade" id="modalTabla" tabindex="-1" aria-labelledby="modalTablaLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="modalTablaLabel"&gt;Tabla de Integrantes&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;table class="table text-center"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th scope="col"&gt;#&lt;/th&gt;
+              &lt;th scope="col"&gt;Nombre&lt;/th&gt;
+              &lt;th scope="col"&gt;Apellido&lt;/th&gt;
+              &lt;th scope="col"&gt;Correo&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;1&lt;/th&gt;
+              &lt;td&gt;Jilmar&lt;/td&gt;
+              &lt;td&gt;Gonzalez&lt;/td&gt;
+              &lt;td&gt;jigonzalez3@espe.edu.ec&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;2&lt;/th&gt;
+              &lt;td&gt;Dereck&lt;/td&gt;
+              &lt;td&gt;Jimenez&lt;/td&gt;
+              &lt;td&gt;dijimenez3@espe.edu.ec&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script Barra de Progreso Tabla --&gt;
+&lt;script&gt;
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnGrupo3 = document.getElementById('btnGrupo3');
+    const modalCargaTabla = new bootstrap.Modal(document.getElementById('modalCargaTabla'));
+    const modalTabla = new bootstrap.Modal(document.getElementById('modalTabla'));
+    const progressBar = document.getElementById('progressBarTabla');
+
+    btnGrupo3.addEventListener('click', (e) =&gt; {
+      e.preventDefault();
+
+      let progreso = 0;
+      progressBar.style.width = '0%';
+      progressBar.textContent = '0%';
+      modalCargaTabla.show();
+
+      const intervalo = setInterval(() =&gt; {
+        progreso += 10;
+
+        // Colores dinámicos según el progreso
+        if (progreso &lt; 50) {
+          progressBar.className = 'progress-bar bg-danger progress-bar-animated';
+        } else if (progreso &lt; 80) {
+          progressBar.className = 'progress-bar bg-warning progress-bar-animated';
+        } else {
+          progressBar.className = 'progress-bar bg-success progress-bar-animated';
+        }
+
+        progressBar.style.width = progreso + '%';
+        progressBar.setAttribute('aria-valuenow', progreso);
+        progressBar.textContent = progreso + '%';
+
+        if (progreso &gt;= 100) {
+          clearInterval(intervalo);
+          setTimeout(() =&gt; {
+            modalCargaTabla.hide();
+            modalTabla.show();
+          }, 400);
+        }
+      }, 150);
+    });
+  });
+&lt;/script&gt;
+</code>
+            </pre>
+                                                    </details>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <p class="text-dark">
+                                                        Al seleccionar la opción <strong>Grupo 3</strong> dentro del
+                                                        menú de navegación, se despliega un
+                                                        <strong>modal de carga.</strong>. En donde se presenta una
+                                                        <strong>barra de progreso con una etiqueta</strong> definida
+                                                        mediante las clases
+                                                        <code>.progress</code> y <code>.progress-bar</code>,
+                                                        la cual incrementa su valor de forma gradual mediante un bloque
+                                                        de <strong>JavaScript</strong>. Durante el avance, la barra
+                                                        cambia dinámicamente el numero de porcentaje, representando
+                                                        visualmente el estado
+                                                        del progreso. Una vez que el porcentaje alcanza el
+                                                        <strong>100%</strong>, el script detiene la animación, oculta el
+                                                        modal de carga y muestra un segundo
+                                                        <strong>modal</strong> que contiene una tabla de integrantes.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card h-100 shadow mb-4">
+                                        <div class="card-header bg-gradient-primary text-white">
+                                            <strong>Barra de Progreso Animada (Formulario Login)</strong>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/barra-animada.png" alt="Barra de Progreso Animada"
+                                                        class="img-fluid rounded w-100 shadow-sm border">
+                                                    <small class="text-muted d-block mt-2">Barra de progreso animada
+                                                        durante la carga</small>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mb-3">
+                                                    <img src="./img/modal-login.png" alt="Formulario Login"
+                                                        class="img-fluid rounded w-100 shadow-sm border">
+                                                    <small class="text-muted d-block mt-2">Formulario de inicio de
+                                                        sesión mostrado tras completar la carga</small>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <details>
+                                                        <summary>Ver código</summary>
+                                                        <pre class="bg-light p-3 mt-2 rounded">
+<code>&lt;!-- Botón en el Navbar --&gt;
+&lt;li class="nav-item"&gt;
+  &lt;a class="nav-link" href="#" id="btnComandante"&gt;Comandante&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;!-- Modal Barra de Progreso Login --&gt;
+&lt;div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="loadingModalLabel"&gt;Cargando acceso...&lt;/h5&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body text-center"&gt;
+
+        &lt;!-- Barra de Prgreso con Animacion--&gt;
+        &lt;div class="progress" style="height: 25px;"&gt;
+          &lt;div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+               role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;
+            0%
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal Formulario Login --&gt;
+&lt;div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="modalLoginLabel"&gt;Iniciar Sesión&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;div class="container p-3"&gt;
+          &lt;div class="text-center mb-3"&gt;
+            &lt;h1 class="fw-bold fs-4"&gt;Login&lt;/h1&gt;
+          &lt;/div&gt;
+
+          &lt;form&gt;
+            &lt;div class="input-group mb-3"&gt;
+              &lt;span class="input-group-text"&gt;&lt;i class="bi bi-person-circle fs-5"&gt;&lt;/i&gt;&lt;/span&gt;
+              &lt;input type="email" class="form-control" placeholder="Ingresa tu usuario" required&gt;
+            &lt;/div&gt;
+
+            &lt;div class="input-group mb-3"&gt;
+              &lt;span class="input-group-text"&gt;&lt;i class="bi bi-lock-fill fs-5"&gt;&lt;/i&gt;&lt;/span&gt;
+              &lt;input type="password" class="form-control" placeholder="Ingresa tu contraseña" required&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-check mb-3"&gt;
+              &lt;input class="form-check-input" type="checkbox" id="remember"&gt;
+              &lt;label class="form-check-label" for="remember"&gt;Recordarme&lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;button type="submit" class="btn btn-primary w-100"&gt;Iniciar Sesión&lt;/button&gt;
+          &lt;/form&gt;
+
+          &lt;div class="text-center mt-3"&gt;
+            &lt;p class="text-muted mb-1"&gt;Ingresa con&lt;/p&gt;
+            &lt;a href="#" class="text-primary mx-2 fs-4"&gt;&lt;i class="bi bi-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a href="#" class="text-danger mx-2 fs-4"&gt;&lt;i class="bi bi-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a href="#" class="text-dark mx-2 fs-4"&gt;&lt;i class="bi bi-twitter-x"&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script Barra de Progreso Login --&gt;
+&lt;script&gt;
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnComandante = document.getElementById('btnComandante');
+    const loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
+    const loginModal = new bootstrap.Modal(document.getElementById('modalLogin'));
+    const progressBar = document.getElementById('progressBar');
+
+    btnComandante.addEventListener('click', (e) =&gt; {
+      e.preventDefault();
+
+      let progreso = 0;
+      progressBar.style.width = '0%';
+      progressBar.textContent = '0%';
+      loadingModal.show();
+
+      const intervalo = setInterval(() =&gt; {
+        progreso += 10;
+        progressBar.style.width = progreso + '%';
+        progressBar.setAttribute('aria-valuenow', progreso);
+        progressBar.textContent = progreso + '%';
+
+        if (progreso &gt;= 100) {
+          clearInterval(intervalo);
+          setTimeout(() =&gt; {
+            loadingModal.hide();
+            loginModal.show();
+          }, 400);
+        }
+      }, 200);
+    });
+  });
+&lt;/script&gt;
+</code>
+            </pre>
+                                                    </details>
+                                                </div>
+
+                                                <div class="col-12 mt-3">
+                                                    <p class="text-dark">
+                                                        Al hacer clic en el enlace <strong>Comandante</strong>
+                                                        se inicia un proceso que muestra un
+                                                        <strong>modal de carga.</strong> En su interior se
+                                                        encuentra una <strong>barra de progreso</strong> definida
+                                                        mediante las clases <code>.progress</code> y
+                                                        <code>.progress-bar</code>, la cual se anima de forma continua
+                                                        gracias a las
+                                                        clases <code>.progress-bar-striped</code> y
+                                                        <code>.progress-bar-animated</code>. Mediante un bloque de
+                                                        <strong>JavaScript</strong>, se controla el incremento del
+                                                        atributo <code>width</code> de la barra, junto con la
+                                                        actualización de su porcentaje visible. Una vez que la barra
+                                                        alcanza el <strong>100%</strong>, el script detiene la
+                                                        animación, cierra el modal de carga y muestra un segundo
+                                                        <strong>modal</strong> donde se encuentra un formulario de acceso
+                                                        <strong>“Iniciar Sesión”</strong>.
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../../js/sb-admin-2.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+
+        <script src="js/main.js"></script>
+
+
+        <script>
+            document.querySelectorAll('.execute').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('data-code');
+                    const targetDiv = document.getElementById(targetId);
+                    const code = btn.parentElement.querySelector('pre code').innerText;
+                    targetDiv.innerHTML = code;
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $(".execute").on("click", function () {
+                    const target = $(this).data("target");
+                    const url = $(this).data("url");
+
+                    $(target).html(`
+                                    <div class="p-3">
+                                    <div class="progress" style="height: 25px; border-radius: 10px;">
+                                        <div id="progress-bar" 
+                                            class="progress-bar progress-bar-striped progress-bar-animated bg-gradient-primary" 
+                                            role="progressbar" 
+                                            style="width: 0%">
+                                        Cargando...
+                                        </div>
+                                    </div>
+                                    </div>
+                                `);
+
+                    // Simulación de progreso animado
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += 10;
+                        $("#progress-bar").css("width", progress + "%");
+
+                        if (progress >= 100) {
+                            clearInterval(interval);
+
+                            // Una vez que "carga", reemplaza por el iframe
+                            const iframe = $('<iframe>', {
+                                src: url,
+                                style: 'width: 100%; height: 600px; border: none; border-radius: 10px;',
+                                frameborder: 0,
+                                allowfullscreen: true,
+                            });
+                            $(target).html(iframe);
+                        }
+                    }, 100);
+                });
+            });
+        </script>
+
+
 </body>
 
 </html>

@@ -10,24 +10,25 @@
 
     <title>EXAMEN PARCIAL 1 - Tooltip y Popover</title>
 
-    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
     
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
-    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
     
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 </head>
 
 <body id="page-top">
+    
     <div id="wrapper">
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../../index.html">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-users"></i>
                 </div>
@@ -84,7 +85,6 @@
                     <span>Badge</span>
                 </a>
             </li>
-
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
@@ -106,7 +106,7 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline small">PARTES</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -125,20 +125,748 @@
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4">Tooltip and Popover - Grupo 01</h1>                    
+                    <h1 class="h3 mb-4">Tooltip and Popover - Grupo 01</h1>
+
+                    <div id="teoria" class="section py-4 reveal arriba">
+                        <div class="card content-card p-4 mb-3">
+                            <h5>Teoría</h5>
+                            <p class="lead">Tooltip y Popover: Componentes interactivos para mejorar la experiencia de usuario.</p>
+                            
+                            <h6>¿Qué es un Tooltip?</h6>
+                            <p>Un <strong>tooltip</strong> es un pequeño elemento emergente que aparece cuando el usuario coloca el cursor sobre un elemento específico. Proporciona información adicional sin ocupar espacio permanente en la interfaz.</p>
+                            
+                            <h6 class="mt-3">¿Qué es un Popover?</h6>
+                            <p>Un <strong>popover</strong> es un contenedor más grande que aparece al hacer clic o interactuar con un elemento. A diferencia del tooltip, puede contener texto formateado, botones, imágenes y otros elementos HTML.</p>
+                            
+                            <h6 class="mt-3">Diferencias principales:</h6>
+                            <ul>
+                                <li><strong>Activación:</strong> Tooltips se activan al pasar el cursor (hover), popovers requieren clic.</li>
+                                <li><strong>Contenido:</strong> Tooltips contienen texto simple, popovers pueden incluir HTML complejo.</li>
+                                <li><strong>Duración:</strong> Tooltips desaparecen al quitar el cursor, popovers permanecen hasta ser cerrados.</li>
+                                <li><strong>Tamaño:</strong> Tooltips son pequeños y discretos, popovers pueden ser más grandes.</li>
+                            </ul>
+                            
+                            <h6 class="mt-3">Casos de uso:</h6>
+                            <p><strong>Tooltips:</strong> Explicar iconos, mostrar información adicional sobre campos de formulario, proporcionar ayuda contextual.</p>
+                            <p><strong>Popovers:</strong> Formularios pequeños, menús de configuración, información detallada, confirmaciones de acciones.</p>
+                        </div>
+                    </div>
+
+                    <div id="video" class="section py-4 reveal izquierda">
+                        <div class="card content-card p-4 mb-3">
+                            <h5>Vídeo</h5>
+                            <p class="lead">Contenido multimedia relacionado con la temática.</p>
+                            <div class="ratio ratio-16x9 mt-3">
+                                <video controls class="w-100 h-100">
+                                    <source src="./Grupo7_LABORATORIO_Parte_II/Capítulo 7 -Tooltip y Popover.mp4" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video HTML5.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ejemplos" class="section py-4 reveal derecha">
+                        <div class="card content-card p-4 mb-3">
+                            <h5>Ejemplos</h5>
+                            <p class="lead">Ejemplo práctico de Tooltips con Bootstrap</p>
+                            <p>Demostración interactiva de tooltips y popovers utilizando Bootstrap 5.</p>
+                            <p>En este fragmento se está mostrando cómo funcionan los <strong>Tooltips</strong> en Bootstrap, que básicamente son pequeños cuadros de texto que aparecen cuando el usuario pasa el cursor sobre un elemento, en este caso un botón. Cada botón tiene el atributo <code>data-bs-toggle="tooltip"</code>, que le indica a Bootstrap que debe activar esta función, y el atributo <code>title</code>, que contiene el texto que se mostrará dentro del tooltip. Además, con <code>data-bs-placement</code> se define la posición en la que aparecerá el mensaje —puede ser arriba (<em>top</em>), abajo (<em>bottom</em>), a la izquierda (<em>left</em>) o a la derecha (<em>right</em>)—. Por ejemplo, el botón con <code>data-bs-placement="left"</code> mostrará el texto “Izquierda” al lado izquierdo del botón. Es importante mencionar que para que los tooltips funcionen correctamente no basta solo con el HTML, también se necesita tener cargado el JavaScript de Bootstrap y una pequeña inicialización que los active en la página. En conjunto, este código sirve como una demostración práctica de cómo usar los tooltips para ofrecer información adicional de forma visual y elegante.</p>
+
+                            <h6 class="mt-3">Código HTML:</h6>
+                            <pre class="bg-dark text-light p-3 rounded"><code>&lt;div class="container"&gt;
+                        &lt;h1&gt;Tooltips&lt;/h1&gt;&lt;br&gt;
+                        
+                        &lt;div class="row"&gt;
+                            &lt;div class="col-xs-12 col-sm-3"&gt;
+                                &lt;button class="btn btn-primary btn-block" data-bs-toggle="tooltip" 
+                                        data-bs-placement="left" title="Izquierda"&gt;Presionar 1&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-xs-12 col-sm-3"&gt;
+                                &lt;button class="btn btn-primary btn-block" data-bs-toggle="tooltip" 
+                                        data-bs-placement="top" title="Superior"&gt;Presionar 2&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-xs-12 col-sm-3"&gt;
+                                &lt;button class="btn btn-primary btn-block" data-bs-toggle="tooltip" 
+                                        data-bs-placement="right" title="Derecha"&gt;Presionar 3&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-xs-12 col-sm-3"&gt;
+                                &lt;button class="btn btn-primary btn-block" data-bs-toggle="tooltip" 
+                                        data-bs-placement="bottom" title="Inferior"&gt;Presionar 4&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;</code></pre>
+                            
+                            <div class="text-center mb-3">
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tooltipDemo" aria-expanded="false" aria-controls="tooltipDemo">
+                                    <i class="fas fa-info-circle"></i> Mostrar/Ocultar Demo de Tooltips
+                                </button>
+                            </div>
+                            
+                            <div class="collapse" id="tooltipDemo">
+                                <h6 class="mt-3">Demostración de Tooltips:</h6>
+                                <div class="border p-4 bg-light rounded">
+                                    <div class="row g-3 justify-content-center">
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-primary w-100 py-2" data-bs-toggle="tooltip" 
+                                                    data-bs-placement="left" title="Tooltip a la izquierda">Presionar 1</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-primary w-100 py-2" data-bs-toggle="tooltip" 
+                                                    data-bs-placement="top" title="Tooltip superior">Presionar 2</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-primary w-100 py-2" data-bs-toggle="tooltip" 
+                                                    data-bs-placement="right" title="Tooltip a la derecha">Presionar 3</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-primary w-100 py-2" data-bs-toggle="tooltip" 
+                                                    data-bs-placement="bottom" title="Tooltip inferior">Presionar 4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <button id="initTooltips" class="btn btn-success">Activar Tooltips</button>
+                                    <small class="d-block text-muted mt-2">Haz clic para activar/desactivar tooltips. Cuando estén activos, pasa el cursor sobre los botones azules</small>
+                                </div>
+                            </div>
+                            <div class="">
+                    <button id="initTooltips2" class=""></button>
+                </div> 
+                            <hr class="my-4">
+                            
+                            <h6>Código HTML para Popovers:</h6>
+                            <p>Ejemplo práctico de Popovers con Bootstrap</p>
+                            <p>En este código se está utilizando la funcionalidad de <strong>Popovers</strong> de Bootstrap, que son similares a los <em>tooltips</em> pero más avanzados, ya que pueden mostrar no solo una pequeña etiqueta de texto sino también contenido más completo, como párrafos, enlaces o cualquier otro texto adicional. Cada botón tiene el atributo <code>data-bs-toggle="popover"</code>, que le indica a Bootstrap que debe generar un popover al interactuar con él, y <code>data-bs-content</code>, donde se define el texto o contenido que se mostrará dentro del recuadro emergente. Además, el atributo <code>data-bs-placement</code> controla en qué posición aparece el popover (izquierda, arriba, derecha o abajo del botón), mientras que <code>data-container="body"</code> especifica que el popover se renderice dentro del cuerpo del documento, evitando problemas de posicionamiento con otros elementos del DOM. En conjunto, este fragmento crea cuatro botones con estilo <code>btn btn-info</code>, cada uno mostrando un popover en una dirección diferente cuando el usuario hace clic. Al igual que con los tooltips, es necesario tener el JavaScript de Bootstrap cargado e inicializar los popovers para que se activen correctamente en la página.</p>
+                            <pre class="bg-dark text-light p-3 rounded"><code>&lt;div class="container"&gt;
+                            &lt;h1&gt;Popover&lt;/h1&gt;&lt;br&gt;
+                            
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-xs-12 col-sm-3"&gt;
+                                    &lt;button class="btn btn-info btn-block" data-container="body" 
+                                            data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Lorem"&gt;Presionar 1&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-12 col-sm-3"&gt;
+                                    &lt;button class="btn btn-info btn-block" data-container="body" 
+                                            data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Lorem"&gt;Presionar 2&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-12 col-sm-3"&gt;
+                                    &lt;button class="btn btn-info btn-block" data-container="body" 
+                                            data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lorem"&gt;Presionar 3&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class="col-xs-12 col-sm-3"&gt;
+                                    &lt;button class="btn btn-info btn-block" data-container="body" 
+                                            data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Lorem"&gt;Presionar 4&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                            
+                            <div class="text-center mb-3">
+                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#popoverDemo" aria-expanded="false" aria-controls="popoverDemo">
+                                    <i class="fas fa-comment-alt"></i> Mostrar/Ocultar Demo de Popovers
+                                </button>
+                            </div>
+                            
+                            <div class="collapse" id="popoverDemo">
+                                <h6 class="mt-3">Demostración de Popovers:</h6>
+                                <div class="border p-4 bg-light rounded">
+                                    <div class="row g-3 justify-content-center">
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-info w-100 py-2" data-bs-container="body" 
+                                                    data-bs-toggle="popover" data-bs-placement="left" 
+                                                    data-bs-content="Este es un popover que aparece a la izquierda del botón cuando haces clic. Haz clic de nuevo para cerrarlo."
+                                                    title="Popover Izquierdo">Presionar 1</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-info w-100 py-2" data-bs-container="body" 
+                                                    data-bs-toggle="popover" data-bs-placement="top" 
+                                                    data-bs-content="Este popover se muestra arriba del botón. Puedes cerrarlo haciendo clic en el botón otra vez."
+                                                    title="Popover Superior">Presionar 2</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-info w-100 py-2" data-bs-container="body" 
+                                                    data-bs-toggle="popover" data-bs-placement="right" 
+                                                    data-bs-content="Este popover aparece a la derecha y también se puede cerrar con un clic."
+                                                    title="Popover Derecho">Presionar 3</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-3 text-center">
+                                            <button class="btn btn-info w-100 py-2" data-bs-container="body" 
+                                                    data-bs-toggle="popover" data-bs-placement="bottom" 
+                                                    data-bs-content="Los popovers pueden contener texto más largo y se cierran al hacer clic en el botón que los activó."
+                                                    title="Popover Inferior">Presionar 4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <button id="initPopovers" class="btn btn-warning">Activar Popovers</button>
+                                    <small class="d-block text-muted mt-2">Haz clic para activar/desactivar popovers. Cuando estén activos, haz clic en los botones naranjas</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="ejercicios" class="section py-4 reveal abajo">
+                        <div class="card content-card p-4 mb-3">
+                            <h5>Ejercicios</h5>
+                            <p class="lead">Formulario interactivo con tooltips y popovers aplicados - ¡Practica lo aprendido!</p>
+                            
+                            <div class="text-center mb-3">
+                                <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#ejerciciosDemo" aria-expanded="false" aria-controls="ejerciciosDemo">
+                                    <i class="fas fa-desktop"></i> Mostrar/Ocultar Demo Interactiva
+                                </button>
+                            </div>
+                            
+                            <div class="collapse" id="ejerciciosDemo">
+                                <div class="mb-4">
+                                    <h6>Demo Interactiva:</h6>
+                                    <div class="border rounded p-3 bg-light">
+                                        <iframe src="./espe.html"
+                                                class="w-100 rounded" 
+                                                style="height: 800px; border: 1px solid #dee2e6; min-height: 750px;" 
+                                                title="Demostración Interactiva de Tooltips y Popovers"
+                                                id="Ejercicio4">
+                                            <p>Tu navegador no soporta iframes. <a href="./espe.html" target="_blank">Abrir en nueva ventana</a></p>
+                                        </iframe>
+                                        <div class="text-center mt-2">
+                                            <small class="text-muted">
+                                                <i class="fas fa-info-circle"></i> 
+                                                Interactúa con los botones en la demo para ver tooltips y popovers en acción
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-3">
+                                    <button id="initEjercicios" class="btn btn-info">Activar Demo Completa</button>
+                                    <small class="d-block text-muted mt-2">Haz clic para activar/desactivar la demostración completa del iframe</small>
+                                </div>
+                            </div>
+                            <div class="">
+                    <button id="initEjercicios2" class=""></button>
                 </div>
+                            
+                            <div class="text-center mb-4">
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
+                                    <i class="fas fa-code"></i> Mostrar/Ocultar Código HTML
+                                </button>
+                            </div>
+                            
+                            <div class="collapse" id="codeExample">
+                                <div class="card card-body mb-4">
+                                    <h6>Código HTML completo del archivo espe.html:</h6>
+                                    <pre class="bg-dark text-light p-3 rounded" style="max-height: 400px; overflow-y: auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+	&lt;title&gt;Inicio&lt;/title&gt;
+	&lt;meta name="description" content=""&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"&gt;
+	&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"&gt;
+	&lt;link rel="stylesheet" href="./css/estios.css"&gt;
+    &lt;link rel="stylesheet" href="./css/iconbar.css"&gt;
+    &lt;link rel="stylesheet" href="./icomoon/style.css"&gt;
+    &lt;link rel="icon" href="./img/favicon.ico"&gt;
+    &lt;style&gt;
+        .expand-row { display: flex; gap: 18px; align-items: stretch; margin-top: 18px; }
+        .expand-row .expand-col { flex: 1; transition: flex .2s ease, box-shadow .2s ease; background: #fafafa; padding: 18px; border: 1px solid #e6e6e6; border-radius: 4px; min-width: 180px; }
+        .expand-row .expand-col:hover { flex: 1.12; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+        @media (max-width: 767px) { .expand-row { flex-direction: column; } .expand-row .expand-col { flex: none; } }
+        .expand-col h4 { margin-top: 0; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div class="container logo"&gt; 
+        &lt;div class="row"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"&gt;
+                &lt;img src="./img/logo_ESPE.png" alt="Logo" class="img-responsive center-block" style="width:50%;"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;nav class="navbar navbar-inverse"&gt;
+			&lt;div class="container-fluid"&gt;
+				&lt;div class="navbar-header"&gt;
+					&lt;button class="navbar-toggle" data-toggle="collapse" data-target="#despliegar"&gt;
+						&lt;span class="icon-bar"&gt;&lt;/span&gt;
+						&lt;span class="icon-bar"&gt;&lt;/span&gt;
+						&lt;span class="icon-bar"&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;a href="#" class="navbar-brand"&gt;Grupo 1&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class="collapse navbar-collapse" id="despliegar"&gt;
+					&lt;ul class="nav navbar-nav"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Docente&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#" data-toggle="modal" data-target="#comandanteModal" role="button"&gt;Comandante&lt;/a&gt;&lt;/li&gt;
+
+						&lt;li&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Grupos&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+							&lt;ul class="dropdown-menu"&gt;
+                                &lt;li&gt;&lt;a href="#" data-toggle="modal" data-target="#grupoModal"&gt;Grupo 1&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Grupo 2&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="#"&gt;Grupo 3&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Grupo 4&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Grupo 5&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Grupo 6&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Grupo 7&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;form class="navbar-form navbar-left"&gt;
+						&lt;div class="form-group"&gt;
+							&lt;input type="text" class="form-control" placeholder="buscar"&gt;
+						&lt;/div&gt;
+						&lt;boton class="btn btn-primary"&gt;Buscar&lt;/boton&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class="container cuerpo"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border"&gt;
+                &lt;div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center menu_left border"&gt;
+                    &lt;div class="btn-group-vertical btn-block"&gt;
+                        &lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#comandanteModal" data-placement="top" title="Inicia sesión para acceder a tu cuenta."&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Login&lt;/button&gt;
+                        &lt;button class="btn btn-default" data-toggle="tooltip" data-placement="left" data-content="" title="Crea una cuenta nueva para comenzar."&gt;&lt;span class="glyphicon glyphicon-hdd"&gt;&lt;/span&gt; Registro&lt;/button&gt;
+                        &lt;button class="btn btn-default" data-toggle="tooltip" data-placement="right" data-content="" title="Consulta los productos o servicios disponibles."&gt;&lt;span class="glyphicon glyphicon-book"&gt;&lt;/span&gt; Producto&lt;/button&gt;
+                        &lt;a href="#" class="btn btn-default" data-toggle="modal" data-target="#formularioModal" data-placement="bottom" title="Completa el formulario con tus datos."&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Formulario&lt;/a&gt;
+                        &lt;button class="btn btn-default" aria-hidden="true" tabindex="-1" data-container="" data-toggle="tooltip" data-placement="bottom" data-content="" title="Mensaje 4..." style="background-color:transparent; color:transparent; border-color:transparent; box-shadow:none; outline:none; opacity:0; pointer-events:none;"&gt;
+                            &lt;span class="glyphicon glyphicon-book"&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 text-center content border"&gt;
+                    &lt;h3&gt;Aplicacion de tecnologías web&lt;/h3&gt;
+                    &lt;br&gt;
+                    &lt;h4&gt;Integrantes:&lt;/h4&gt;
+                    &lt;h4&gt;Carlos Andres Carrasco Novoa&lt;/h4&gt;
+                    &lt;h4&gt;Christian David Ramos Alava&lt;/h4&gt;
+                    &lt;h4&gt;NRC: 29922&lt;/h4&gt;
+                    &lt;h4&gt;Grupo 1&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="col-xs-12 col-sm-12 col-md-4 col-lg-5 video border" style="display:flex; align-items:stretch; height:100%;"&gt;
+                    &lt;div class="embed-responsive embed-responsive-16by9" style="width:100%; height:100%; position:relative;"&gt;
+                        &lt;video class="embed-responsive-item" controls preload="metadata" playsinline
+                               style="width:100%; height:100%; object-fit:cover; display:block;"&gt;
+                            &lt;source src="./Grupo7_LABORATORIO_Parte_II/Capítulo 7 -Tooltip y Popover.mp4" type="video/mp4"&gt;
+                            Tu navegador no soporta el elemento de video.
+                        &lt;/video&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container footer"&gt;
+        &lt;div class="row"&gt;
+                &lt;div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"&gt;
+                	&lt;button class="btn btn-primary" data-toggle="popover" data-placement="top" title="Facebook" data-content="¡Comparte esta publicación con tus amigos en Facebook y ayúdanos a llegar a más personas!" data-trigger="focus"&gt;&lt;span class="icon-Facebook"&gt;&lt;/span&gt; Facebook&lt;/button&gt;
+                	&lt;button class="btn btn-info" data-toggle="popover" data-placement="bottom" title="Twitter" data-content="Comparte esta publicación en Twitter" data-trigger="focus"&gt;&lt;span class="icon-twitter"&gt;&lt;/span&gt; Twitter&lt;/button&gt;
+                	&lt;button class="btn btn-danger" data-toggle="popover" data-placement="right" title="YouTube" data-content="Suscríbete a nuestro canal en YouTube" data-trigger="focus"&gt;&lt;span class="icon-youtube"&gt;&lt;/span&gt; YouTube&lt;/button&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Resto del HTML con modales y JavaScript --&gt;
+    &lt;!-- Ver archivo completo espe.html para todos los detalles --&gt;</code></pre>
+                                    <div class="text-center mt-2">
+                                        <small class="text-muted">
+                                            <i class="fas fa-info-circle"></i> 
+                                            Este es el código HTML completo del archivo espe.html que se muestra en el iframe superior
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
             </div>
         </div>
     </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
     
-    <script src="js/main.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        
+        sr.reveal('.navbar', {
+            duration: 2000,
+            origin: 'bottom'
+        });
+        sr.reveal('.arriba', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+        sr.reveal('.derecha', {
+            duration: 2000,
+            origin: 'right',
+            distance: '300px'
+        });
+        sr.reveal('.izquierda', {
+            duration: 2000,
+            origin: 'left',
+            distance: '300px'
+        });
+        sr.reveal('.abajo', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#teoria', {
+            duration: 1200,
+            origin: 'top',
+            distance: '40px'
+        });
+        sr.reveal('#video', {
+            duration: 1200,
+            origin: 'left',
+            distance: '40px'
+        });
+        sr.reveal('#ejemplos', {
+            duration: 1200,
+            origin: 'right',
+            distance: '40px'
+        });
+        sr.reveal('#ejercicios', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '40px'
+        });
+        sr.reveal('button, .btn, input[type="button"], input[type="submit"]', {
+            duration: 600,
+            distance: '20px',
+            origin: 'bottom',
+            opacity: 0,
+            easing: 'ease',
+            interval: 100,
+            reset: false,
+            viewFactor: 0
+        });
+        
+        sr.reveal('#ejercicios', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '40px'
+        });
+        
+        sr.reveal('button, .btn, input[type="button"], input[type="submit"]', {
+            duration: 600,
+            distance: '20px',
+            origin: 'bottom',
+            opacity: 0,
+            easing: 'ease',
+            interval: 100,
+            reset: false,
+            viewFactor: 0
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                console.log('Starting initialization after DOM content loaded...');
+                console.log('Current URL:', window.location.href);
+                console.log('Document ready state:', document.readyState);
+                
+                if (typeof bootstrap === 'undefined') {
+                    console.error('Bootstrap is not loaded!');
+                    if (typeof window.bootstrap !== 'undefined') {
+                        console.log('Found Bootstrap in window.bootstrap');
+                    }
+                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.tooltip !== 'undefined') {
+                        console.log('Found jQuery Bootstrap');
+                    }
+                    return;
+                }
+                
+                console.log('Bootstrap loaded successfully, version:', bootstrap);
+                
+                console.log('tooltipDemo element exists:', !!document.getElementById('tooltipDemo'));
+                console.log('popoverDemo element exists:', !!document.getElementById('popoverDemo'));
+                
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('#tooltipDemo [data-bs-toggle="tooltip"]'));
+                var tooltipList = [];
+                var tooltipsEnabled = false;
+
+                console.log('Found tooltip elements:', tooltipTriggerList.length, tooltipTriggerList);
+
+                var initTooltipsBtn = document.getElementById('initTooltips');
+                if (!initTooltipsBtn) {
+                    console.error('initTooltips button not found!');
+                    var allButtons = document.querySelectorAll('button');
+                    console.log('All buttons found:', allButtons.length);
+                    for (var i = 0; i < allButtons.length; i++) {
+                        if (allButtons[i].textContent.includes('Tooltip')) {
+                            console.log('Found potential tooltip button:', allButtons[i]);
+                        }
+                    }
+                    return;
+                }
+                
+                console.log('initTooltips button found:', initTooltipsBtn);
+
+                initTooltipsBtn.addEventListener('click', function() {
+                    console.log('Tooltip button clicked, current state:', tooltipsEnabled);
+                    
+                    if (!tooltipsEnabled) {
+                        tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                            console.log('Creating tooltip for:', tooltipTriggerEl);
+                            return new bootstrap.Tooltip(tooltipTriggerEl, {
+                                boundary: 'viewport',
+                                fallbackPlacements: [],
+                                sanitize: false,
+                                animation: true,
+                                trigger: 'hover focus',
+                                delay: { "show": 100, "hide": 100 },
+                                offset: [0, 8],
+                                popperConfig: {
+                                    strategy: 'fixed'
+                                }
+                            });
+                        });
+                        
+                        this.textContent = 'Tooltips Activados ✓';
+                        this.className = 'btn btn-secondary';
+                        tooltipsEnabled = true;
+                        console.log('Tooltips activated with fixed placement, count:', tooltipList.length);
+                    } else {
+                        tooltipList.forEach(function(tooltip) {
+                            tooltip.dispose();
+                        });
+                        tooltipList = [];
+                        
+                        this.textContent = 'Activar Tooltips';
+                        this.className = 'btn btn-success';
+                        tooltipsEnabled = false;
+                        console.log('Tooltips disabled');
+                    }
+                });
+
+                var popoverTriggerList = [].slice.call(document.querySelectorAll('#popoverDemo [data-bs-toggle="popover"]'));
+                var popoverList = [];
+                var popoversEnabled = false;
+
+                console.log('Found popover elements:', popoverTriggerList.length, popoverTriggerList);
+
+                var initPopoversBtn = document.getElementById('initPopovers');
+                if (!initPopoversBtn) {
+                    console.error('initPopovers button not found!');
+                    return;
+                }
+                
+                console.log('initPopovers button found:', initPopoversBtn);
+
+                initPopoversBtn.addEventListener('click', function() {
+                    console.log('Popover button clicked, current state:', popoversEnabled);
+                    
+                    if (!popoversEnabled) {
+                        var self = this;
+                        
+                        this.textContent = 'Activando...';
+                        this.disabled = true;
+                        
+                        setTimeout(function() {
+                            popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                                console.log('Creating popover for:', popoverTriggerEl);
+                                return new bootstrap.Popover(popoverTriggerEl, {
+                                    boundary: document.body,
+                                    fallbackPlacements: [],
+                                    sanitize: false,
+                                    trigger: 'click',
+                                    animation: true,
+                                    html: true,
+                                    offset: [0, 8],
+                                    popperConfig: {
+                                        strategy: 'fixed'
+                                    }
+                                });
+                            });
+                            
+                            self.documentClickHandler = function(e) {
+                                if (!e.target.closest('[data-bs-toggle="popover"]') && !e.target.closest('.popover')) {
+                                    popoverList.forEach(function(popover) {
+                                        popover.hide();
+                                    });
+                                }
+                            };
+                            
+                            document.addEventListener('click', self.documentClickHandler);
+                            
+                            self.textContent = 'Popovers Activados ✓';
+                            self.className = 'btn btn-secondary';
+                            self.disabled = false;
+                            popoversEnabled = true;
+                            
+                            console.log('Popovers activated');
+                        }, 500);
+                    } else {
+                        popoverList.forEach(function(popover) {
+                            popover.dispose();
+                        });
+                        popoverList = [];
+                        
+                        if (this.documentClickHandler) {
+                            document.removeEventListener('click', this.documentClickHandler);
+                        }
+                        
+                        this.textContent = 'Activar Popovers';
+                        this.className = 'btn btn-warning';
+                        popoversEnabled = false;
+                        console.log('Popovers disabled');
+                    }
+                });
+            }, 200);
+
+                var ejerciciosTriggerList = [].slice.call(document.querySelectorAll('#ejerciciosDemo iframe'));
+                var ejerciciosEnabled = false;
+
+                console.log('Found ejercicios elements:', ejerciciosTriggerList.length, ejerciciosTriggerList);
+
+                var initEjerciciosBtn = document.getElementById('initEjercicios');
+                if (initEjerciciosBtn) {
+                    console.log('initEjercicios button found:', initEjerciciosBtn);
+
+                    initEjerciciosBtn.addEventListener('click', function() {
+                        console.log('Ejercicios button clicked, current state:', ejerciciosEnabled);
+                        
+                        if (!ejerciciosEnabled) {
+                            var iframe = document.getElementById('Ejercicio4');
+                            if (iframe) {
+                                iframe.style.opacity = '1';
+                                iframe.style.pointerEvents = 'auto';
+                                iframe.style.border = '2px solid #28a745';
+                            }
+                            
+                            this.textContent = 'Demo Activada ✓';
+                            this.className = 'btn btn-success';
+                            ejerciciosEnabled = true;
+                            console.log('Ejercicios demo activated');
+                        } else {
+                            var iframe = document.getElementById('Ejercicio4');
+                            if (iframe) {
+                                iframe.style.opacity = '0.7';
+                                iframe.style.pointerEvents = 'none';
+                                iframe.style.border = '1px solid #dee2e6';
+                            }
+                            
+                            this.textContent = 'Activar Demo Completa';
+                            this.className = 'btn btn-info';
+                            ejerciciosEnabled = false;
+                            console.log('Ejercicios demo disabled');
+                        }
+                    });
+                } else {
+                    console.error('initEjercicios button not found!');
+                }
+
+            var collapseElements = document.querySelectorAll('[data-bs-toggle="collapse"]');
+            console.log('Found collapse elements:', collapseElements.length);
+            
+            collapseElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    var targetSelector = this.getAttribute('data-bs-target');
+                    var target = document.querySelector(targetSelector);
+                    
+                    if (target) {
+                        console.log('Toggling collapse for:', targetSelector);
+                        var bsCollapse = bootstrap.Collapse.getOrCreateInstance(target);
+                        bsCollapse.toggle();
+                    } else {
+                        console.error('Collapse target not found:', targetSelector);
+                    }
+                });
+            });
+            var formTooltips = [].slice.call(document.querySelectorAll('#ejercicios [data-bs-toggle="tooltip"]'));
+            var formPopovers = [].slice.call(document.querySelectorAll('#ejercicios [data-bs-toggle="popover"]'));
+            
+            formTooltips.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl, {
+                    boundary: 'viewport',
+                    fallbackPlacements: [],
+                    sanitize: false,
+                    animation: true,
+                    trigger: 'hover focus',
+                    delay: { "show": 100, "hide": 100 },
+                    offset: [0, 8]
+                });
+            });
+            
+            formPopovers.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    boundary: document.body,
+                    fallbackPlacements: [],
+                    html: true,
+                    sanitize: false,
+                    animation: true,
+                    offset: [0, 8]
+                });
+            });
+
+            var sendButton = document.getElementById('sendButton');
+            if (sendButton) {
+                var form = sendButton.closest('form');
+                
+                var sendPopover = new bootstrap.Popover(sendButton, {
+                    boundary: document.body,
+                    sanitize: false,
+                    animation: true,
+                    trigger: 'manual',
+                    html: true,
+                    content: `
+                        <div class="text-center">
+                            <p class="mb-3">¿Estás seguro de que quieres enviar el formulario?</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <button type="button" class="btn btn-success btn-sm" id="confirmSend">
+                                    <i class="fas fa-check"></i> Sí, Enviar
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm" id="cancelSend">
+                                    <i class="fas fa-times"></i> Cancelar
+                                </button>
+                            </div>
+                        </div>
+                    `,
+                    title: '<i class="fas fa-paper-plane"></i> Confirmar Envío'
+                });
+
+                sendButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sendPopover.show();
+                    
+                    setTimeout(function() {
+                        var confirmBtn = document.getElementById('confirmSend');
+                        var cancelBtn = document.getElementById('cancelSend');
+                        
+                        if (confirmBtn) {
+                            confirmBtn.addEventListener('click', function() {
+                                sendPopover.hide();
+                                alert('Formulario enviado exitosamente!');
+                            });
+                        }
+                        
+                        if (cancelBtn) {
+                            cancelBtn.addEventListener('click', function() {
+                                sendPopover.hide();
+                            });
+                        }
+                    }, 100);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!sendButton.contains(e.target) && !e.target.closest('.popover')) {
+                        sendPopover.hide();
+                    }
+                });
+            }
+        });
+    </script>
     
 </body>
 

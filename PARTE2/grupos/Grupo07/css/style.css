@@ -168,3 +168,208 @@ h1, h2, h3, h4, h5, h6, pre {
   min-height: 100vh;
   padding: 30px;
 }
+
+/*panel basico*/
+/* ==== Simulación de panel clásico Bootstrap 3 ==== */
+.panel {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-default {
+  border-color: #ddd;
+}
+
+.panel-body {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+/* ==== Estilo botón ejecutar ==== */
+.execute {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+}
+
+.execute:hover {
+  background-color: #333;
+}
+
+/*Panel con titulo*/
+/* ==== Panel simulado (Bootstrap 3 style) ==== */
+.panel {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.panel.show {
+  opacity: 1;
+  max-height: 500px;
+}
+
+/* Encabezado del panel */
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-weight: bold;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Cuerpo del panel */
+.panel-body {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+/* ==== Botón ==== */
+.btn-dark {
+  font-weight: bold;
+  background-color: #000;
+  text-transform: uppercase;
+}
+
+/* Sobrescribe el estilo del botón secondary para hacerlo negro */
+.btn-secondary {
+  background-color: #000 !important;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  border-color: #000 !important;
+  color: #fff !important;
+  transition: all 0.2s ease;
+}
+
+/* Efecto hover */
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  color: #fff !important;
+}
+
+
+/*panel con footer*/
+/* ==== Footer del panel ==== */
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/*paneles contextuales*/
+/* ==== Paneles contextuales ==== */
+.panel-primary > .panel-heading {
+  background-color: #337ab7;
+  color: #fff;
+}
+.panel-success > .panel-heading {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+.panel-info > .panel-heading {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+.panel-warning > .panel-heading {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+.panel-danger > .panel-heading {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/*panel con tablas*/
+/* ==== Tablas dentro de paneles ==== */
+.panel .table {
+  margin-bottom: 0;
+  border-top: 1px solid #ddd;
+}
+
+.panel .table th,
+.panel .table td {
+  vertical-align: middle;
+}
+
+.panel .table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/*panel con lista de elemenos*/
+/* ==== List groups dentro de panel ==== */
+.list-group {
+  margin-bottom: 0;
+  border-top: 1px solid #ddd;
+}
+
+.list-group-item {
+  border: 1px solid #ddd;
+  border-width: 0 0 1px 0;
+  padding: 10px 15px;
+  background-color: #fff;
+}
+
+.list-group-item:last-child {
+  border-bottom: 0;
+}
+
+.panel {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.panel {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: all 0.25s ease;
+}
+
+.panel.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.panel.hide {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* ======= COLOR MORADO / LILA BOOTSTRAP ======= */
+.bg-purple {
+  background-color: #6f42c1 !important; /* Morado de Bootstrap */
+  color: #fff !important;
+}
+
+.bg-purple-light {
+  background-color: #6f42c1 !important; /* Lila suave */
+  color: #fff !important;
+}
+
+.ejemplo-img {
+  width: 500px;
+  height: px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+}
